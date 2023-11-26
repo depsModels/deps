@@ -22,7 +22,7 @@ header::before {
     content: "";
     position: absolute;
     inset: 0;
-    background-image: url("bg-fundo-cortado.jpg");
+    background-image: url("images/bg-header-cut.jpg");
     background-size: cover;
     background-position: bottom;
     z-index: -1;
@@ -101,6 +101,13 @@ nav img {
     border: 1px solid var(--Black, #000);
     background: #FFF;
     cursor: pointer;
+    transform: translatey(0px);
+    transition: transform 0.6s;
+}
+
+.block-buttons__services:hover{
+    transform: translatey(-2.2vh);
+    transition: transform 0.6s;
 }
 
 .block-buttons__contact {
@@ -116,4 +123,11 @@ nav img {
     border: 2px solid #FFF;
     backdrop-filter: blur(100px);
     cursor: pointer;
+    transform: translatey(0px);
+    transition: transform 0.6s;
+}
+
+.block-buttons__contact:hover{
+    transform: translatey(-2.2vh);
+    transition: transform 0.6s;
 }
