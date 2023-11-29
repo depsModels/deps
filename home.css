@@ -1,0 +1,133 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #141414;
+}
+
+.container {
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+header {
+    padding-top: 20px;
+    height: 100vh;
+    position: relative;
+}
+
+header::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url("images/bg-header-cut.jpg");
+    background-size: cover;
+    background-position: bottom;
+    z-index: -1;
+    opacity: 0.6;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 15%;
+    padding-top: 10px;
+}
+
+nav img {
+    width: 40%;
+    filter: brightness(110%);
+    float: left;
+}
+
+
+#link-logo {}
+
+.menu-block__links {
+    padding: 2vh;
+    font-weight: 300;
+    text-decoration: none;
+    color: #FFF;
+    font-family: helvetica;
+    font-size: 3.4vh;
+}
+
+.block-section-home {
+    margin-top: 15vh;
+    height: 60vh;
+    width: 100vh;
+}
+
+.block-section-home__h1 {
+    margin-left: 3vh;
+    color: #FFF;
+    font-family: helvetica;
+    font-size: 6vh;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 120%;
+}
+
+.block-section-home__description {
+    margin-top: 5vh;
+    margin-left: 3vh;
+    color: #FFF;
+    font-family: helvetica;
+    font-size: 3.5vh;
+    font-style: normal;
+    font-weight: 100;
+    line-height: 150%;
+    /* 48px */
+}
+
+.block-buttons {
+    margin-left: 3vh;
+    margin-top: 8vh;
+}
+
+.block-buttons__services {
+    margin-right: 5vh;
+    padding: 3vh 4vh;
+    color: #000;
+    font-family: helvetica;
+    font-size: 3vh;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    border-radius: 20px;
+    border: 1px solid var(--Black, #000);
+    background: #FFF;
+    cursor: pointer;
+    transform: translatey(0px);
+    transition: transform 0.6s;
+}
+
+.block-buttons__services:hover{
+    transform: translatey(-2.2vh);
+    transition: transform 0.6s;
+}
+
+.block-buttons__contact {
+    padding: 3vh 4vh;
+    color: var(--White, #FFF);
+    font-family: helvetica;  
+    font-size: 3vh;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 150%;
+    background-color: transparent;
+    border-radius: 20px;
+    border: 2px solid #FFF;
+    backdrop-filter: blur(100px);
+    cursor: pointer;
+    transform: translatey(0px);
+    transition: transform 0.6s;
+}
+
+.block-buttons__contact:hover{
+    transform: translatey(-2.2vh);
+    transition: transform 0.6s;
+}
