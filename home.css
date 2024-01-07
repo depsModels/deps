@@ -4,10 +4,14 @@
 }
 
 body {
-    background: #313131;
+    background: #1f1f1f;
 }
 
-body::before{
+.body-before-opacity {
+    opacity: 0.6;
+}
+
+body::before {
     content: "";
     position: absolute;
     inset: 0;
@@ -16,10 +20,16 @@ body::before{
     background-position: bottom;
     z-index: -1;
     opacity: 0.6;
+    background-repeat: no-repeat;
+    /* Evita a repetição da imagem */
+}
+
+#burguer{
+    color: #FFF;
 }
 
 .container {
-    margin-left: 80px;
+    margin-left: 100px;
     margin-right: 80px;
 }
 
@@ -43,8 +53,7 @@ nav img {
     float: left;
 }
 
-
-.menu-block__links {
+.menu__links {
     padding: 2vh;
     font-weight: 300;
     text-decoration: none;
@@ -53,14 +62,15 @@ nav img {
     font-size: 3.4vh;
 }
 
-.block-section-home {
+/*section home first to appear*/
+
+.section-home {
     margin-top: 15vh;
     height: 60vh;
     width: 100vh;
 }
 
-.block-section-home__h1 {
-    margin-left: 3vh;
+.section-home__h1 {
     color: #FFF;
     font-family: helvetica;
     font-size: 6vh;
@@ -69,24 +79,21 @@ nav img {
     line-height: 120%;
 }
 
-.block-section-home__description {
+.section-home__description {
     margin-top: 5vh;
-    margin-left: 3vh;
     color: #FFF;
     font-family: helvetica;
     font-size: 3.5vh;
     font-style: normal;
     font-weight: 100;
     line-height: 150%;
-    /* 48px */
 }
 
-.block-buttons {
-    margin-left: 3vh;
+.buttons {
     margin-top: 8vh;
 }
 
-.block-buttons__services {
+.buttons__services {
     margin-right: 5vh;
     padding: 3vh 4vh;
     color: #000;
@@ -95,7 +102,7 @@ nav img {
     font-style: normal;
     font-weight: 400;
     line-height: 150%;
-    border-radius: 20px;
+    border-radius: 6px;
     border: 1px solid var(--Black, #000);
     background: #FFF;
     cursor: pointer;
@@ -103,41 +110,44 @@ nav img {
     transition: transform 0.6s;
 }
 
-.block-buttons__services:hover{
+.buttons__services:hover {
     transform: translatey(-2.2vh);
     transition: transform 0.6s;
 }
 
-.block-buttons__contact {
+.buttons__contact {
     padding: 3vh 4vh;
     color: var(--White, #FFF);
-    font-family: helvetica;  
+    font-family: helvetica;
     font-size: 3vh;
     font-style: normal;
     font-weight: 300;
     line-height: 150%;
     background-color: transparent;
-    border-radius: 20px;
-    border: 2px solid #FFF;
+    border-radius: 6px;
+    border: 1px solid #FFF;
     backdrop-filter: blur(100px);
     cursor: pointer;
     transform: translatey(0px);
     transition: transform 0.6s;
 }
 
-.block-buttons__contact:hover{
+.buttons__contact:hover {
     transform: translatey(-2.2vh);
     transition: transform 0.6s;
 }
 
-#block-section-features{
+
+/*section cards services*/
+
+#section-features {
     justify-content: space-between;
     display: flex;
     padding-top: 10vh;
     padding-bottom: 10vh;
 }
 
-.block-section-features__card{
+.section-features__card {
     padding: 0.7vh;
     background-color: #161616;
     border-radius: 2vh;
@@ -147,31 +157,117 @@ nav img {
     font-weight: 100;
     line-height: 150%;
     color: white;
-    width: 55vh;
-    
+    width: 60vh;
+    height: 80vh;
     text-align: justify;
 }
 
-.block-section-features__card h1{
+.section-features__card h1 {
     margin: 6vh;
     text-align: center;
 }
 
-.block-section-features__card p{
+.section-features__card p {
     margin: 2vh;
 }
 
-.block-section-features__card img{
+.section-features__card img {
     border-radius: 2vh;
     width: 100%;
     height: 40vh;
 }
 
-.block-section-features__card:hover{
-    background-color: rgb(255, 255, 255);
-    color: #000;
+.section-features__card:hover {
     border: solid 2px black;
     cursor: pointer;
     transform: scale(1.1);
-    transition-duration: 2s;
+    transition: all 0.5s;
+}
+
+/*section DEPS who we are*/
+.section-who-we-are {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    height: 60vh;
+    gap: 50px;
+    margin-bottom: 5vh;
+}
+
+.section-who-we-are>div {
+    flex: 0 0 220px;
+    border-radius: 0.5rem;
+    transition: 0.5s ease-in-out, background 2s ease-in-out;
+    cursor: pointer;
+    box-shadow: 1px 5px 15px #000000;
+    position: relative;
+    overflow: hidden;
+}
+
+.section-who-we-are>div:nth-of-type(1) {
+    background: url("images/D.png") no-repeat 8% 6%;
+}
+
+.section-who-we-are>div:nth-of-type(1):hover {
+    background: url("images/D.png") no-repeat 8% 0% / cover;
+}
+
+.section-who-we-are>div:nth-of-type(2) {
+    background: url("images/2.png") no-repeat 5% 45%;
+}
+
+.section-who-we-are>div:nth-of-type(2):hover {
+    background: url("images/2.png") no-repeat 5% 45% / cover;
+}
+
+.section-who-we-are>div:nth-of-type(3) {
+    background: url("images/3.png") no-repeat 5% 45%;
+}
+
+.section-who-we-are>div:nth-of-type(3):hover {
+    background: url("images/3.png") no-repeat 5% 45% / cover;
+}
+
+.section-who-we-are>div:nth-of-type(4) {
+    background: url("images/4.png") no-repeat 5% 45%;
+}
+
+.section-who-we-are>div:nth-of-type(4):hover {
+    background: url("images/4.png") no-repeat 5% 45% / cover;
+}
+
+.section-who-we-are>div .section-who-we-are__content {
+    font-size: 1.5rem;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    opacity: 0;
+    flex-direction: column;
+    height: 100%;
+    justify-content: flex-end;
+    background: rgb(0, 0, 0);
+    background: linear-gradient(0deg,
+            rgba(2, 2, 46, 0.6755077030812324) 0%,
+            rgba(255, 255, 255, 0) 100%);
+    transform: translateY(100%);
+    transition: opacity 0.5s ease-in-out, transform 0.5s 0.2s;
+    visibility: hidden;
+}
+
+.section-who-we-are>div:hover {
+    flex: 0 0 100vh;
+    box-shadow: 1px 3px 15px #000000;
+    transform: translateY(-30px);
+}
+
+.section-who-we-are>div:hover .section-who-we-are__content {
+    opacity: 1;
+    transform: translateY(0%);
+    visibility: visible;
+}
+
+.section-who-we-are>div .section-who-we-are__content span {
+    display: block;
+    margin-top: 5px;
+    font-size: 1.2rem;
 }
