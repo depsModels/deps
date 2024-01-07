@@ -90,7 +90,6 @@ nav img {
 }
 
 .buttons {
-    margin-left: 3vh;
     margin-top: 8vh;
 }
 
@@ -196,7 +195,7 @@ nav img {
 }
 
 .section-who-we-are>div {
-    flex: 0 0 200px;
+    flex: 0 0 220px;
     border-radius: 0.5rem;
     transition: 0.5s ease-in-out, background 2s ease-in-out;
     cursor: pointer;
@@ -242,7 +241,6 @@ nav img {
     color: #fff;
     display: flex;
     align-items: center;
-    padding: 15px;
     opacity: 0;
     flex-direction: column;
     height: 100%;
@@ -257,7 +255,7 @@ nav img {
 }
 
 .section-who-we-are>div:hover {
-    flex: 0 0 110vh;
+    flex: 0 0 100vh;
     box-shadow: 1px 3px 15px #000000;
     transform: translateY(-30px);
 }
