@@ -1,22 +1,20 @@
-document.addEventListener("DOMContentLoaded", function() {
-    var body = document.querySelector('body');
-    var imageUrl = "images/bg-header-cut.jpg";
 
-    function lazyload() {
-        if (body) {
-            console.log("sexo");
-            body.classList.add('body-before-styles', 'body-before-opacity');
-            body.style.backgroundImage = "url('" + imageUrl + "')";
-            document.removeEventListener("scroll", lazyload);
-            window.removeEventListener("resize", lazyload);
-            window.removeEventListener("orientationchange", lazyload);
-        }
-    }
 
-    document.addEventListener("scroll", lazyload);
-    window.addEventListener("resize", lazyload);
-    window.addEventListener("orientationchange", lazyload);
+    document.addEventListener("DOMContentLoaded", function () {
+        const menuIcon = document.querySelector('.menu-icon');
+        const menu = document.querySelector('.menu');
 
-    lazyload(); // Carrega a imagem de fundo inicialmente
-});
+        document.addEventListener('click', function (event) {
+            if (!menu.contains(event.target) && !menuIcon.contains(event.target)) {
+                menuIcon.classList.remove('open');
+                menu.classList.remove('open');
+            }
+        });
+
+        menuIcon.addEventListener('click', function (event) {
+            event.stopPropagation();
+            menuIcon.classList.toggle('open');
+            menu.classList.toggle('open');
+        });
+    });
 
