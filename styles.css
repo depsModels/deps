@@ -169,10 +169,10 @@ nav {
     margin-right: 15vh;
 }
 
-nav img {
+nav img{
     margin-left: 10vh;
     margin-top: 50px;
-    width: 40%;
+    width: 20%;
     filter: brightness(110%);
     float: left;
 }
@@ -195,7 +195,7 @@ nav img {
 }
 
 .button-yellow {
-    color: #ffffff;
+    color: black;
     background: #feac0e;
 }
 
