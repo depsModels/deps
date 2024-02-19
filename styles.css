@@ -116,8 +116,6 @@ p {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-
-
 .yellow-emphasis {
     color: #feac0e;
 }
@@ -199,7 +197,7 @@ nav img{
 }
 
 .button-yellow {
-    color: black;
+    color: white;
     background: #feac0e;
 }
 
