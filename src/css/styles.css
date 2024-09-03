@@ -6,10 +6,79 @@
 }
 
 .container-main {
-  margin-top: 5rem;
-  margin-left: 20rem;
-  margin-right: 20rem;
+  display: flex;
+  margin: 0;
+  margin-bottom: 10px;
 }
+
+.left-features {
+  width: 50%;
+  height: 140vh;
+}
+
+#card-features-1 {
+  background-color: #000;
+  height: 70vh;
+  display: flex;
+  /* Usar flexbox para posicionar elementos */
+  flex-direction: column;
+  /* Coloca o conteúdo em coluna */
+  justify-content: space-between;
+  /* Distribui o título para o topo e o parágrafo para o final */
+  padding: 20px;
+}
+
+.left-features,
+p {
+  font-family: poppins;
+}
+
+.right-features {
+  background-color: white;
+  margin-top: 12%;
+  width: 50%;
+  height: 120vh;
+}
+
+#card-features-2 {
+  background-color: #f3f3f3;
+  height: 70vh;
+  display: flex;
+  /* Usar flexbox para posicionar elementos */
+  flex-direction: column;
+  /* Coloca o conteúdo em coluna */
+  justify-content: space-between;
+  /* Distribui o título para o topo e o parágrafo para o final */
+  padding: 10vh;
+}
+
+#card-features-3 {
+  background-color: white;
+  height: 70vh;
+  display: flex;
+  /* Usar flexbox para posicionar elementos */
+  flex-direction: column;
+  /* Coloca o conteúdo em coluna */
+  justify-content: space-between;
+  /* Distribui o título para o topo e o parágrafo para o final */
+  padding: 10vh;
+}
+
+#img-features {
+  height: 70vh;
+  overflow: hidden;
+}
+
+#lampada-img {
+  height: 100%;
+  /* Faz a imagem preencher toda a altura da div */
+  width: auto;
+  /* Mantém a proporção original da imagem */
+  object-fit: cover;
+  /* Cobre o contêiner sem distorcer a imagem */
+}
+
+
 
 .icons {
   margin-top: 4vh;
@@ -26,14 +95,14 @@
 h1,
 h2,
 h3 {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: poppins;
   font-style: normal;
   font-weight: 600;
   line-height: 120%;
 }
 
 p {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: poppins;
 }
 
 .description {
@@ -60,9 +129,29 @@ p {
   color: white;
 }
 
-.titles {
+.title-home {
+  font-family: Poppins;
   margin-top: 2rem;
-  font-size: 2.5rem;
+  font-size: 3.4rem;
+}
+
+#title-presentation {
+  color: white;
+  margin-top: 5vh;
+  text-align: center;
+  font-size: 4.4rem;
+
+}
+
+.titles {
+  font-family: Poppins;
+  margin-top: 2rem;
+  font-size: 3.4rem;
+}
+
+.title-features {
+  margin-top: 10px;
+  margin-left: 55%;
 }
 
 .titles-center {
@@ -95,12 +184,21 @@ p {
 .subtitles {
   font-size: 1.5rem;
   font-weight: 100;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: poppins;
+}
+
+#subtitle-presentation {
+  margin-left: 5vh;
+  margin-top: 5vh;
+  font-size: 1.4rem;
+  font-weight: 800;
 }
 
 .subtitles-home {
+  font-family: Poppins;
   margin-top: 2rem;
 }
+ 
 
 .list {
   margin-top: 5rem;
@@ -120,7 +218,7 @@ p {
   font-weight: lighter;
   text-decoration: none;
   color: #fff;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: poppins;
 }
 
 .yellow-emphasis {
@@ -163,7 +261,7 @@ header {
   align-items: flex-start;
   margin-left: 5rem;
   margin-top: 7rem;
-  width: 40rem;
+  width: 50rem;
   height: 20rem;
 }
 
@@ -172,6 +270,7 @@ header {
 nav {
   display: flex;
   justify-content: space-between;
+  font-family: poppins;
   align-items: center;
   height: 15%;
   margin-right: 15vh;
@@ -222,10 +321,10 @@ nav img {
 }
 
 #button-header {
-  margin-top: 10%;
+  margin-top: 20%;
 }
 
-/**********  Cards **********/
+/********** Cards **********/
 
 .block-cards {
   justify-content: center;
@@ -233,24 +332,67 @@ nav img {
   display: flex;
   width: 100%;
   gap: 4rem;
+  perspective: 1000px; /* Adiciona perspectiva para o efeito 3D */
 }
 
-.cards {
+.card {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  perspective: 1000px; /* Define a perspectiva para o efeito flip */
+}
+
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d; /* Mantém o efeito 3D */
+  transition: transform 0.8s; /* Transição suave para o flip */
+  border-radius: 1em;
+  box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.25);
+}
+
+.card:hover .card-inner {
+  transform: rotateY(180deg); /* Rotaciona o card em 3D ao passar o mouse */
+}
+
+.card-front, 
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden; /* Oculta a face traseira quando a frente é visível */
   display: flex;
-  flex-direction: column;
+  flex-direction: column; /* Alinha o texto em coluna */
+  justify-content: center;
   align-items: center;
-  padding-top: 2rem;
-  padding: 1.2rem;
-  width: 35%;
-  height: 450px;
-  background-color: #dedede;
-  border-radius: 2rem;
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  border-radius: 1em;
+  padding: 20px;
+  text-align: center; /* Centraliza o texto */
+  box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(10px);
+  color: #212121;
+}
+
+.card-front {
+  background-color: rgba(255, 255, 255, 0.85); /* Mantém a cor de fundo original */
+}
+
+.card-back {
+  background-color: rgba(255, 255, 255, 0.7); /* Mantém a cor de fundo original */
+  transform: rotateY(180deg); /* A face de trás está inicialmente invisível */
+}
+
+.card-footer {
+  font-size: 0.85em;
+  color: #446;
+  margin-top: 10px; /* Espaçamento entre os textos */
 }
 
 /******** Features ***********/
 #features {
   padding-bottom: 6rem;
+  background-color: #202020;
 }
 
 .features-cards {
@@ -264,16 +406,124 @@ nav img {
 .features-cards li {
   margin-bottom: 10px;
 }
-
 /******** Presentation ***********/
 
 #presentation {
   width: 100%;
   height: 100%;
-  background-color: #dedede;
+  background-color: #202020;
   padding-top: 5rem;
   padding-bottom: 5rem;
 }
+
+.projects-container {
+  display: flex;
+  width: 100%;
+}
+
+.projects {
+  width: 100%;
+  height: 90vh;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.5s ease, background-position 2s ease; /* Adiciona a transição para o degradê */
+  z-index: 1;
+  background-size: 100% 200%; /* Define o tamanho do degradê para ser maior verticalmente */
+  background-position: bottom; /* Inicia o degradê da parte inferior */
+}
+
+/* Estilo da imagem que cobre o card antes do hover */
+.image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-size: cover; /* Cobre o card inteiro com a imagem */
+  background-position: center;
+  transition: opacity 0.4s ease;
+  z-index: 1;
+}
+
+/* Background e hover */
+#stock-deps {
+  background: linear-gradient(to top, #f59b47, #f3ec78); /* Degradê de baixo para cima */
+  margin-top: 10vh;
+}
+
+#karine {
+  background: linear-gradient(to top, #135797, #51dde7); /* Degradê de baixo para cima */
+  margin-top: 25vh;
+}
+
+#gym {
+  background: linear-gradient(to top, #bb1300, #ff7d7d); /* Degradê de baixo para cima */
+}
+
+.projects:hover {
+  background-position: top; /* Move o degradê para o topo ao passar o mouse */
+  transform: scale(1.1);
+  z-index: 10;
+}
+
+.projects:hover .image-overlay {
+  opacity: 0; /* Oculta a imagem ao passar o mouse */
+}
+
+/* Estilo do card de informação */
+.info-card {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(255, 255, 255, 0.9);
+  color: #333;
+  padding: 10px;
+  text-align: center;
+  transition: transform 0.4s ease, opacity 0.4s ease;
+  transform: translateY(100%);
+  opacity: 0;
+  z-index: 2;
+}
+
+.projects:hover .info-card {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* Efeito de imagem pequena centralizada */
+#stock-deps:hover::before,
+#karine:hover::before,
+#gym:hover::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 450px; /* Tamanho da imagem centralizada */
+  height: 300px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  transform: translate(-50%, -50%);
+  opacity: 1;
+  transition: opacity 0.4s ease;
+  z-index: 1;
+  background-color: inherit; /* Mantém o degradê no fundo */
+}
+
+/* Imagens específicas para cada card */
+#stock-deps:hover::before {
+  background-image: url('/src/images/stock.png');
+}
+
+#karine:hover::before {
+  background-image: url('/src/images/karine.png');
+}
+
+#gym:hover::before {
+  background-image: url('/src/images/GYM.png');
+}
+
 
 .content {
   display: flex;
@@ -297,163 +547,12 @@ nav img {
 /******** Prices *************/
 
 #prices {
-  display: flex;
-  justify-content: space-around;
-  text-align: center;
-  background-color: #212121;
-  background-color: #202020;
-  margin: 0;
-  padding-top: 5%;
-  padding-bottom: 5%;
-  width: 100%;
-}
-
-.pricingTable {
-  color: #fff;
-  font-family: 'Open Sans', sans-serif;
-  text-align: center;
-  padding: 0 0 35px;
-  border: 8px solid #feac0e;
-  border-radius: 30px;
-}
-
-.pricingTable .pricingTable-header {
-  padding: 30px 0 0;
-  margin: 0 auto 30px;
-}
-
-.pricingTable .title {
-  font-size: 35px;
-  font-weight: 600;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  width: 85%;
-  padding: 10px 0;
-  margin: 0 auto 25px;
-  border-radius: 15px;
-  border: 3px solid #feac0e;
-}
-
-.pricingTable .price-value .amount {
-  font-size: 50px;
-  font-weight: 800;
-  line-height: 50px;
-  display: inline-block;
-}
-
-.pricingTable .price-value .duration {
-  font-size: 16px;
-  font-weight: 500;
   display: block;
-}
-
-.pricingTable .pricing-content {
-  text-align: left;
-  padding: 0;
-  margin: 0 0 30px;
-  list-style: none;
-  display: inline-block;
-}
-
-.pricingTable .pricing-content li {
-  font-size: 17px;
-  line-height: 25px;
-  text-transform: capitalize;
-  border-bottom: 1px solid #fff;
-  padding: 0 0 13px 25px;
-  margin: 0 0 12px;
-  position: relative;
-}
-
-.pricingTable .pricing-content li:last-child {
-  margin-bottom: 0;
-  border-bottom: none;
-}
-
-.pricingTable .pricing-content li:before {
-  content: '\f00c';
-  color: #feac0e;
-  font-family: 'Font Awesome 5 free';
-  font-size: 16px;
-  font-weight: 900;
-  position: absolute;
-  top: 1px;
-  left: 0;
-}
-
-.pricingTable .pricingTable-signup a {
-  color: #fff;
-  background: #feac0e;
-  font-size: 25px;
-  font-weight: 600;
-  text-transform: uppercase;
-  padding: 10px 30px;
-  border: 3px solid transparent;
-  border-radius: 10px;
-  transition: all 0.3s ease 0s;
-}
-
-.pricingTable .pricingTable-signup a:hover {
-  color: #feac0e;
-  background: transparent;
-  border: 3px solid #feac0e;
-}
-
-.pricingTable.red,
-.pricingTable.red .title {
-  border-color: #b00000;
-}
-
-.pricingTable.red .pricing-content li:before {
-  color: #b00000;
-}
-
-.pricingTable.red .pricingTable-signup a {
-  background: #b00000;
-}
-
-.pricingTable.red .pricingTable-signup a:hover {
-  color: #b00000;
-  background: transparent;
-  border: 3px solid #b00000;
-}
-
-.pricingTable.blue,
-.pricingTable.blue .title {
-  border-color: #0046af;
-}
-
-.pricingTable.blue .pricing-content li:before {
-  color: #0046af;
-}
-
-.pricingTable.blue .pricingTable-signup a {
-  background: #0046af;
-}
-
-.pricingTable.blue .pricingTable-signup a:hover {
-  color: #0046af;
-  background: transparent;
-  border: 3px solid #0046af;
-}
-
-.pricingTable.orange,
-.pricingTable.orange .title {
-  border-color: #f86b17;
-}
-
-.pricingTable.orange .pricing-content li:before {
-  color: #f86b17;
-}
-
-.pricingTable.orange .pricingTable-signup a {
-  background: #f86b17;
-}
-
-.pricingTable.orange .pricingTable-signup a:hover {
-  color: #f86b17;
-  background: transparent;
-  border: 3px solid #f86b17;
+  background-color: #212121;
+  padding-top: 5%;
+  padding-bottom: 30vh;
+  width: 100%;
+  height: 100vh;
 }
 
 /********** WHO WE ARE **********/
@@ -636,7 +735,7 @@ footer .footer-title {
   height: fit-content;
 }
 
-.space-y-2 > :not([hidden]) ~ :not([hidden]) {
+.space-y-2> :not([hidden])~ :not([hidden]) {
   --tw-space-y-reverse: 0;
   margin-top: calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));
   margin-bottom: calc(0.5rem * var(--tw-space-y-reverse));
