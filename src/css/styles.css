@@ -1,10 +1,12 @@
 /********** Variaveis **********/
 
 :root {
-  --color-red-deps: #b00000
-  --color-yellow-deps: #feac0e
-  --color-blue-deps: #0046af 
-  --color-faint-blue-deps: #49beff
+  --color-red-deps: #b00000;
+  --color-yellow-deps: #feac0e;
+  --color-blue-deps: #0046af;
+  --color-faint-blue-deps: #49beff;
+  --dark-background: #212529;
+  --low-opacity: #b5b5b5;
 }
 
 /********** Body / Commons **********/
@@ -12,6 +14,10 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans",
+    "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol", "Noto Color Emoji";
 }
 
 .container-main {
@@ -86,8 +92,6 @@ p {
   object-fit: cover;
   /* Cobre o contêiner sem distorcer a imagem */
 }
-
-
 
 .icons {
   margin-top: 4vh;
@@ -208,7 +212,6 @@ p {
   margin-top: 2rem;
 }
 
-
 .list {
   margin-top: 5rem;
   width: 50%;
@@ -226,16 +229,20 @@ p {
   padding: 2vh;
   font-weight: lighter;
   text-decoration: none;
-  color: #fff;
+  color: var(--low-opacity);
   font-family: poppins;
 }
 
+.links:hover {
+  color: #fff;
+}
+
 .yellow-emphasis {
-  color: #feac0e;
+  color: var(--color-yellow-deps);
 }
 
 .blue-emphasis {
-  color: #0046af;
+  color: var(--color-blue-deps);
 }
 
 /**********  Header **********/
@@ -316,12 +323,12 @@ nav img {
 
 .button-yellow {
   color: white;
-  background: #feac0e;
+  background: var(--color-yellow-deps);
 }
 
 .button-light-blue {
   color: white;
-  background-color: #49beff;
+  background-color: var(--color-faint-blue-deps);
 }
 
 .button:hover {
@@ -388,7 +395,7 @@ nav img {
   /* Centraliza o texto */
   box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.25);
   backdrop-filter: blur(10px);
-  color: #212121;
+  color: var(--dark-background);
 }
 
 .card-front {
@@ -411,9 +418,10 @@ nav img {
 }
 
 /******** Features ***********/
+
 #features {
   padding-bottom: 6rem;
-  background-color: #202020;
+  background-color: var(--dark-background);
 }
 
 .features-cards {
@@ -433,7 +441,7 @@ nav img {
 #presentation {
   width: 100%;
   height: 100%;
-  background-color: #202020;
+  background-color: var(--dark-background);
   padding-top: 5rem;
   padding-bottom: 5rem;
 }
@@ -557,7 +565,6 @@ nav img {
   background-image: url('/src/images/GYM.png');
 }
 
-
 .content {
   display: flex;
   margin-top: 2rem;
@@ -581,14 +588,14 @@ nav img {
 
 #prices {
   display: block;
-  background-color: #212121;
+  background-color: var(--dark-background);
   padding-top: 5%;
   padding-bottom: 30vh;
   width: 100%;
   height: 100vh;
 }
 
-/********** WHO WE ARE **********/
+/********** Who We Are **********/
 
 #who-we-are {
   padding-top: 1rem;
@@ -605,7 +612,7 @@ nav img {
 .pointer {
   margin-top: 6.2rem;
   height: 70vh;
-  border: 5px solid #ffc700;
+  border: 5px solid var(--color-yellow-deps);
   border-radius: 0.2rem;
   transition: border-color 0.3s ease-in;
 }
@@ -643,28 +650,28 @@ label {
 #label-design:hover {
   padding-left: 4vh;
   cursor: pointer;
-  background-color: #ffc700;
+  background-color: var(--color-yellow-deps);
   color: white;
 }
 
 #label-efficiency:hover {
   padding-left: 4vh;
   cursor: pointer;
-  background-color: #b00000;
+  background-color: var(--color-red-deps);
   color: white;
 }
 
 #label-productivity:hover {
   padding-left: 4vh;
   cursor: pointer;
-  background-color: #49beff;
+  background-color: var(--color-faint-blue-deps);
   color: white;
 }
 
 #label-simplicity:hover {
   padding-left: 4vh;
   cursor: pointer;
-  background-color: #0046af;
+  background-color: var(--color-blue-deps);
   color: white;
 }
 
@@ -738,48 +745,127 @@ label {
   width: 100%;
 }
 
-/******** Footer ***********/
+/******** Footer *********/
 
-footer .app-name {
-  border-left: 4px solid #2d4bf0;
-  padding-left: 1.5rem;
-  font-size: 1.875rem;
-  line-height: 2.25rem;
-  font-weight: 700;
-}
-
-footer .app-name .app-initial {
-  color: #2d4bf0;
-}
-
-footer .app-info p {
-  padding-left: 1.65rem;
-}
-
-footer .footer-title {
-  font-size: 1.25rem;
-  line-height: 1.75rem;
-  border-left: 4px solid #2d4bf0;
-  padding-left: 1.5rem;
-  height: fit-content;
-}
-
-.space-y-2> :not([hidden])~ :not([hidden]) {
-  --tw-space-y-reverse: 0;
-  margin-top: calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));
-  margin-bottom: calc(0.5rem * var(--tw-space-y-reverse));
-}
-
-a.text-white {
+#footer {
+  background-color: var(--dark-background);
   color: #ffffff;
+  padding: 1.25rem;
+  text-align: center;
+}
+
+.footer-content {
+  display: inline-block;
+  width: 100%;
+  padding: 1.25rem 0;
+}
+
+.row {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.app-info,
+.navegation,
+.form {
+  display: inline-block;
+  width: 30%;
+  vertical-align: top;
+  text-align: left;
+  padding: 1rem;
+}
+
+.app-name {
+  font-size: 1.75rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.app-info p {
+  margin-top: 1rem;
+}
+
+.navegation ul {
+  list-style: none;
+  padding: 0;
+}
+
+.navegation ul li.section-title {
+  font-size: 1.5rem;
+  color: #ffffff;
+  font-weight: normal;
+  margin-bottom: 1rem;
+}
+
+.navegation ul li a {
+  font-size: 1.5rem;
+  color: var(--low-opacity);
   text-decoration: none;
 }
 
-a.text-white:hover {
-  color: #d4d4d4;
-  cursor: pointer;
+.navegation ul li a:hover,
+.img-links:hover {
+  color: #ffffff;
 }
 
+.icons-img-links {
+  padding-top: 7rem;
+}
+
+.img-links {
+  font-size: 2rem;
+  color: var(--low-opacity);
+  margin-right: 1.5rem;
+}
+
+div a {
+  text-decoration: none;
+}
+
+.form h4 {
+  font-size: 1.5rem;
+  color: #ffffff;
+  font-weight: normal;
+  margin-bottom: 1rem;
+}
+
+.form-wrapper {
+  text-align: left;
+}
+
+input,
+textarea {
+  font-size: 1rem;
+  width: 100%;
+  padding: 0.625rem;
+  margin-bottom: 0.625rem;
+  border: none;
+  border-radius: 0.3125rem;
+}
+
+.btn-form {
+  width: auto;
+  padding: 0.75rem 1.15rem;
+  background-color: var(--color-blue-deps);
+  color: #ffffff;
+  border: none;
+  border-radius: 0.3125rem;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.btn-form:hover {
+  background-color: var(--color-faint-blue-deps);
+}
+
+.copyright {
+  text-align: center;
+  font-size: 1rem;
+  margin-top: 1.25rem;
+  color: var(--low-opacity);
+}
 
 /********** WhatsApp **********/
 
