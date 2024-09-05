@@ -1,3 +1,12 @@
+/********** Variaveis **********/
+
+:root {
+  --color-red-deps: #b00000
+  --color-yellow-deps: #feac0e
+  --color-blue-deps: #0046af 
+  --color-faint-blue-deps: #49beff
+}
+
 /********** Body / Commons **********/
 
 * {
@@ -198,7 +207,7 @@ p {
   font-family: Poppins;
   margin-top: 2rem;
 }
- 
+
 
 .list {
   margin-top: 5rem;
@@ -332,61 +341,73 @@ nav img {
   display: flex;
   width: 100%;
   gap: 4rem;
-  perspective: 1000px; /* Adiciona perspectiva para o efeito 3D */
+  perspective: 1000px;
+  /* Adiciona perspectiva para o efeito 3D */
 }
 
 .card {
   position: relative;
   width: 300px;
   height: 300px;
-  perspective: 1000px; /* Define a perspectiva para o efeito flip */
+  perspective: 1000px;
+  /* Define a perspectiva para o efeito flip */
 }
 
 .card-inner {
   position: relative;
   width: 100%;
   height: 100%;
-  transform-style: preserve-3d; /* Mantém o efeito 3D */
-  transition: transform 0.8s; /* Transição suave para o flip */
+  transform-style: preserve-3d;
+  /* Mantém o efeito 3D */
+  transition: transform 0.8s;
+  /* Transição suave para o flip */
   border-radius: 1em;
   box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.25);
 }
 
 .card:hover .card-inner {
-  transform: rotateY(180deg); /* Rotaciona o card em 3D ao passar o mouse */
+  transform: rotateY(180deg);
+  /* Rotaciona o card em 3D ao passar o mouse */
 }
 
-.card-front, 
+.card-front,
 .card-back {
   position: absolute;
   width: 100%;
   height: 100%;
-  backface-visibility: hidden; /* Oculta a face traseira quando a frente é visível */
+  backface-visibility: hidden;
+  /* Oculta a face traseira quando a frente é visível */
   display: flex;
-  flex-direction: column; /* Alinha o texto em coluna */
+  flex-direction: column;
+  /* Alinha o texto em coluna */
   justify-content: center;
   align-items: center;
   border-radius: 1em;
   padding: 20px;
-  text-align: center; /* Centraliza o texto */
+  text-align: center;
+  /* Centraliza o texto */
   box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.25);
   backdrop-filter: blur(10px);
   color: #212121;
 }
 
 .card-front {
-  background-color: rgba(255, 255, 255, 0.85); /* Mantém a cor de fundo original */
+  background-color: rgba(255, 255, 255, 0.85);
+  /* Mantém a cor de fundo original */
 }
 
 .card-back {
-  background-color: rgba(255, 255, 255, 0.7); /* Mantém a cor de fundo original */
-  transform: rotateY(180deg); /* A face de trás está inicialmente invisível */
+  background-color: rgba(255, 255, 255, 0.7);
+  /* Mantém a cor de fundo original */
+  transform: rotateY(180deg);
+  /* A face de trás está inicialmente invisível */
 }
 
 .card-footer {
   font-size: 0.85em;
   color: #446;
-  margin-top: 10px; /* Espaçamento entre os textos */
+  margin-top: 10px;
+  /* Espaçamento entre os textos */
 }
 
 /******** Features ***********/
@@ -406,6 +427,7 @@ nav img {
 .features-cards li {
   margin-bottom: 10px;
 }
+
 /******** Presentation ***********/
 
 #presentation {
@@ -426,10 +448,13 @@ nav img {
   height: 90vh;
   position: relative;
   overflow: hidden;
-  transition: transform 0.5s ease, background-position 2s ease; /* Adiciona a transição para o degradê */
+  transition: transform 0.5s ease, background-position 2s ease;
+  /* Adiciona a transição para o degradê */
   z-index: 1;
-  background-size: 100% 200%; /* Define o tamanho do degradê para ser maior verticalmente */
-  background-position: bottom; /* Inicia o degradê da parte inferior */
+  background-size: 100% 200%;
+  /* Define o tamanho do degradê para ser maior verticalmente */
+  background-position: bottom;
+  /* Inicia o degradê da parte inferior */
 }
 
 /* Estilo da imagem que cobre o card antes do hover */
@@ -439,7 +464,8 @@ nav img {
   left: 0;
   right: 0;
   bottom: 0;
-  background-size: cover; /* Cobre o card inteiro com a imagem */
+  background-size: cover;
+  /* Cobre o card inteiro com a imagem */
   background-position: center;
   transition: opacity 0.4s ease;
   z-index: 1;
@@ -447,27 +473,32 @@ nav img {
 
 /* Background e hover */
 #stock-deps {
-  background: linear-gradient(to top, #f59b47, #f3ec78); /* Degradê de baixo para cima */
+  background: linear-gradient(to top, #f59b47, #f3ec78);
+  /* Degradê de baixo para cima */
   margin-top: 10vh;
 }
 
 #karine {
-  background: linear-gradient(to top, #135797, #51dde7); /* Degradê de baixo para cima */
+  background: linear-gradient(to top, #135797, #51dde7);
+  /* Degradê de baixo para cima */
   margin-top: 25vh;
 }
 
 #gym {
-  background: linear-gradient(to top, #bb1300, #ff7d7d); /* Degradê de baixo para cima */
+  background: linear-gradient(to top, #bb1300, #ff7d7d);
+  /* Degradê de baixo para cima */
 }
 
 .projects:hover {
-  background-position: top; /* Move o degradê para o topo ao passar o mouse */
+  background-position: top;
+  /* Move o degradê para o topo ao passar o mouse */
   transform: scale(1.1);
   z-index: 10;
 }
 
 .projects:hover .image-overlay {
-  opacity: 0; /* Oculta a imagem ao passar o mouse */
+  opacity: 0;
+  /* Oculta a imagem ao passar o mouse */
 }
 
 /* Estilo do card de informação */
@@ -499,7 +530,8 @@ nav img {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 450px; /* Tamanho da imagem centralizada */
+  width: 450px;
+  /* Tamanho da imagem centralizada */
   height: 300px;
   background-size: contain;
   background-repeat: no-repeat;
@@ -508,7 +540,8 @@ nav img {
   opacity: 1;
   transition: opacity 0.4s ease;
   z-index: 1;
-  background-color: inherit; /* Mantém o degradê no fundo */
+  background-color: inherit;
+  /* Mantém o degradê no fundo */
 }
 
 /* Imagens específicas para cada card */
@@ -707,12 +740,8 @@ label {
 
 /******** Footer ***********/
 
-:root {
-  --theme-col: #2d4bf0;
-}
-
 footer .app-name {
-  border-left: 4px solid var(--theme-col);
+  border-left: 4px solid #2d4bf0;
   padding-left: 1.5rem;
   font-size: 1.875rem;
   line-height: 2.25rem;
@@ -720,7 +749,7 @@ footer .app-name {
 }
 
 footer .app-name .app-initial {
-  color: var(--theme-col);
+  color: #2d4bf0;
 }
 
 footer .app-info p {
@@ -730,7 +759,7 @@ footer .app-info p {
 footer .footer-title {
   font-size: 1.25rem;
   line-height: 1.75rem;
-  border-left: 4px solid var(--theme-col);
+  border-left: 4px solid #2d4bf0;
   padding-left: 1.5rem;
   height: fit-content;
 }
@@ -750,6 +779,7 @@ a.text-white:hover {
   color: #d4d4d4;
   cursor: pointer;
 }
+
 
 /********** WhatsApp **********/
 
