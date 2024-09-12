@@ -20,6 +20,12 @@
     "Segoe UI Symbol", "Noto Color Emoji";
 }
 
+html{
+  scroll-behavior: smooth;
+}
+
+
+
 .container-main {
   display: flex;
   margin: 0;
@@ -35,6 +41,7 @@
   background-color: #000;
   height: 70vh;
   display: flex;
+  border-radius: 1em;
   /* Usar flexbox para posicionar elementos */
   flex-direction: column;
   /* Coloca o conteúdo em coluna */
@@ -59,6 +66,7 @@ p {
   background-color: #f3f3f3;
   height: 70vh;
   display: flex;
+  border-radius: 1em;
   /* Usar flexbox para posicionar elementos */
   flex-direction: column;
   /* Coloca o conteúdo em coluna */
@@ -71,6 +79,7 @@ p {
   background-color: white;
   height: 70vh;
   display: flex;
+  border-radius: 1em;
   /* Usar flexbox para posicionar elementos */
   flex-direction: column;
   /* Coloca o conteúdo em coluna */
@@ -85,6 +94,7 @@ p {
 }
 
 #lampada-img {
+  border-radius: 1em;
   height: 100%;
   /* Faz a imagem preencher toda a altura da div */
   width: auto;
@@ -158,7 +168,7 @@ p {
 
 .titles {
   font-family: Poppins;
-  margin-top: 2rem;
+  margin-top: 1rem;
   font-size: 3.4rem;
 }
 
@@ -235,6 +245,18 @@ p {
 
 .links:hover {
   color: #fff;
+}
+.link-smooth {
+  transition: color 0.2s;
+}
+
+.link-smooth:hover {
+  color: #333;
+  cursor: pointer;
+}
+
+.link-smooth:active {
+  color: #666;
 }
 
 .yellow-emphasis {
@@ -346,18 +368,25 @@ nav img {
   justify-content: center;
   margin-top: 5rem;
   display: flex;
-  width: 100%;
-  gap: 4rem;
+  flex-wrap: wrap;
+  gap: 6rem;
+  /* Aumente o espaçamento entre os cards */
   perspective: 1000px;
-  /* Adiciona perspectiva para o efeito 3D */
 }
 
-.card {
+.custom-card {
   position: relative;
-  width: 300px;
-  height: 300px;
+  width: 350px;
+  height: 450px;
   perspective: 1000px;
-  /* Define a perspectiva para o efeito flip */
+  border-radius: 1em;
+  box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.25);
+  transition: transform 0.8s;
+}
+
+.custom-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px 2px rgba(0, 0, 0, 0.5);
 }
 
 .card-inner {
@@ -365,56 +394,76 @@ nav img {
   width: 100%;
   height: 100%;
   transform-style: preserve-3d;
-  /* Mantém o efeito 3D */
   transition: transform 0.8s;
-  /* Transição suave para o flip */
   border-radius: 1em;
-  box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.25);
+  padding: 20px;
+  text-align: center;
+  color: var(--dark-background);
+  background-image: url('image.jpg');
+  /* Adicione a imagem de fundo aqui */
+  background-size: cover;
+  background-position: center;
 }
 
-.card:hover .card-inner {
-  transform: rotateY(180deg);
-  /* Rotaciona o card em 3D ao passar o mouse */
-}
-
-.card-front,
-.card-back {
+.card-back,
+.card-front {
   position: absolute;
   width: 100%;
   height: 100%;
   backface-visibility: hidden;
-  /* Oculta a face traseira quando a frente é visível */
   display: flex;
   flex-direction: column;
-  /* Alinha o texto em coluna */
   justify-content: center;
   align-items: center;
   border-radius: 1em;
   padding: 20px;
   text-align: center;
-  /* Centraliza o texto */
   box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.25);
   backdrop-filter: blur(10px);
-  color: var(--dark-background);
+  opacity: 0.7;
+  /* Ajuste a opacidade para que a imagem seja mais visível */
+  transition: opacity 0.3s ease-in-out;
+}
+
+
+.card-front:hover {
+  opacity: 0.9;
 }
 
 .card-front {
   background-color: rgba(255, 255, 255, 0.85);
-  /* Mantém a cor de fundo original */
+  z-index: 1;
 }
 
 .card-back {
   background-color: rgba(255, 255, 255, 0.7);
-  /* Mantém a cor de fundo original */
   transform: rotateY(180deg);
-  /* A face de trás está inicialmente invisível */
+  z-index: 0;
 }
 
 .card-footer {
   font-size: 0.85em;
   color: #446;
   margin-top: 10px;
-  /* Espaçamento entre os textos */
+}
+
+/* Adicione imagens e ícones para cada card */
+.custom-card:nth-child(1) {
+  background-image: url('../images/landing-page.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.custom-card:nth-child(2) {
+  background-image: url('../images/ERP.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.custom-card:nth-child(3) {
+  background-image: url('../images/blue-ecommerce.jpg');
+  background-size: cover;
+  background-position: center;
 }
 
 /******** Features ***********/
@@ -457,15 +506,11 @@ nav img {
   position: relative;
   overflow: hidden;
   transition: transform 0.5s ease, background-position 2s ease;
-  /* Adiciona a transição para o degradê */
-  z-index: 1;
-  background-size: 100% 200%;
-  /* Define o tamanho do degradê para ser maior verticalmente */
-  background-position: bottom;
-  /* Inicia o degradê da parte inferior */
+  border-radius: 1em;
+  box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(10px);
 }
 
-/* Estilo da imagem que cobre o card antes do hover */
 .image-overlay {
   position: absolute;
   top: 0;
@@ -473,7 +518,6 @@ nav img {
   right: 0;
   bottom: 0;
   background-size: cover;
-  /* Cobre o card inteiro com a imagem */
   background-position: center;
   transition: opacity 0.4s ease;
   z-index: 1;
@@ -498,18 +542,15 @@ nav img {
 }
 
 .projects:hover {
-  background-position: top;
-  /* Move o degradê para o topo ao passar o mouse */
-  transform: scale(1.1);
+  transform: scale(1.05);
   z-index: 10;
+  box-shadow: 0 0 20px 2px rgba(0, 0, 0, 0.5);
 }
 
 .projects:hover .image-overlay {
-  opacity: 0;
-  /* Oculta a imagem ao passar o mouse */
+  opacity: 0.1;
 }
 
-/* Estilo do card de informação */
 .info-card {
   position: absolute;
   bottom: 0;
@@ -530,7 +571,7 @@ nav img {
   opacity: 1;
 }
 
-/* Efeito de imagem pequena centralizada */
+
 #stock-deps:hover::before,
 #karine:hover::before,
 #gym:hover::before {
@@ -539,7 +580,7 @@ nav img {
   top: 50%;
   left: 50%;
   width: 450px;
-  /* Tamanho da imagem centralizada */
+
   height: 300px;
   background-size: contain;
   background-repeat: no-repeat;
@@ -595,7 +636,7 @@ nav img {
   height: 100vh;
 }
 
-/********** Who We Are **********/
+/********** WHO WE ARE **********/
 
 #who-we-are {
   padding-top: 1rem;
@@ -604,22 +645,26 @@ nav img {
   justify-content: center;
 }
 
+.deps-acronym p {
+  transition: opacity 0.5s;
+}
+
+.deps-acronym p.active {
+  opacity: 1;
+}
+
+.deps-acronym p:not(.active) {
+  opacity: 0.7;
+}
+
 .who-we-are__icons {
   margin-top: 2.5rem;
   width: 10rem;
 }
 
-.pointer {
-  margin-top: 6.2rem;
-  height: 70vh;
-  border: 5px solid var(--color-yellow-deps);
-  border-radius: 0.2rem;
-  transition: border-color 0.3s ease-in;
-}
-
 .deps-acronym {
-  width: 35%;
-  margin-top: 4rem;
+  width: 45%;
+  margin-top: 0rem;
   display: flex;
   flex-direction: column;
   gap: 2.6rem;
@@ -643,35 +688,37 @@ label {
 #label-efficiency,
 #label-productivity,
 #label-simplicity {
+  transition:  0.5s;
   width: 70%;
   border-radius: 10vh;
 }
 
 #label-design:hover {
-  padding-left: 4vh;
+  padding-left: 2vh;
   cursor: pointer;
-  background-color: var(--color-yellow-deps);
+  background-color: #ffc700;
   color: white;
+  
 }
 
 #label-efficiency:hover {
-  padding-left: 4vh;
+  padding-left: 2vh;
   cursor: pointer;
-  background-color: var(--color-red-deps);
+  background-color: #b00000;
   color: white;
 }
 
 #label-productivity:hover {
-  padding-left: 4vh;
+  padding-left: 2vh;
   cursor: pointer;
-  background-color: var(--color-faint-blue-deps);
+  background-color: #49beff;
   color: white;
 }
 
 #label-simplicity:hover {
-  padding-left: 4vh;
+  padding-left: 2vh;
   cursor: pointer;
-  background-color: var(--color-blue-deps);
+  background-color: #0046af;
   color: white;
 }
 

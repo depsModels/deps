@@ -350,4 +350,9 @@
     .btn-stock {
         text-align: center;
     }
+
+    .custom-card {
+        width: 200px;
+        height: 280px;
+    }
 }

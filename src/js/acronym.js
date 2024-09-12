@@ -16,9 +16,6 @@ radioDesign.addEventListener('mouseover', (e) => {
     sectionProductivity.style.display = 'none';
     sectionSimplicity.style.display = 'none';
 
-    pointer.style.borderColor = '#FFC700';
-    
-  
 });
 
 radioEfficiency.addEventListener('mouseover', (e) => {
@@ -26,10 +23,6 @@ radioEfficiency.addEventListener('mouseover', (e) => {
     sectionEfficiency.style.display = 'block';
     sectionProductivity.style.display = 'none';
     sectionSimplicity.style.display = 'none';
-
-    pointer.style.borderColor = '#B00000';
-    
-    
 });
 
 radioProductivity.addEventListener('mouseover', (e) => {
@@ -37,9 +30,6 @@ radioProductivity.addEventListener('mouseover', (e) => {
     sectionEfficiency.style.display = 'none';
     sectionProductivity.style.display = 'block';
     sectionSimplicity.style.display = 'none';
-
-    pointer.style.borderColor = '#49BEFF';
-   
 });
 
 radioSimplicity.addEventListener('mouseover', (e) => {
@@ -47,7 +37,17 @@ radioSimplicity.addEventListener('mouseover', (e) => {
     sectionEfficiency.style.display = 'none';
     sectionProductivity.style.display = 'none';
     sectionSimplicity.style.display = 'block';
+});
 
-    pointer.style.borderColor = '#0046AF';
-   
+
+const depsAcronym = document.querySelector('.deps-acronym');
+const labels = depsAcronym.querySelectorAll('p');
+
+labels.forEach((label) => {
+    label.addEventListener('mouseover', () => {
+        label.classList.add('active');
+    });
+    label.addEventListener('mouseout', () => {
+        label.classList.remove('active');
+    });
 });
