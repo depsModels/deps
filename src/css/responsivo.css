@@ -1,17 +1,28 @@
-/************************* Estilos para dispositivos móveis (até 767 pixels) *********************/
+/*********** Estilos para dispositivos móveis (até 767 pixels) ***********/
+
 @media (max-width: 767px) {
+    /********** Reset Global **********/
     * {
         margin: 0;
         padding: 0;
+        box-sizing: border-box;
     }
 
     body {
         width: 100%;
         text-align: center;
+        overflow-x: hidden; /* Evita rolagem horizontal */
     }
 
     .container-main {
         margin: 1rem;
+    }
+
+    /********** Navegação *********/
+    nav {
+        width: 80%;
+        position: relative;
+        z-index: 1000;
     }
 
     nav img {
@@ -20,17 +31,7 @@
         float: left;
     }
 
-    nav {
-        width: 80%;
-        position: relative;
-        z-index: 1000;
-    }
-
-    footer {
-        display: block;
-    }
-
-    /* Estilizando o botão de menu toggle */
+    /********** Menu Toggle **********/
     .menu-toggle {
         width: 50px;
         height: 50px;
@@ -42,11 +43,9 @@
         justify-content: center;
         cursor: pointer;
         position: fixed;
-        /* Mantém o botão fixo no topo */
         top: 40px;
         right: 40px;
         z-index: 1001;
-        /* Certifica-se de que o botão está acima do menu */
         transition: background-color 0.3s ease;
     }
 
@@ -60,7 +59,6 @@
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        position: relative;
     }
 
     .hamburger-icon span {
@@ -84,7 +82,7 @@
         transform: translateY(-10px) rotate(-45deg);
     }
 
-    /* Estilizando o menu */
+    /* Menu */
     .menu {
         display: none;
         position: fixed;
@@ -123,16 +121,16 @@
         transform: translateY(0);
     }
 
+    /* Layouts e Seções */
     .container {
         margin: 0;
         width: 100%;
     }
 
     header {
-        padding-top: 0px;
+        padding-top: 0;
         width: 100%;
         height: 100vh;
-        display: block;
         text-align: center;
     }
 
@@ -148,7 +146,6 @@
 
     .section-home {
         margin-top: 10vh;
-        height: auto;
         width: 80%;
         display: block;
         margin: 0 auto;
@@ -156,24 +153,19 @@
     }
 
     .section-home__h1 {
-        text-align: center;
         font-size: 5.2vh;
         margin-top: 13vh;
     }
 
     .section-home__description {
         margin-top: 1vh;
-        text-align: center;
         font-size: 2.5vh;
     }
 
     #section-features {
         width: 90%;
-        justify-content: space-between;
-        display: block;
         margin: 0 auto;
-        padding-top: 10vh;
-        padding-bottom: 20vh;
+        padding: 10vh 0 20vh;
         text-align: center;
     }
 
@@ -182,7 +174,6 @@
         background-color: transparent;
         font-family: helvetica;
         font-size: 2.8vh;
-        font-style: normal;
         font-weight: 100;
         line-height: 150%;
         color: white;
@@ -190,7 +181,6 @@
         height: 80vh;
         text-align: justify;
         margin-top: 20px;
-        text-align: center;
     }
 
     .section-features__card h1 {
@@ -203,12 +193,11 @@
 
     .section-who-we-are {
         width: 96%;
-        display: block;
         height: 60vh;
         margin-bottom: 5vh;
     }
 
-    .section-who-we-are>div {
+    .section-who-we-are > div {
         flex: 0 0 20px;
         border-radius: 0.5rem;
         transition: 0.5s ease-in-out, background 2s ease-in-out;
@@ -218,7 +207,7 @@
         overflow: hidden;
     }
 
-    .section-who-we-are>div .section-who-we-are__content {
+    .section-who-we-are > div .section-who-we-are__content {
         height: 200px;
         margin-bottom: 10px;
     }
@@ -244,7 +233,6 @@
     }
 
     .buttons__services {
-        margin: 0;
         margin-bottom: 1vh;
     }
 
@@ -292,18 +280,20 @@
     }
 
     .list {
-        padding: 0 auto;
-        margin-left: 0%;
         width: 100%;
+        text-align: center;
+        padding: 0 auto;
+        margin-left: 0;
     }
 
-    #img-ecommerce {
+    #img-ecommerce,
+    #img-stock {
         display: none;
     }
 
     .professional-content {
-        margin-left: 0rem;
         width: 100%;
+        margin-left: 0;
     }
 
     #img-professional {
@@ -312,10 +302,6 @@
 
     #container-professional {
         display: block;
-    }
-
-    #img-stock {
-        display: none;
     }
 
     .button {
@@ -343,10 +329,6 @@
         text-align: center;
     }
 
-    .list {
-        text-align: center;
-    }
-
     .btn-stock {
         text-align: center;
     }
@@ -354,5 +336,64 @@
     .custom-card {
         width: 200px;
         height: 280px;
+    }
+
+    /*********** Footer ************/
+    .footer-content {
+        padding: 1rem;
+    }
+
+    .row {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .app-info,
+    .navegation,
+    .form {
+        width: 100%;
+        text-align: center;
+        padding: 0.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .app-name {
+        font-size: 1.25rem;
+    }
+
+    .app-info p {
+        font-size: 0.875rem;
+    }
+
+    .navegation {
+        display: none;
+    }
+
+    .icons-img-links {
+        padding-top: 0.5rem;
+    }
+
+    .img-links {
+        font-size: 1.25rem;
+        margin-right: 0.75rem;
+    }
+
+    .form h4 {
+        font-size: 1rem;
+    }
+
+    input,
+    textarea {
+        font-size: 0.75rem;
+        padding: 0.5rem;
+    }
+
+    .btn-form {
+        width: auto;
+        padding: 0.5rem 1rem;
+    }
+
+    .copyright {
+        font-size: 0.75rem;
     }
 }

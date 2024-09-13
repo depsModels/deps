@@ -24,8 +24,6 @@ html{
   scroll-behavior: smooth;
 }
 
-
-
 .container-main {
   display: flex;
   margin: 0;
@@ -163,7 +161,6 @@ p {
   margin-top: 5vh;
   text-align: center;
   font-size: 4.4rem;
-
 }
 
 .titles {
@@ -304,7 +301,6 @@ header {
 }
 
 /********** Navigation Bar **********/
-
 nav {
   display: flex;
   justify-content: space-between;
@@ -319,11 +315,29 @@ nav img {
   margin-top: 50px;
   width: 20%;
   filter: brightness(110%);
-  float: left;
 }
 
-.menu-toggle {
-  display: none;
+.menu ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.menu ul li {
+  margin-left: 1.375rem; 
+}
+
+.menu ul li a {
+  text-decoration: none; 
+  color: var(--low-opacity, #b5b5b5);
+  font-weight: 500;
+  font-size: 1.25rem;
+  transition: color 0.3s ease;
+}
+
+.menu ul li a:hover {
+  color: #fff; 
 }
 
 /**********  Buttons **********/
@@ -424,7 +438,6 @@ nav img {
   /* Ajuste a opacidade para que a imagem seja mais visível */
   transition: opacity 0.3s ease-in-out;
 }
-
 
 .card-front:hover {
   opacity: 0.9;
@@ -636,7 +649,7 @@ nav img {
   height: 100vh;
 }
 
-/********** WHO WE ARE **********/
+/********** Who We Are **********/
 
 #who-we-are {
   padding-top: 1rem;
@@ -850,11 +863,12 @@ label {
   font-size: 1.5rem;
   color: var(--low-opacity);
   text-decoration: none;
+  transition: color 0.3s ease;
 }
 
 .navegation ul li a:hover,
 .img-links:hover {
-  color: #ffffff;
+  color: #fff;
 }
 
 .icons-img-links {

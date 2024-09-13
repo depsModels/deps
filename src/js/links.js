@@ -24,9 +24,9 @@ slideUpElements.forEach(element => element.classList.add('show'));
 
 function showElements(parentClass, childClasses) {
     childClasses.forEach(childClass => {
-      const elements = document.querySelectorAll(`.${parentClass}.${childClass}`);
-      elements.forEach(element => element.classList.add('show'));
+        const elements = document.querySelectorAll(`.${parentClass}.${childClass}`);
+        elements.forEach(element => element.classList.add('show'));
     });
-  }
-  
-  showElements('slide', ['slide-in', 'slide-up', 'slide-down']);
+}
+
+showElements('slide', ['slide-in', 'slide-up', 'slide-down']);
