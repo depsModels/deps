@@ -1,6 +1,7 @@
 /*********** Estilos para dispositivos móveis (até 767 pixels) ***********/
 
 @media (max-width: 767px) {
+
     /********** Reset Global **********/
     * {
         margin: 0;
@@ -11,14 +12,15 @@
     body {
         width: 100%;
         text-align: center;
-        overflow-x: hidden; /* Evita rolagem horizontal */
+        overflow-x: hidden;
+        /* Evita rolagem horizontal */
     }
 
     .container-main {
         margin: 1rem;
     }
 
-    /********** Navegação *********/
+
     nav {
         width: 80%;
         position: relative;
@@ -31,7 +33,6 @@
         float: left;
     }
 
-    /********** Menu Toggle **********/
     .menu-toggle {
         width: 50px;
         height: 50px;
@@ -82,7 +83,6 @@
         transform: translateY(-10px) rotate(-45deg);
     }
 
-    /* Menu */
     .menu {
         display: none;
         position: fixed;
@@ -121,7 +121,6 @@
         transform: translateY(0);
     }
 
-    /* Layouts e Seções */
     .container {
         margin: 0;
         width: 100%;
@@ -197,7 +196,7 @@
         margin-bottom: 5vh;
     }
 
-    .section-who-we-are > div {
+    .section-who-we-are>div {
         flex: 0 0 20px;
         border-radius: 0.5rem;
         transition: 0.5s ease-in-out, background 2s ease-in-out;
@@ -207,7 +206,7 @@
         overflow: hidden;
     }
 
-    .section-who-we-are > div .section-who-we-are__content {
+    .section-who-we-are>div .section-who-we-are__content {
         height: 200px;
         margin-bottom: 10px;
     }
@@ -337,6 +336,35 @@
         width: 200px;
         height: 280px;
     }
+
+    /******** Features ***********/
+    .container-main {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .left-features,
+    .right-features {
+        width: 100%;
+        padding: 0 1rem;
+    }
+
+    #img-features {
+        margin-top: 2rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    #notebook-img {
+        max-width: 100%;
+    }
+
 
     /*********** Footer ************/
     .footer-content {
