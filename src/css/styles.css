@@ -15,7 +15,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans",
+  font-family: system-ui, -apple-system, poppins, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans",
     "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
     "Segoe UI Symbol", "Noto Color Emoji";
 }
@@ -46,11 +46,6 @@ html{
   justify-content: space-between;
   /* Distribui o título para o topo e o parágrafo para o final */
   padding: 20px;
-}
-
-.left-features,
-p {
-  font-family: poppins;
 }
 
 .right-features {
@@ -151,7 +146,6 @@ p {
 }
 
 .title-home {
-  font-family: Poppins;
   margin-top: 2rem;
   font-size: 3.4rem;
 }
@@ -164,7 +158,6 @@ p {
 }
 
 .titles {
-  font-family: Poppins;
   margin-top: 1rem;
   font-size: 3.4rem;
 }
@@ -424,7 +417,6 @@ nav img {
   display: flex;
   flex-wrap: wrap;
   gap: 6rem;
-  /* Aumente o espaçamento entre os cards */
   perspective: 1000px;
 }
 
@@ -454,7 +446,6 @@ nav img {
   text-align: center;
   color: var(--dark-background);
   background-image: url('image.jpg');
-  /* Adicione a imagem de fundo aqui */
   background-size: cover;
   background-position: center;
 }
@@ -587,21 +578,19 @@ nav img {
 }
 
 /* Background e hover */
+
 #stock-deps {
   background: linear-gradient(to top, #f59b47, #f3ec78);
-  /* Degradê de baixo para cima */
   margin-top: 10vh;
 }
 
 #karine {
   background: linear-gradient(to top, #135797, #51dde7);
-  /* Degradê de baixo para cima */
   margin-top: 25vh;
 }
 
 #gym {
   background: linear-gradient(to top, #bb1300, #ff7d7d);
-  /* Degradê de baixo para cima */
 }
 
 .projects:hover {
@@ -688,9 +677,9 @@ nav img {
   margin-right: 2rem;
 }
 
-/******** Prices *************/
+/******** Services **********/
 
-#prices {
+#services {
   display: block;
   background-color: var(--dark-background);
   padding-top: 5%;
@@ -727,7 +716,7 @@ nav img {
 
 .deps-acronym {
   width: 45%;
-  margin-top: 0rem;
+  margin-top: 0;
   display: flex;
   flex-direction: column;
   gap: 2.6rem;
@@ -1000,16 +989,4 @@ textarea {
 
 .whatsapp-button:hover {
   background-color: #1ebea5;
-}
-
-/********** MODAL **********/
-
-.modal-success .modal-content {
-  background-color: #80e459;
-  /* Verde */
-}
-
-.modal-danger .modal-content {
-  background-color: #b85959;
-  /* Vermelho */
 }
