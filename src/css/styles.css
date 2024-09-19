@@ -6,7 +6,12 @@
   --color-blue-deps: #0046af;
   --color-faint-blue-deps: #49beff;
   --dark-background: #212529;
+  --gray-background: #313436;
   --low-opacity: #b5b5b5;
+
+  --spacing-sm: 1rem;
+  --spacing-md: 2rem;
+  --spacing-xl: 4rem;
 }
 
 /********** Body / Commons **********/
@@ -20,7 +25,7 @@
     "Segoe UI Symbol", "Noto Color Emoji";
 }
 
-html{
+html {
   scroll-behavior: smooth;
 }
 
@@ -40,12 +45,9 @@ html{
   height: 70vh;
   display: flex;
   border-radius: 1em;
-  /* Usar flexbox para posicionar elementos */
   flex-direction: column;
-  /* Coloca o conteúdo em coluna */
   justify-content: space-between;
-  /* Distribui o título para o topo e o parágrafo para o final */
-  padding: 20px;
+  padding: var(--spacing-md);
 }
 
 .right-features {
@@ -212,7 +214,7 @@ p {
   margin-top: 2rem;
 }
 
-.first-letter-acronym{
+.first-letter-acronym {
   font-size: 10vh;
 }
 
@@ -240,8 +242,9 @@ p {
 .links:hover {
   color: #fff;
 }
+
 .link-smooth {
-  transition: color 0.2s;
+  transition: 0.2s;
 }
 
 .link-smooth:hover {
@@ -261,39 +264,39 @@ p {
   color: var(--color-blue-deps);
 }
 
-.light-blue-emphasis{
+.light-blue-emphasis {
   color: var(--color-faint-blue-deps);
 }
 
-.red-emphasis{
+.red-emphasis {
   color: var(--color-red-deps);
 }
 
-.bold{
-  font-weight: 900 ;
+.bold {
+  font-weight: 900;
 }
 
-.text-bottom{
+.text-bottom {
   bottom: 0px;
 }
 
-.title-kaftan{
+.title-kaftan {
   font-family: kaftan;
   font-size: 5rem;
 }
 
-.subtitle-kaftan{
+.subtitle-kaftan {
   font-family: kaftan;
   font-size: 4rem;
 }
 
 /********** Espaçamentos ************/
 
-.margin-right{
+.margin-right {
   margin-right: 1rem;
 }
 
-.margin-top-5{
+.margin-top-5 {
   margin-top: 5rem;
 }
 
@@ -358,11 +361,11 @@ nav img {
 }
 
 .menu ul li {
-  margin-left: 1.375rem; 
+  margin-left: 1.375rem;
 }
 
 .menu ul li a {
-  text-decoration: none; 
+  text-decoration: none;
   color: var(--low-opacity, #b5b5b5);
   font-weight: 500;
   font-size: 1.25rem;
@@ -370,7 +373,7 @@ nav img {
 }
 
 .menu ul li a:hover {
-  color: #fff; 
+  color: #fff;
 }
 
 /**********  Buttons **********/
@@ -424,15 +427,40 @@ nav img {
   position: relative;
   width: 350px;
   height: 450px;
-  perspective: 1000px;
   border-radius: 1em;
-  box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.25);
-  transition: transform 0.8s;
+  background-image: url('image.jpg');
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1), 0 2px 5px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .custom-card:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 20px 2px rgba(0, 0, 0, 0.5);
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15), 0 4px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+.custom-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  border-radius: 1em;
+  transition: opacity 0.3s;
+}
+
+.custom-card:hover::before {
+  opacity: 1;
+}
+
+.custom-card-link {
+  text-decoration: none;
+  color: inherit;
 }
 
 .card-inner {
@@ -567,13 +595,15 @@ nav img {
   z-index: 1;
 }
 
-.img-stock{
+.img-stock {
   background-image: url('/src/images/img-controle-estoque.jpg');
 }
-.img-karine{
+
+.img-karine {
   background-image: url('/src/images/psicologa.jpg');
 }
-.img-gym{
+
+.img-gym {
   background-image: url('/src/images/gym-img.jpg');
 }
 
@@ -658,12 +688,7 @@ nav img {
   background-image: url('/src/images/GYM.png');
 }
 
-.content {
-  display: flex;
-  margin-top: 2rem;
-}
-
-.content img {
+#img-stock {
   width: 45rem;
   height: 30rem;
   border-radius: 20px;
@@ -740,7 +765,7 @@ label {
 #label-efficiency,
 #label-productivity,
 #label-simplicity {
-  transition:  0.5s;
+  transition: 0.5s;
   width: 70%;
   border-radius: 10vh;
 }
@@ -750,7 +775,7 @@ label {
   cursor: pointer;
   background-color: #ffc700;
   color: white;
-  
+
 }
 
 #label-efficiency:hover {
@@ -797,7 +822,7 @@ label {
   width: 100%;
   height: 100%;
   padding-bottom: 2rem;
-  background-color: #dedede;
+  background-color: var(--low-opacity);
 }
 
 .e-commerces__content {
@@ -817,6 +842,8 @@ label {
   width: 100%;
   height: 100%;
   padding-bottom: 5rem;
+  background-color: var(--dark-background);
+  padding-top: var(--spacing-md);
 }
 
 #img-stock {
@@ -830,7 +857,7 @@ label {
   width: 100%;
   height: 100%;
   padding-bottom: 5rem;
-  background-color: #dedede;
+  background-color: var(--low-opacity);
 }
 
 #img-professional {
