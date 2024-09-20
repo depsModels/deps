@@ -159,7 +159,7 @@
         display: block;
     }
 
-    /******** Features ***********/
+    /*********** Who-We-Are ************/
 
     .container-main {
         flex-direction: column;
@@ -181,6 +181,12 @@
         max-width: 100%;
     }
 
+    .about-acronym {
+        width: 60%;
+        text-align: center;
+        margin: 100px auto;
+    }
+
     /******** Services ********/
 
     #services {
@@ -197,14 +203,6 @@
     .block-cards {
         display: block;
         margin: 0 auto;
-    }
-
-    /*********** Who-We-Are ************/
-
-    .about-acronym {
-        width: 60%;
-        text-align: center;
-        margin: 100px auto;
     }
 
     /*********** E-commerces ************/

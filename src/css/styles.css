@@ -336,6 +336,7 @@ header {
 }
 
 /********** Navigation Bar **********/
+
 nav {
   display: flex;
   justify-content: space-between;
@@ -491,7 +492,6 @@ nav img {
   box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.25);
   backdrop-filter: blur(10px);
   opacity: 0.7;
-  /* Ajuste a opacidade para que a imagem seja mais visível */
   transition: opacity 0.3s ease-in-out;
 }
 
@@ -516,7 +516,6 @@ nav img {
   margin-top: 10px;
 }
 
-/* Adicione imagens e ícones para cada card */
 .custom-card:nth-child(1) {
   background-image: url('../images/landing-page.jpg');
   background-size: cover;
@@ -533,25 +532,6 @@ nav img {
   background-image: url('../images/blue-ecommerce.jpg');
   background-size: cover;
   background-position: center;
-}
-
-/******** Features ***********/
-
-#features {
-  padding-bottom: 6rem;
-  background-color: var(--dark-background);
-}
-
-.features-cards {
-  margin-top: 5rem;
-  list-style: none;
-  padding: 0;
-  text-align: left;
-  margin-bottom: 20px;
-}
-
-.features-cards li {
-  margin-bottom: 10px;
 }
 
 /******** Presentation ***********/
@@ -604,7 +584,7 @@ nav img {
   background-image: url('/src/images/gym-img.jpg');
 }
 
-/* Background e hover */
+/* Background e Hover */
 
 #stock-deps {
   background: linear-gradient(to top, #f59b47, #f3ec78);
@@ -650,7 +630,6 @@ nav img {
   opacity: 1;
 }
 
-
 #stock-deps:hover::before,
 #karine:hover::before,
 #gym:hover::before {
@@ -669,10 +648,8 @@ nav img {
   transition: opacity 0.4s ease;
   z-index: 1;
   background-color: inherit;
-  /* Mantém o degradê no fundo */
 }
 
-/* Imagens específicas para cada card */
 #stock-deps:hover::before {
   background-image: url('/src/images/stock.png');
 }
@@ -699,26 +676,19 @@ nav img {
   margin-right: 2rem;
 }
 
-/******** Services **********/
-
-#services {
-  display: block;
-  background-color: var(--low-opacity);
-  padding-top: 5%;
-  padding-bottom: 30rem;
-  width: 100%;
-  height: 100vh;
-}
-
-.title-services{
-  margin-right: 8rem;
-}
-
-.span-emphasis {
-  margin-left: 18rem;
-}
-
 /********** Who We Are **********/
+
+.features-cards {
+  margin-top: 5rem;
+  list-style: none;
+  padding: 0;
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.features-cards li {
+  margin-bottom: 10px;
+}
 
 #who-we-are {
   padding: 2rem 0 4rem 0;
@@ -821,6 +791,25 @@ label {
   display: none;
 }
 
+/******** Services **********/
+
+#services {
+  display: block;
+  background-color: var(--low-opacity);
+  padding-top: 5%;
+  padding-bottom: 30rem;
+  width: 100%;
+  height: 100vh;
+}
+
+.title-services{
+  margin-right: 8rem;
+}
+
+.span-emphasis {
+  margin-left: 18rem;
+}
+
 /********* E-commerces ********/
 
 #e-commerces {
@@ -850,6 +839,7 @@ label {
 }
 
 #img-stock {
+  margin-top: 2rem;
   width: 30rem;
   height: 20rem;
 }
@@ -861,7 +851,6 @@ label {
   height: 100%;
   padding: 2rem 0 4rem 0;
   background-color: var(--dark-background);
-  border-bottom: 1rem solid white;
 }
 
 #img-professional {
@@ -949,6 +938,7 @@ label {
   font-size: 2rem;
   color: var(--low-opacity);
   margin-right: 1.5rem;
+  transition: color 0.4s ease;
 }
 
 div a {
@@ -985,11 +975,13 @@ textarea {
   border-radius: 0.3125rem;
   cursor: pointer;
   font-size: 1rem;
+  transition: background-color 0.4s ease, color 0.4s ease;
 }
 
 .btn-form:hover {
   background-color: var(--color-faint-blue-deps);
 }
+
 
 .copyright {
   text-align: center;
