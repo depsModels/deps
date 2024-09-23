@@ -29,4 +29,23 @@ document.addEventListener('DOMContentLoaded', function() {
             menuOpen = false;
         }
     });
+
+    function handleResize() {
+        if (window.innerWidth > 767) {
+            menuToggle.classList.remove('active');
+            menu.style.display = 'flex';
+            menuOpen = false;
+
+            // Reset link styles
+            links.forEach(link => {
+                link.style.opacity = '1';
+                link.style.transform = 'translateY(0)';
+            });
+        } else {
+            menu.style.display = 'none'; // Esconde o menu original em telas menores
+        }
+    }
+
+    window.addEventListener('resize', handleResize);
+    handleResize(); // Chama para garantir o estado correto no carregamento
 });
