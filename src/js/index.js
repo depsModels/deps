@@ -5,6 +5,10 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 
 
-document.addEventListener('DOMContentLoaded', function() {
-    new Splide('#image-carousel').mount();
+var splide = new Splide('.splide', {
+    type: 'loop',
+    padding: '5rem',
+    autoplay: true,
 });
+
+splide.mount();
