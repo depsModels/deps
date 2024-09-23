@@ -133,24 +133,33 @@
     }
 
     .menu.show {
-        display: flex;
+        display: block;
         opacity: 1;
         transform: scale(1);
+    }
+
+    .menu ul{
+        display: block;
+        padding: 10rem;
+    }
+
+    .menu ul li{
+        margin-top: 30%;
     }
 
     .links {
         color: white;
         font-size: 24px;
         text-decoration: none;
-        margin: 15px 0;
+        margin: 50px 0;
         opacity: 0;
-        transform: translateY(20px);
+        transform: translateY(50px);
         transition: opacity 0.5s ease, transform 0.5s ease;
     }
 
     .menu.show .links {
         opacity: 1;
-        transform: translateY(0);
+        transform: translateY(20px);
     }
 
     /******** Presentation ***********/
