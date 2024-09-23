@@ -6,7 +6,6 @@
   --color-blue-deps: #0046af;
   --color-faint-blue-deps: #49beff;
   --dark-background: #212529;
-  --gray-background: #313436;
   --low-opacity: #b5b5b5;
 
   --spacing-sm: 1rem;
@@ -20,9 +19,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: system-ui, -apple-system, poppins, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans",
-    "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
-    "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: system-ui, -apple-system, poppins, 'Segoe UI', Roboto, 'Helvetica Neue', 'Noto Sans', 'Liberation Sans', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
 }
 
 html {
@@ -128,11 +125,11 @@ p {
   font-size: 1.1rem;
   text-align: justify;
   font-weight: 400;
-  margin-top: 2rem;
+  padding-top: 2rem;
 }
 
 .description-cards {
-  margin-top: 2rem;
+  padding-top: 2rem;
 }
 
 .description-acronym {
@@ -154,13 +151,13 @@ p {
 
 #title-presentation {
   color: white;
-  margin-top: 5vh;
+  padding-top: 5vh;
   text-align: center;
   font-size: 4.4rem;
 }
 
 .titles {
-  margin-top: 1rem;
+  padding: 1rem;
   font-size: 3.4rem;
 }
 
@@ -204,14 +201,14 @@ p {
 
 #subtitle-presentation {
   margin-left: 5vh;
-  margin-top: 5vh;
+  padding-top: 5vh;
   font-size: 1.4rem;
   font-weight: 800;
 }
 
 .subtitles-home {
   font-family: Poppins;
-  margin-top: 2rem;
+  padding-top: 2rem;
 }
 
 .first-letter-acronym {
@@ -290,6 +287,13 @@ p {
   font-size: 4rem;
 }
 
+/********** carroça ************/
+
+.splide__slide img {
+  width: 100%;
+  height: auto;
+}
+
 /********** Espaçamentos ************/
 
 .margin-right {
@@ -337,6 +341,7 @@ header {
 }
 
 /********** Navigation Bar **********/
+
 nav {
   display: flex;
   justify-content: space-between;
@@ -432,7 +437,6 @@ nav img {
   width: 350px;
   height: 450px;
   border-radius: 1em;
-  background-image: url('image.jpg');
   background-size: cover;
   background-position: center;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1), 0 2px 5px rgba(0, 0, 0, 0.05);
@@ -446,7 +450,7 @@ nav img {
 }
 
 .custom-card::before {
-  content: "";
+  content: '';
   position: absolute;
   top: 0;
   left: 0;
@@ -476,8 +480,6 @@ nav img {
   border-radius: 1em;
   padding: 20px;
   text-align: center;
-  color: var(--dark-background);
-  background-image: url('image.jpg');
   background-size: cover;
   background-position: center;
 }
@@ -488,6 +490,7 @@ nav img {
   width: 100%;
   height: 100%;
   backface-visibility: hidden;
+  background-color: var(--dark-background);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -498,7 +501,6 @@ nav img {
   box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.25);
   backdrop-filter: blur(10px);
   opacity: 0.7;
-  /* Ajuste a opacidade para que a imagem seja mais visível */
   transition: opacity 0.3s ease-in-out;
 }
 
@@ -507,23 +509,22 @@ nav img {
 }
 
 .card-front {
-  background-color: rgba(255, 255, 255, 0.85);
+  font-size: 1.5rem;
+  background-color: var(--dark-background);
   z-index: 1;
 }
 
 .card-back {
-  background-color: rgba(255, 255, 255, 0.7);
+  background-color: var(--dark-background);
   transform: rotateY(180deg);
   z-index: 0;
 }
 
 .card-footer {
-  font-size: 0.85em;
-  color: #446;
+  font-size: 1rem;
   margin-top: 10px;
 }
 
-/* Adicione imagens e ícones para cada card */
 .custom-card:nth-child(1) {
   background-image: url('../images/landing-page.jpg');
   background-size: cover;
@@ -540,25 +541,6 @@ nav img {
   background-image: url('../images/blue-ecommerce.jpg');
   background-size: cover;
   background-position: center;
-}
-
-/******** Features ***********/
-
-#features {
-  padding-bottom: 6rem;
-  background-color: var(--dark-background);
-}
-
-.features-cards {
-  margin-top: 5rem;
-  list-style: none;
-  padding: 0;
-  text-align: left;
-  margin-bottom: 20px;
-}
-
-.features-cards li {
-  margin-bottom: 10px;
 }
 
 /******** Presentation ***********/
@@ -582,7 +564,6 @@ nav img {
   position: relative;
   overflow: hidden;
   transition: transform 0.5s ease, background-position 2s ease;
-  border-radius: 1em;
   box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.25);
   backdrop-filter: blur(10px);
 }
@@ -611,16 +592,14 @@ nav img {
   background-image: url('/src/images/gym-img.jpg');
 }
 
-/* Background e hover */
+/* Background e Hover */
 
 #stock-deps {
   background: linear-gradient(to top, #f59b47, #f3ec78);
-  margin-top: 10vh;
 }
 
 #karine {
   background: linear-gradient(to top, #135797, #51dde7);
-  margin-top: 25vh;
 }
 
 #gym {
@@ -657,7 +636,6 @@ nav img {
   opacity: 1;
 }
 
-
 #stock-deps:hover::before,
 #karine:hover::before,
 #gym:hover::before {
@@ -665,9 +643,8 @@ nav img {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 450px;
-
-  height: 300px;
+  width: 45rem;
+  height: 40rem;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -676,10 +653,8 @@ nav img {
   transition: opacity 0.4s ease;
   z-index: 1;
   background-color: inherit;
-  /* Mantém o degradê no fundo */
 }
 
-/* Imagens específicas para cada card */
 #stock-deps:hover::before {
   background-image: url('/src/images/stock.png');
 }
@@ -706,24 +681,26 @@ nav img {
   margin-right: 2rem;
 }
 
-/******** Services **********/
-
-#services {
-  display: block;
-  background-color: var(--dark-background);
-  padding-top: 5%;
-  padding-bottom: 30vh;
-  width: 100%;
-  height: 100vh;
-}
-
 /********** Who We Are **********/
 
+.features-cards {
+  margin-top: 5rem;
+  list-style: none;
+  padding: 0;
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.features-cards li {
+  margin-bottom: 10px;
+}
+
 #who-we-are {
-  padding-top: 1rem;
+  padding: 2rem 0 4rem 0;
   display: block;
   height: 100%;
   justify-content: center;
+  background-color: var(--dark-background);
 }
 
 .deps-acronym p {
@@ -770,34 +747,33 @@ label {
 #label-productivity,
 #label-simplicity {
   transition: 0.5s;
-  width: 70%;
+  width: 80%;
   border-radius: 10vh;
 }
 
 #label-design:hover {
-  padding-left: 2vh;
+  padding-left: 2rem;
   cursor: pointer;
   background-color: #ffc700;
   color: white;
-
 }
 
 #label-efficiency:hover {
-  padding-left: 2vh;
+  padding-left: 2rem;
   cursor: pointer;
   background-color: #b00000;
   color: white;
 }
 
 #label-productivity:hover {
-  padding-left: 2vh;
+  padding-left: 2rem;
   cursor: pointer;
   background-color: #49beff;
   color: white;
 }
 
 #label-simplicity:hover {
-  padding-left: 2vh;
+  padding-left: 2rem;
   cursor: pointer;
   background-color: #0046af;
   color: white;
@@ -819,19 +795,36 @@ label {
   display: none;
 }
 
+/******** Services **********/
+
+#services {
+  display: block;
+  background-color: var(--low-opacity);
+  padding-top: 5%;
+  padding-bottom: 10rem;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.title-services {
+  margin-right: 8rem;
+}
+
+.span-emphasis {
+  margin-left: 18rem;
+}
+
 /********* E-commerces ********/
 
 #e-commerces {
-  margin-top: 2rem;
+  padding: 2rem 0 4rem 0;
   width: 100%;
   height: 100%;
-  padding-bottom: 2rem;
-  background-color: var(--low-opacity);
+  background-color: var(--dark-background);
 }
 
 .e-commerces__content {
   display: flex;
-  padding-top: 2rem;
 }
 
 .e-commerces__content img {
@@ -845,12 +838,12 @@ label {
 #stock {
   width: 100%;
   height: 100%;
-  padding-bottom: 5rem;
-  background-color: var(--dark-background);
-  padding-top: var(--spacing-md);
+  padding: 2rem 0 4rem 0;
+  background-color: var(--low-opacity);
 }
 
 #img-stock {
+  margin-top: 2rem;
   width: 30rem;
   height: 20rem;
 }
@@ -860,8 +853,8 @@ label {
 #professional {
   width: 100%;
   height: 100%;
-  padding-bottom: 5rem;
-  background-color: var(--low-opacity);
+  padding: 2rem 0 4rem 0;
+  background-color: var(--dark-background);
 }
 
 #img-professional {
@@ -878,7 +871,8 @@ label {
 /******** Footer *********/
 
 #footer {
-  background-color: var(--dark-background);
+  border-top: 2px solid #fafafa;
+  background-color: #222222;
   color: #ffffff;
   padding: 1.25rem;
   text-align: center;
@@ -949,6 +943,7 @@ label {
   font-size: 2rem;
   color: var(--low-opacity);
   margin-right: 1.5rem;
+  transition: color 0.4s ease;
 }
 
 div a {
@@ -985,6 +980,7 @@ textarea {
   border-radius: 0.3125rem;
   cursor: pointer;
   font-size: 1rem;
+  transition: background-color 0.4s ease, color 0.4s ease;
 }
 
 .btn-form:hover {

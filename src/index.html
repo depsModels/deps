@@ -9,14 +9,11 @@
 
     <!-- Meta tags básicas -->
     <title>Deps Models - Softwares e Sites para o Seu Sucesso</title>
-    <meta name="description"
-        content="DEPS Models - Desenvolvemos softwares e sites personalizados para impulsionar sua presença online. Destaque-se com nossos serviços de design, controle de estoque eficiente, e-commerce de sucesso e presença profissional online. Potencialize seu negócio agora!">
-    <meta name="keywords"
-        content="sites, charqueadas, deps models , software personalizado, desenvolvimento de sites, controle de estoque, e-commerce, eficiência empresarial, lucratividade">
+    <meta name="description" content="DEPS Models - Desenvolvemos softwares e sites personalizados para impulsionar sua presença online. Destaque-se com nossos serviços de design, controle de estoque eficiente, e-commerce de sucesso e presença profissional online. Potencialize seu negócio agora!">
+    <meta name="keywords" content="sites, charqueadas, deps models , software personalizado, desenvolvimento de sites, controle de estoque, e-commerce, eficiência empresarial, lucratividade">
     <meta name="google-site-verification" content="fFotP0r2-2NjMkPuhQWEhlyYjbtKbXlEWIMHia41tdo" />
     <meta property="og:title" content="Deps Models - Softwares e Sites para o Seu Sucesso">
-    <meta property="og:description"
-        content="DEPS Models - Desenvolvemos softwares e sites personalizados para impulsionar sua presença online. Destaque-se com nossos serviços de design, controle de estoque eficiente, e-commerce de sucesso e presença profissional online. Potencialize seu negócio agora!">
+    <meta property="og:description" content="DEPS Models - Desenvolvemos softwares e sites personalizados para impulsionar sua presença online. Destaque-se com nossos serviços de design, controle de estoque eficiente, e-commerce de sucesso e presença profissional online. Potencialize seu negócio agora!">
     <meta property="og:image" content="https://www.depsmodels.com/src/images/logos/new-logo.png">
     <meta property="og:url" content="https://www.depsmodels.com">
     <meta property="og:type" content="website">
@@ -24,8 +21,7 @@
     <!-- Meta tags para redes sociais: Instagram -->
     <meta name="instagram:card" content="summary_large_image">
     <meta name="instagram:title" content="Deps Models - Softwares e Sites para o Seu Sucesso">
-    <meta name="instagram:description"
-        content="DEPS Models - Desenvolvemos softwares e sites personalizados para impulsionar sua presença online. Destaque-se com nossos serviços de design, controle de estoque eficiente, e-commerce de sucesso e presença profissional online. Potencialize seu negócio agora!">
+    <meta name="instagram:description" content="DEPS Models - Desenvolvemos softwares e sites personalizados para impulsionar sua presença online. Destaque-se com nossos serviços de design, controle de estoque eficiente, e-commerce de sucesso e presença profissional online. Potencialize seu negócio agora!">
     <meta name="instagram:image" content="https://www.depsmodels.com/src/images/logos/new-logo.png">
     <meta name="instagram:site" content="depsmodels">
     <meta name="instagram:creator" content="depsmodels">
@@ -48,8 +44,11 @@
 
     <!-- Recursos externos -->
     <script src="https://kit.fontawesome.com/52413a9b28.js" crossorigin="anonymous"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- CDN SPLIDE CARROÇA -->
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" rel="stylesheet">
 </head>
 
 <body>
@@ -70,8 +69,8 @@
                 <ul>
                     <li><a href="#home" class="links link-smooth">Home</a></li>
                     <li><a href="#presentation" class="links link-smooth">Projetos</a></li>
-                    <li><a href="#features" class="links link-smooth">Soluções</a></li>
                     <li><a href="#who-we-are" class="links link-smooth">Quem somos</a></li>
+                    <li><a href="#services" class="links link-smooth">Serviços</a></li>
                     <li><a href="#footer" class="links link-smooth">Contato</a></li>
                 </ul>
             </div>
@@ -80,16 +79,12 @@
         <section class="section-home">
             <h3 class="subtitles subtitles-home light" data-aos="fade-right">CRIE, CONSTRUA, CONQUISTE</h3>
             <h1 class="title-home light" data-aos="fade-right" data-aos-duration="1000">
-                Transforme sua <span class="yellow-emphasis subtitle-kaftan">Marca</span>
-                com <br>
-                Web Design <span class="yellow-emphasis subtitle-kaftan">Exclusivo</span>
+                Transforme sua <span class="yellow-emphasis subtitle-kaftan">Marca</span> com <br> Web Design <span class="yellow-emphasis subtitle-kaftan">Exclusivo</span>
             </h1>
             <h2 class="subtitles subtitles-home light" data-aos="fade-right" data-aos-duration="2800">
                 Potencializando pequenos negócios e startups para alcançar novos patamares
             </h2>
-
-            <a href="https://api.whatsapp.com/send?phone=5551995336519&text=Olá,%20quero%20potencializar%20meu%20negócio!"
-                data-aos="fade-zoom-in" data-aos-easing="linear" data-aos-delay="1200">
+            <a href="https://api.whatsapp.com/send?phone=5551995336519&text=Olá,%20quero%20potencializar%20meu%20negócio!" data-aos="fade-zoom-in" data-aos-easing="linear" data-aos-delay="1200">
                 <button id="button-header" class="button button-yellow">Potencialize seu negócio</button>
             </a>
         </section>
@@ -101,58 +96,60 @@
                 A Agência Digital Moderna <span class="yellow-emphasis title-kaftan">para um <br>
                     Mundo Conectado</span>
             </h2>
-            <div>
-                <p id="subtitle-presentation" class="light">Projetos apresentados</p>
-            </div>
-
-            <div class="projects-container">
-                <div class="projects" id="stock-deps" data-aos="zoom-in-right">
-                    <div class="image-overlay img-stock">
-                    </div>
-                    <div class="info-card">Informações do Projeto Stock Deps</div>
-                </div>
-                <div class="projects" id="karine" data-aos="zoom-in-up" data-aos-duration="1000">
-                    <div class="image-overlay img-karine"></div>
-                    <div class="info-card">Informações do Projeto Karine</div>
-                </div>
-                <div class="projects" id="gym" data-aos="zoom-in-left">
-                    <div class="image-overlay img-gym"></div>
-                    <div class="info-card">Informações do Projeto Gym</div>
-                </div>
+        </section>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                new Splide('#image-carousel').mount();
+            });
+        </script>
+        <section id="image-carousel" class="splide" aria-label="Beautiful Images">
+            <div class="splide__track">
+                <ul class="splide__list">
+                    <li class="splide__slide">
+                        <div class="projects" id="stock-deps" data-aos="zoom-in-left">
+                            <div class="image-overlay img-stock"></div>
+                            <div class="info-card">Informações do Projeto Stock Deps</div>
+                        </div>
+                    </li>
+                    <li class="splide__slide">
+                        <div class="projects" id="karine" data-aos="zoom-in-left">
+                            <div class="image-overlay img-karine"></div>
+                            <div class="info-card">Informações do Projeto Karine</div>
+                        </div>
+                    </li>
+                    <li class="splide__slide">
+                        <div class="projects" id="gym" data-aos="zoom-in-left">
+                            <div class="image-overlay img-gym"></div>
+                            <div class="info-card">Informações do Projeto Gym</div>
+                        </div>
+                    </li>
+                </ul>
             </div>
         </section>
 
-        <section id="features">
+        <section id="who-we-are">
+            <h1 class="titles titles-center light">O que é a DEPS?</h1>
             <div class="container-main">
+                <!-- Conteúdo da antiga seção features -->
                 <div class="left-features">
                     <div id="card-features-1">
-                        <h2 class="title-features light"> <span class="bold">O que nós fazemos </span>e
-                            amamos
-                        </h2>
-                        <p class="light" id="text-bottom">Como parceiros estratégicos, evoluímos marcas influentes,
-                            experiências em múltiplos dispositivos
-                            e estratégias criativas que se conectam e se alinham com as expectativas em constante
-                            mudança do
-                            seu público.</p>
+                        <h2 class="title-features light"> <span class="bold">O que nós fazemos </span>e amamos</h2>
+                        <p class="light" id="text-bottom">
+                            Como parceiros estratégicos, evoluímos marcas influentes, experiências em múltiplos dispositivos e estratégias criativas que se conectam e se alinham com as expectativas em constante mudança do seu público.
+                        </p>
                     </div>
                     <div id="card-features-3">
                         <div>
-                            <h2>
-                                Estratégia digital
-                            </h2>
+                            <h2>Estratégia digital</h2>
                             <p>
-                                Estratégias perspicazes, integradas e inovadoras que navegam pelos cenários digitais,
-                                otimizam a presença online e geram resultados mensuráveis.
+                                Estratégias perspicazes, integradas e inovadoras que navegam pelos cenários digitais, otimizam a presença online e geram resultados mensuráveis.
                             </p>
                         </div>
                         <hr>
                         <div>
-                            <h2>
-                                Design envolvente
-                            </h2>
+                            <h2>Design envolvente</h2>
                             <p>
-                                Designs impactantes e personalizados que capturam a essência da sua marca, atraem a
-                                atenção do público e criam experiências visuais memoráveis.
+                                Designs impactantes e personalizados que capturam a essência da sua marca, atraem a atenção do público e criam experiências visuais memoráveis.
                             </p>
                         </div>
                     </div>
@@ -160,27 +157,89 @@
                 <div class="right-features">
                     <div id="card-features-2">
                         <div>
-                            <h2>
-                                Web Design Customizado
-                            </h2>
+                            <h2>Web Design Customizado</h2>
                             <p>
-                                Sites personalizados deslumbrantes que inspiram usuários, impulsionam o crescimento dos
-                                negócios e potencializam as missões de nossos parceiros.
+                                Sites personalizados deslumbrantes que inspiram usuários, impulsionam o crescimento dos negócios e potencializam as missões de nossos parceiros.
                             </p>
                         </div>
                         <hr>
                         <div>
-                            <h2>
-                                Identidade da Marca
-                            </h2>
+                            <h2>Identidade da Marca</h2>
                             <p>
-                                Identidade visual distinta, coesa e impactante que ressoa com o público, fortalece a
-                                presença e reflete seus valores.
+                                Identidade visual distinta, coesa e impactante que ressoa com o público, fortalece a presença e reflete seus valores.
                             </p>
                         </div>
                     </div>
                     <div id="img-features">
-                        <img id="notebook-img" src="/src/images/notebook.jpg" alt="Notebook" loading=”lazy”>
+                        <img id="notebook-img" src="/src/images/notebook.jpg" alt="Notebook" loading="lazy">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Conteúdo da antiga seção who-we-are -->
+            <div class="container flex">
+                <div class="deps-acronym">
+                    <p class="titles " id="label-design">
+                        <input type="radio" id="design-radio" name="acronym-radio" value="design" checked>
+                        <label class="label-who-we-are light" for="design-radio">
+                            <span class="first-letter-acronym">D</span>esign
+                        </label>
+                    </p>
+                    <p class="titles" id="label-efficiency">
+                        <input type="radio" id="efficiency-radio" name="acronym-radio" value="efficiency">
+                        <label class="label-who-we-are light" for="efficiency-radio">
+                            <span class="first-letter-acronym">E</span>fetividade
+                        </label>
+                    </p>
+                    <p class="titles" id="label-productivity">
+                        <input type="radio" id="productivity-radio" name="acronym-radio" value="productivity">
+                        <label class="label-who-we-are light" for="productivity-radio">
+                            <span class="first-letter-acronym">P</span>rodutividade
+                        </label>
+                    </p>
+                    <p class="titles" id="label-simplicity">
+                        <input type="radio" id="simplicity-radio" name="acronym-radio" value="simplicity">
+                        <label class="label-who-we-are light" for="simplicity-radio">
+                            <span class="first-letter-acronym">S</span>implicidade
+                        </label>
+                    </p>
+                </div>
+                <div class="about-acronym">
+                    <div id="design">
+                        <img class="who-we-are__icons" src="/src/images/icon-design.png" alt="Ícone Design" loading="lazy">
+                        <h2 class="titles">
+                            <span class="yellow-emphasis">Design</span>
+                        </h2>
+                        <p class="description-acronym light">
+                            Design é a arte de unir estética e função, transformando conceitos em experiências visuais significativas.
+                        </p>
+                    </div>
+                    <div id="efficiency">
+                        <img class="who-we-are__icons" src="/src/images/icon-efficiency.png" alt="Ícone Eficiência" loading="lazy">
+                        <h2 class="titles">
+                            <span class="red-emphasis">Efetividade</span>
+                        </h2>
+                        <p class="description-acronym light">
+                            Efetividade no design é a arte de unir estética e funcionalidade para atingir resultados concretos.
+                        </p>
+                    </div>
+                    <div id="productivity">
+                        <img class="who-we-are__icons" src="/src/images/icon-produtivity.png" alt="Ícone Produtividade" loading="lazy">
+                        <h2 class="titles">
+                            <span class="light-blue-emphasis">Produtividade</span>
+                        </h2>
+                        <p class="description-acronym light">
+                            A produtividade é a chave para o sucesso, impulsionando eficiência e resultados significativos.
+                        </p>
+                    </div>
+                    <div id="simplicity">
+                        <img class="who-we-are__icons" src="/src/images/icon-simplicity.png" alt="Ícone Simplicidade" loading="lazy">
+                        <h2 class="titles">
+                            <span class="blue-emphasis">Simplicidade</span>
+                        </h2>
+                        <p class="description-acronym light">
+                            Simplicidade no design é a arte de proporcionar uma experiência intuitiva, tornando a interação fácil e agradável.
+                        </p>
                     </div>
                 </div>
             </div>
@@ -188,159 +247,55 @@
 
         <section id="services">
             <div class="container-fluid">
+                <h2 class="title-services titles titles-center">Crescer com a Deps é <br><span class="span-emphasis blue-emphasis title-kaftan">Sinônimo de Sucesso</span></h2>
                 <div class="d-flex block-cards">
                     <!-- Card 1 -->
-                    
-                        <a class="custom-card link-smooth" href="#e-commerces">
-                            <div class="card-inner">
-                                <!-- Front Side -->
-                                <div class="card-front">
-                                    <p>Landing Pages</p>
-                                    <p class="card-footer">Criado para capturar leads e aumentar conversões.</p>
-                                </div>
-                                <!-- Back Side -->
-                                <div class="card-back">
-                                    <p>Landing pages são essenciais para capturar leads e aumentar conversões com designs
-                                        atraentes.</p>
-                                    <p class="card-footer">Personalizado para seu negócio!</p>
-                                </div>
+                    <a class="custom-card link-smooth" href="#e-commerces">
+                        <div class="card-inner">
+                            <!-- Front Side -->
+                            <div class="card-front light">
+                                <p class="bold">Landing Pages</p>
+                                <p class="card-footer light">Criado para capturar leads e aumentar conversões.</p>
                             </div>
-                        </a>
-                
-
-                <!-- Card 2 -->
-                <div class="custom-card">
-                    <div class="card-inner">
-                        <!-- Front Side -->
-                        <div class="card-front">
-                            <p>Controle de Estoque</p>
-                            <p class="card-footer">Gerenciamento eficiente de produtos e estoque.</p>
                         </div>
-                        <!-- Back Side -->
-                        <div class="card-back">
-                            <p>Gerencie seus produtos com eficiência e evite a falta de estoque com sistemas de
-                                controle inteligentes.</p>
-                            <p class="card-footer">Facilidade e agilidade!</p>
+                    </a>
+                    <!-- Card 2 -->
+                    <div class="custom-card">
+                        <div class="card-inner">
+                            <!-- Front Side -->
+                            <div class="card-front light">
+                                <p class="bold">Controle de Estoque</p>
+                                <p class="card-footer light">Gerenciamento eficiente de produtos e estoque.</p>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <!-- Card 3 -->
-                <div class="custom-card">
-                    <div class="card-inner">
-                        <!-- Front Side -->
-                        <div class="card-front">
-                            <p>E-commerce</p>
-                            <p class="card-footer">Venda online com eficiência e alcance global.</p>
+                    <!-- Card 3 -->
+                    <div class="custom-card">
+                        <div class="card-inner">
+                            <!-- Front Side -->
+                            <div class="card-front light">
+                                <p class="bold">E-commerce</p>
+                                <p class="card-footer light">Venda online com eficiência e alcance global.</p>
+                            </div>
                         </div>
-                        <!-- Back Side -->
-                        <div class="card-back">
-                            <p>Vendas online nunca foram tão fáceis! Crie sua loja virtual e alcance clientes em
-                                todo o mundo.</p>
-                            <p class="card-footer">Impulsione seu negócio!</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            </div>
-        </section>
-
-        <section id="who-we-are">
-            <h1 class="titles titles-center">O que significa DEPS?</h1>
-            <div class="container flex">
-                <div class="deps-acronym">
-                    <p class="titles " id="label-design">
-                        <input type="radio" id="design-radio" name="acronym-radio" value="design" checked>
-                        <label class="label-who-we-are" for="design-radio"><span class="first-letter-acronym">D</span>
-                            esign</label>
-                    </p>
-                    <p class="titles" id="label-efficiency">
-                        <input type="radio" id="efficiency-radio" name="acronym-radio" value="efficiency">
-                        <label class="label-who-we-are" for="efficiency-radio"><span
-                                class="first-letter-acronym">E</span>
-                            fetividade</label>
-                    </p>
-                    <p class="titles" id="label-productivity">
-                        <input type="radio" id="productivity-radio" name="acronym-radio" value="productivity">
-                        <label class="label-who-we-are" for="productivity-radio"><span
-                                class="first-letter-acronym">P</span>
-                            rodutividade</label>
-                    </p>
-                    <p class="titles" id="label-simplicity">
-                        <input type="radio" id="simplicity-radio" name="acronym-radio" value="simplicity">
-                        <label class="label-who-we-are" for="simplicity-radio"><span
-                                class="first-letter-acronym">S</span>
-                            implicidade</label>
-                    </p>
-                </div>
-
-                <div class="about-acronym">
-                    <div id="design">
-                        <img class="who-we-are__icons" src="/src/images/icon-design.png" alt="Ícone Design"
-                            loading="lazy">
-                        <h2 class="titles">
-                            <span class="yellow-emphasis">Design</span>
-                        </h2>
-                        <p class="description-acronym">
-                            Design é a arte de unir estética e função, transformando conceitos em experiências visuais
-                            significativas. É a linguagem que comunica, conecta e desperta emoções.
-                        </p>
-                    </div>
-                    <div id="efficiency">
-                        <img class="who-we-are__icons" src="/src/images/icon-efficiency.png" alt="Ícone Eficiência"
-                            loading="lazy">
-                        <h2 class="titles">
-                            <span class="red-emphasis">Efetividade</span>
-                        </h2>
-                        <p class="description-acronym">
-                            Efetividade no design é a arte de unir estética e funcionalidade para atingir resultados
-                            concretos, criando experiências visuais significativas que inspiram ação e cumprem metas
-                            estratégicas.
-                        </p>
-                    </div>
-                    <div id="productivity">
-                        <img class="who-we-are__icons" src="/src/images/icon-produtivity.png" alt="Ícone Produtividade"
-                            loading="lazy">
-                        <h2 class="titles">
-                            <span class="light-blue-emphasis">Produtividade</span>
-                        </h2>
-                        <p class="description-acronym">
-                            A produtividade é a chave para o sucesso, impulsionando eficiência e resultados
-                            significativos por meio de esforços focados e bem-organizados.
-                        </p>
-                    </div>
-                    <div id="simplicity">
-                        <img class="who-we-are__icons" src="/src/images/icon-simplicity.jpg" alt="Ícone Simplicidade"
-                            loading="lazy">
-                        <h2 class="titles">
-                            <span class="blue-emphasis">Simplicidade</span>
-                        </h2>
-                        <p class="description-acronym">
-                            Simplicidade no design é mais que estética; é a arte de proporcionar uma experiência
-                            intuitiva para o usuário, tornando a interação fácil e agradável, essencial para cativar e
-                            satisfazer clientes.
-                        </p>
                     </div>
                 </div>
             </div>
         </section>
 
         <section id="e-commerces">
-            <div class="container">
+            <div class="container light">
                 <div id="e-commerce-container" class="e-commerces__content">
                     <h2 id="title-ecommerce" class="titles titles-end">
-                        Potencialize Seus <span class="blue-emphasis">Resultados</span>: Como um
+                        Potencialize Seus <span class="blue-emphasis">Resultados</span> : Como um
                         <span class="blue-emphasis">E-commerce</span> de Última Geração Pode Transformar Sua Empresa.
                     </h2>
-                    <p class="description">
-                        Aumento nas Vendas: "Com um e-commerce eficiente, as empresas geralmente experimentam um aumento
-                        médio de 50% nas vendas, atingindo novos clientes online."
-                        <br><br> Alcance Global: "Expandir sua presença online através de um e-commerce permite alcançar
-                        clientes em todo o mundo, abrindo portas para novos mercados e oportunidades."
-                        <br><br> Melhoria na Experiência do Cliente: "Proporcione uma experiência de compra perfeita,
-                        com navegação intuitiva e checkout simplificado"
+                    <p class="description light">
+                        Aumento nas Vendas: "Com um e-commerce eficiente, as empresas geralmente experimentam um aumento médio de 50% nas vendas, atingindo novos clientes online."
+                        <br><br> Alcance Global: "Expandir sua presença online através de um e-commerce permite alcançar clientes em todo o mundo, abrindo portas para novos mercados e oportunidades."
+                        <br><br> Melhoria na Experiência do Cliente: "Proporcione uma experiência de compra perfeita, com navegação intuitiva e checkout simplificado"
                     </p>
                 </div>
-
                 <div class="e-commerces__content">
                     <div class="list" id="list-1">
                         <menu>
@@ -354,14 +309,12 @@
                                 Certificado SSL
                             </li>
                         </menu>
-                        <a
-                            href="https://api.whatsapp.com/send?phone=5551995336519&text=Olá,%20quero%20fazer%20um%20orçamento!">
+                        <a href="https://api.whatsapp.com/send?phone=5551995336519&text=Olá,%20quero%20fazer%20um%20orçamento!">
                             <button class="button button-yellow">Faça o orçamento agora!
                             </button>
                         </a>
                     </div>
-                    <img src="/src/images/blue-ecommerce.jpg" id="img-ecommerce" alt="E-commerce para sua empresa"
-                        loading="lazy">
+                    <img src="/src/images/blue-ecommerce.jpg" id="img-ecommerce" alt="E-commerce para sua empresa" loading="lazy">
                 </div>
             </div>
         </section>
@@ -370,25 +323,18 @@
             <div class="container">
                 <div class="d-flex">
                     <div class="margin-right">
-                        <h2 class="titles light">
-                            Controle <span class="blue-emphasis">Total</span> : Otimize Seu <span
-                                class="blue-emphasis ">Negócio</span> com Nossos Sistemas Avançados de Controle de
-                            Estoque
+                        <h2 class="titles ">
+                            Controle <span class="blue-emphasis">Total</span> : Otimize Seu <span class="blue-emphasis ">Negócio</span> com Nossos Sistemas Avançados de Controle de Estoque
                         </h2>
-                        <p class="description margin-top-5 light">
-                            Mantenha um registro preciso e em tempo real de todos os itens no seu estoque, evitando
-                            discrepâncias e melhorando a acurácia das informações.
-                            <br><br> Maximize a eficiência no uso do espaço físico, identificando padrões de
-                            movimentação de produtos e organizando o estoque de maneira mais eficaz.
-                            <br><br> Acesse relatórios e análises em tempo real para tomar decisões informadas sobre
-                            compras, promoções e estratégias de vendas.
+                        <p class="description margin-top-5 ">
+                            Mantenha um registro preciso e em tempo real de todos os itens no seu estoque, evitando discrepâncias e melhorando a acurácia das informações.
+                            <br><br> Maximize a eficiência no uso do espaço físico, identificando padrões de movimentação de produtos e organizando o estoque de maneira mais eficaz.
+                            <br><br> Acesse relatórios e análises em tempo real para tomar decisões informadas sobre compras, promoções e estratégias de vendas.
                         </p>
                     </div>
-                    <div class="btn-stock">
-                        <img id="img-stock" src="/src/images/img-stock.png" alt="Controle de estoque para o seu negócio"
-                            loading="lazy">
-                        <a
-                            href="https://api.whatsapp.com/send?phone=5551995336519&text=Olá,%20quero%20otimizar%20minha%20empresa!">
+                    <div>
+                        <img id="img-stock" src="/src/images/img-stock.png" alt="Controle de estoque para o seu negócio" loading="lazy">
+                        <a href="https://api.whatsapp.com/send?phone=5551995336519&text=Olá,%20quero%20otimizar%20minha%20empresa!">
                             <button class="button button-yellow">Otimize seu negócio já!</button></a>
                     </div>
                 </div>
@@ -396,15 +342,13 @@
         </section>
 
         <section id="professional">
-            <div id="container-professional" class="container flex">
+            <div id="container-professional light" class="container flex">
                 <div>
-                    <h2 class="titles">
-                        Presença <span class="blue-emphasis">Profissional</span> : Impulsione Sua <span
-                            class=" blue-emphasis">Carreira</span> com Nossos Sites <span
-                            class="blue-emphasis">Personalizados</span> para Psicólogos, Médicos, Advogados
-                        e muito mais!
+                    <h2 class="titles light">
+                        Presença <span class="blue-emphasis">Profissional</span> : Impulsione Sua <span class=" blue-emphasis">Carreira</span> com Nossos Sites <span class="blue-emphasis">Personalizados</span> para Psicólogos, Médicos, Advogados e muito
+                        mais!
                     </h2>
-                    <div class=" list">
+                    <div class=" list light">
                         <menu>
                             <li>
                                 Currículo online impactante
@@ -420,18 +364,18 @@
                                 class="button button-yellow"> Quero me destacar!</button></a>
                     </div>
                 </div>
-                <div class="professional-content">
-                    <img id="img-professional" src="/src/images/img-professional.jpg"
-                        alt="Webite para você se destacar online" loading="lazy">
-                    <p class="description margin-top-5">Destacar-se no mundo profissional começa online.
-                        Desenvolva uma presença digital impactante com nosso serviço de criação de sites personalizados.
-                        <br><br> Construa um currículo online envolvente, apresente seus melhores trabalhos e
-                        estabeleça-se como uma autoridade em sua área.
-                        <br><br> Destaque-se da concorrência e alcance novas oportunidades com um site profissional e
-                        otimizado para o sucesso.
+                <div class="professional-content light">
+                    <img id="img-professional" src="/src/images/img-professional.jpg" alt="Webite para você se destacar online" loading="lazy">
+                    <p class="description margin-top-5 light">Destacar-se no mundo profissional começa online. Desenvolva uma presença digital impactante com nosso serviço de criação de sites personalizados.
+                        <br><br> Construa um currículo online envolvente, apresente seus melhores trabalhos e estabeleça-se como uma autoridade em sua área.
+                        <br><br> Destaque-se da concorrência e alcance novas oportunidades com um site profissional e otimizado para o sucesso.
                     </p>
                 </div>
             </div>
+        </section>
+
+        <section class="">
+            <!--- Aqui deverá ser desenvolvida uma nova seção para alternar a cor da mesma --->
         </section>
     </main>
 
@@ -442,18 +386,18 @@
                     <span class="app-name">
                         Deps Models
                     </span>
-                    <p>Trabalhamos para fazer a sua <strong>IDEIA</strong> virar <strong>REALIDADE</strong>! Entre
-                        em contato conosco já!</p>
+                    <p>Trabalhamos para fazer a sua <strong>IDEIA</strong> virar <strong>REALIDADE</strong>! Entre em contato conosco já!</p>
                     <div class="icons-img-links">
                         <a href="https://www.instagram.com/depsmodels/" target="_blank">
                             <i class="img-links fa-brands fa-instagram"></i>
-                        </a><a
-                            href="https://api.whatsapp.com/send?phone=5551995336519&text=Olá,%20quero%20me%20destacar!"
-                            target="_blank">
+                        </a>
+                        <a href="https://api.whatsapp.com/send?phone=5551995336519&text=Olá,%20quero%20me%20destacar!" target="_blank">
                             <i class="img-links fa-brands fa-whatsapp"></i>
-                        </a><a href="mailto:suporte@depsmodels.com" target="_blank">
+                        </a>
+                        <a href="mailto:suporte@depsmodels.com" target="_blank">
                             <i class="img-links fa-regular fa-envelope"></i>
-                        </a><a href="https://github.com/depsModels" target="_blank">
+                        </a>
+                        <a href="https://github.com/depsModels" target="_blank">
                             <i class="img-links fa-brands fa-github"></i>
                         </a>
                     </div>
@@ -464,8 +408,8 @@
                         <li class="section-title">Navegação</li>
                         <li><a href="#home" class="links link-smooth">Home</a></li>
                         <li><a href="#presentation" class="links link-smooth">Projetos</a></li>
-                        <li><a href="#features" class="links link-smooth">Soluções</a></li>
                         <li><a href="#who-we-are" class="links link-smooth">Quem somos</a></li>
+                        <li><a href="#services" class="links link-smooth">Serviços</a></li>
                         <li><a href="#footer" class="links link-smooth">Contato</a></li>
                     </ul>
                 </div>
