@@ -1,326 +1,325 @@
 /*********** Estilos para dispositivos móveis (até 767 pixels) ***********/
 
 @media (max-width: 767px) {
-
-    /********** Body / Commons **********/
-
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
-
-    body {
-        width: 100%;
-        text-align: center;
-        overflow-x: hidden;
-    }
-
-    /********** Typography **********/
-
-    h2 {
-        font-size: 1.5rem;
-    }
-
-    p {
-        font-size: 1rem;
-    }
-
-    .titles {
-        font-size: 2rem;
-    }
-
-    /**********  Buttons **********/
-
-    .button {
-        margin: 0;
-    }
-
-    /********** Header **********/
-
-    header {
-        padding-top: 0;
-        width: 100%;
-        height: 100vh;
-        text-align: center;
-    }
-
-    nav {
-        width: 100%;
-        position: relative;
-        z-index: 1000;
-    }
-
-    nav img {
-        width: 20vh;
-        filter: brightness(110%);
-        float: left;
-    }
-
-    .section-home {
-        margin-top: 10vh;
-        width: 100%;
-        display: block;
-        margin: 0 auto;
-        text-align: center;
-    }
-
-    .menu-toggle {
-        width: 3.5rem;
-        height: 3.5rem;
-        border-radius: 50%;
-        background-color: #333;
-        border: none;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        cursor: pointer;
-        position: fixed;
-        top: 2%;
-        right: 2%;
-        z-index: 1001;
-        transition: background-color 0.3s ease;
-    }
-
-    .menu-toggle:hover {
-        background-color: #555;
-    }
-
-    .hamburger-icon {
-        width: 24px;
-        height: 24px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-    }
-
-    .hamburger-icon span {
-        display: block;
-        width: 100%;
-        height: 3px;
-        background-color: white;
-        border-radius: 2px;
-        transition: all 0.3s ease;
-    }
-
-    .menu-toggle.active .hamburger-icon span:nth-child(1) {
-        transform: translateY(11px) rotate(45deg);
-    }
-
-    .menu-toggle.active .hamburger-icon span:nth-child(2) {
-        opacity: 0;
-    }
-
-    .menu-toggle.active .hamburger-icon span:nth-child(3) {
-        transform: translateY(-10px) rotate(-45deg);
-    }
-
-    .menu {
-        display: none;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.9);
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        z-index: 1000;
-        opacity: 0;
-        transition: opacity 0.5s ease, transform 0.5s ease;
-        transform: scale(0.9);
-    }
-
-    .menu.show {
-        display: flex;
-        opacity: 1;
-        transform: scale(1);
-    }
-
-    .links {
-        color: white;
-        font-size: 24px;
-        text-decoration: none;
-        margin: 15px 0;
-        opacity: 0;
-        transform: translateY(20px);
-        transition: opacity 0.5s ease, transform 0.5s ease;
-    }
-
-    .menu.show .links {
-        opacity: 1;
-        transform: translateY(0);
-    }
-
-    /******** Presentation ***********/
-
-    #presentation {
-        display: block;
-    }
-
-    /*********** Who-We-Are ************/
-
-    .container-main {
-        flex-direction: column;
-        align-items: center;
-        margin: 1rem;
-    }
-
-    .left-features,
-    .right-features {
-        width: 100%;
-        padding: 0 1rem;
-    }
-
-    #img-features {
-        margin-top: 2rem;
-    }
-
-    #notebook-img {
-        max-width: 100%;
-    }
-
-    .about-acronym {
-        width: 60%;
-        text-align: center;
-        margin: 100px auto;
-    }
-
-    /******** Services ********/
-
-    #services {
-        padding: 5%;
-        display: block;
-        margin: 0 auto;
-    }
-
-    .custom-card {
-        width: 200px;
-        height: 280px;
-    }
-
-    .block-cards {
-        display: block;
-        margin: 0 auto;
-    }
-
-    /*********** E-commerces ************/
-
-    #e-commerce-container {
-        display: block;
-    }
-
-    .description {
-        margin-bottom: 10%;
-    }
-
-    .e-commerces__content {
-        display: block;
-    }
-
-    .titles-end {
-        text-align: center;
-    }
-
-    .list {
-        width: 100%;
-        text-align: center;
-        padding: 0 auto;
-        margin-left: 0;
-    }
-
-    #title-ecommerce {
-        text-align: center;
-    }
-
-    #img-ecommerce,
-    #img-stock {
-        display: none;
-    }
-
-    /*********** Stock ************/
-
-    .btn-stock {
-        text-align: center;
-    }
-
-    .content {
-        display: block;
-    }
-
-    /*********** Professional ************/
-
-    .professional-content {
-        width: 100%;
-        margin-left: 0;
-    }
-
-    #img-professional {
-        width: 100%;
-    }
-
-    #container-professional {
-        display: block;
-    }
-
-    /*********** Footer ************/
-
-    .footer-content {
-        padding: 1rem;
-    }
-
-    .row {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .app-info,
-    .navegation,
-    .form {
-        width: 100%;
-        text-align: center;
-        padding: 0.5rem;
-        margin-bottom: 1rem;
-    }
-
-    .app-name {
-        font-size: 1.25rem;
-    }
-
-    .app-info p {
-        font-size: 0.875rem;
-    }
-
-    .navegation {
-        display: none;
-    }
-
-    .icons-img-links {
-        padding-top: 0.5rem;
-    }
-
-    .img-links {
-        font-size: 1.25rem;
-        margin-right: 0.75rem;
-    }
-
-    .form h4 {
-        font-size: 1rem;
-    }
-
-    input,
-    textarea {
-        font-size: 0.75rem;
-        padding: 0.5rem;
-    }
-
-    .btn-form {
-        width: auto;
-        padding: 0.5rem 1rem;
-    }
-
-    .copyright {
-        font-size: 0.75rem;
-    }
+  /********** Body / Commons **********/
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    width: 100%;
+    text-align: center;
+    overflow-x: hidden;
+  }
+
+  /********** Typography **********/
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+
+  .titles {
+    font-size: 2rem;
+  }
+
+  /**********  Buttons **********/
+
+  .button {
+    margin: 0;
+  }
+
+  /********** Header **********/
+
+  header {
+    padding-top: 0;
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+  }
+
+  nav {
+    width: 100%;
+    position: relative;
+    z-index: 1000;
+  }
+
+  nav img {
+    width: 20vh;
+    filter: brightness(110%);
+    float: left;
+  }
+
+  .section-home {
+    margin-top: 10vh;
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .menu-toggle {
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 50%;
+    background-color: #333;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: fixed;
+    top: 2%;
+    right: 2%;
+    z-index: 1001;
+    transition: background-color 0.3s ease;
+  }
+
+  .menu-toggle:hover {
+    background-color: #555;
+  }
+
+  .hamburger-icon {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .hamburger-icon span {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: white;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+  }
+
+  .menu-toggle.active .hamburger-icon span:nth-child(1) {
+    transform: translateY(11px) rotate(45deg);
+  }
+
+  .menu-toggle.active .hamburger-icon span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .menu-toggle.active .hamburger-icon span:nth-child(3) {
+    transform: translateY(-10px) rotate(-45deg);
+  }
+
+  .menu {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    opacity: 0;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    transform: scale(0.9);
+  }
+
+  .menu.show {
+    display: flex;
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  .links {
+    color: white;
+    font-size: 24px;
+    text-decoration: none;
+    margin: 15px 0;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+  }
+
+  .menu.show .links {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /******** Presentation ***********/
+
+  #presentation {
+    display: block;
+  }
+
+  /*********** Who-We-Are ************/
+
+  .container-main {
+    flex-direction: column;
+    align-items: center;
+    margin: 1rem;
+  }
+
+  .left-features,
+  .right-features {
+    width: 100%;
+    padding: 0 1rem;
+  }
+
+  #img-features {
+    margin-top: 2rem;
+  }
+
+  #notebook-img {
+    max-width: 100%;
+  }
+
+  .about-acronym {
+    width: 60%;
+    text-align: center;
+    margin: 100px auto;
+  }
+
+  /******** Services ********/
+
+  #services {
+    padding: 5%;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .custom-card {
+    width: 200px;
+    height: 280px;
+  }
+
+  .block-cards {
+    display: block;
+    margin: 0 auto;
+  }
+
+  /*********** E-commerces ************/
+
+  #e-commerce-container {
+    display: block;
+  }
+
+  .description {
+    margin-bottom: 10%;
+  }
+
+  .e-commerces__content {
+    display: block;
+  }
+
+  .titles-end {
+    text-align: center;
+  }
+
+  .list {
+    width: 100%;
+    text-align: center;
+    padding: 0 auto;
+    margin-left: 0;
+  }
+
+  #title-ecommerce {
+    text-align: center;
+  }
+
+  #img-ecommerce,
+  #img-stock {
+    display: block;
+  }
+
+  /*********** Stock ************/
+
+  .btn-stock {
+    text-align: center;
+  }
+
+  .content {
+    display: block;
+  }
+
+  /*********** Professional ************/
+
+  .professional-content {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  #img-professional {
+    width: 100%;
+  }
+
+  #container-professional {
+    display: block;
+  }
+
+  /*********** Footer ************/
+
+  .footer-content {
+    padding: 1rem;
+  }
+
+  .row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .app-info,
+  .navegation,
+  .form {
+    width: 100%;
+    text-align: center;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .app-name {
+    font-size: 1.25rem;
+  }
+
+  .app-info p {
+    font-size: 0.875rem;
+  }
+
+  .navegation {
+    display: none;
+  }
+
+  .icons-img-links {
+    padding-top: 0.5rem;
+  }
+
+  .img-links {
+    font-size: 1.25rem;
+    margin-right: 0.75rem;
+  }
+
+  .form h4 {
+    font-size: 1rem;
+  }
+
+  input,
+  textarea {
+    font-size: 0.75rem;
+    padding: 0.5rem;
+  }
+
+  .btn-form {
+    width: auto;
+    padding: 0.5rem 1rem;
+  }
+
+  .copyright {
+    font-size: 0.75rem;
+  }
 }
