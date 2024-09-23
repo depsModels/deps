@@ -53,6 +53,7 @@ html {
   margin-top: 12%;
   width: 50%;
   height: 120vh;
+  border-radius: 1em;
 }
 
 #card-features-2 {
@@ -520,19 +521,19 @@ nav img {
 }
 
 .custom-card:nth-child(1) {
-  background-image: url('../images/landing-page.jpg');
+  background-image: url('../images/services-landing-page.avif');
   background-size: cover;
   background-position: center;
 }
 
 .custom-card:nth-child(2) {
-  background-image: url('../images/ERP.jpg');
+  background-image: url('../images/services-erp.avif');
   background-size: cover;
   background-position: center;
 }
 
 .custom-card:nth-child(3) {
-  background-image: url('../images/blue-ecommerce.jpg');
+  background-image: url('../images/services-e-commerce.avif');
   background-size: cover;
   background-position: center;
 }
@@ -575,15 +576,15 @@ nav img {
 }
 
 .img-stock {
-  background-image: url('/src/images/img-controle-estoque.jpg');
+  background-image: url('/src/images/bg-carousel-stock-management.avif');
 }
 
 .img-karine {
-  background-image: url('/src/images/psicologa.jpg');
+  background-image: url('/src/images/bg-carousel-psychologist.avif');
 }
 
 .img-gym {
-  background-image: url('/src/images/gym-img.jpg');
+  background-image: url('/src/images/bg-carousel-gym.avif');
 }
 
 /* Background e Hover */
@@ -650,15 +651,15 @@ nav img {
 }
 
 #stock-deps:hover::before {
-  background-image: url('/src/images/stock.png');
+  background-image: url('/src/images/project-stock-deps.avif');
 }
 
 #karine:hover::before {
-  background-image: url('/src/images/karine.png');
+  background-image: url('/src/images/project-karine.avif');
 }
 
 #gym:hover::before {
-  background-image: url('/src/images/GYM.png');
+  background-image: url('/src/images/project-gym.avif');
 }
 
 #img-stock {

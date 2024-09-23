@@ -213,9 +213,9 @@
     margin: 0 auto;
   }
 
-  /*********** E-commerces ************/
+  /********* Landing Pages ********/
 
-  #e-commerce-container {
+  #landing-pages-container {
     display: block;
   }
 
@@ -223,7 +223,7 @@
     margin-bottom: 10%;
   }
 
-  .e-commerces__content {
+  .landing-pages__content {
     display: block;
   }
 
@@ -238,18 +238,13 @@
     margin-left: 0;
   }
 
-  #title-ecommerce {
+  #title-landing-pages {
     text-align: center;
   }
 
-  #img-ecommerce,
-  #img-stock {
-    display: block;
-  }
+  /********* Stock Management *********/
 
-  /*********** Stock ************/
-
-  .btn-stock {
+  .btn-stock-management {
     text-align: center;
   }
 
@@ -257,18 +252,18 @@
     display: block;
   }
 
-  /*********** Professional ************/
+  /******** E-commerce *********/
 
-  .professional-content {
+  .e-commerce-content {
     width: 100%;
     margin-left: 0;
   }
 
-  #img-professional {
+  #img-e-commerce {
     width: 100%;
   }
 
-  #container-professional {
+  #container-e-commerce {
     display: block;
   }
 
