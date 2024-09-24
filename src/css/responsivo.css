@@ -65,8 +65,8 @@
   }
 
   .menu-toggle {
-    width: 3.5rem;
-    height: 3.5rem;
+    width: 4rem;
+    height: 4rem;
     border-radius: 50%;
     background-color: #333;
     border: none;
@@ -131,35 +131,36 @@
     transform: scale(0.9);
   }
 
-    .menu.show {
-        display: block;
-        opacity: 1;
-        transform: scale(1);
-    }
+  .menu.show {
+    display: block;
+    opacity: 1;
+    transform: scale(1);
+  }
 
-    .menu ul{
-        display: block;
-        padding: 10rem;
-    }
+  .menu ul {
+    display: block;
+    padding: 10rem;
+  }
 
-    .menu ul li{
-        margin-top: 30%;
-    }
+  .menu ul li {
+    width: 15rem;
+    margin-top: 20%;
+  }
 
-    .links {
-        color: white;
-        font-size: 24px;
-        text-decoration: none;
-        margin: 15px 0;
-        opacity: 0;
-        transform: translateY(20px);
-        transition: opacity 0.5s ease, transform 0.5s ease;
-    }
+  .links {
+    color: white;
+    font-size: 24px;
+    text-decoration: none;
+    margin: 15px 0;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+  }
 
-    .menu.show .links {
-        opacity: 1;
-        transform: translateY(0);
-    }
+  .menu.show .links {
+    opacity: 1;
+    transform: translateY(0);
+  }
 
   /******** Presentation ***********/
 
@@ -195,87 +196,120 @@
     margin: 100px auto;
   }
 
-  /******** Services ********/
+  /******** Services **********/
 
   #services {
-    padding: 5%;
+    padding-bottom: 5rem;
+  }
+
+  .title-services {
+    margin-right: 0;
+    text-align: center;
+  }
+
+  .span-emphasis {
+    margin-left: 0;
     display: block;
-    margin: 0 auto;
+    margin-top: 0.5rem;
+  }
+
+  .d-flex.block-cards {
+    display: block;
+    margin-top: 2rem;
   }
 
   .custom-card {
-    width: 200px;
-    height: 280px;
+    display: block;
+    width: 100%;
+    margin-bottom: 2rem;
   }
 
-  .block-cards {
+  .card-inner {
     display: block;
-    margin: 0 auto;
+    text-align: center;
+  }
+
+  .bold {
+    font-size: 1.5rem;
+  }
+
+  .card-footer {
+    font-size: 1.2rem;
   }
 
   /********* Landing Pages ********/
 
-  #landing-pages-container {
-    display: block;
-  }
-
-  .description {
-    margin-bottom: 10%;
-  }
-
   .landing-pages__content {
-    display: block;
+    display: block; 
+    text-align: center; 
   }
 
-  .titles-end {
-    text-align: center;
+  .text-content,
+  .image-content {
+    width: 100%; 
+    margin: 0 auto; 
+  }
+
+  .image-content {
+    margin-top: 2rem; 
   }
 
   .list {
-    width: 100%;
-    text-align: center;
-    padding: 0 auto;
-    margin-left: 0;
-  }
-
-  #title-landing-pages {
-    text-align: center;
+    margin-top: 1.5rem;
   }
 
   /********* Stock Management *********/
 
-  .btn-stock-management {
-    text-align: center;
+  .stock-management__content {
+    display: block; 
+    text-align: center; 
   }
 
-  .content {
-    display: block;
+  .text-content,
+  .image-content {
+    width: 100%; 
+    margin: 0 auto; 
   }
 
-  /******** E-commerce *********/
-
-  .e-commerce-content {
-    width: 100%;
-    margin-left: 0;
+  .image-content {
+    margin-top: 2rem;
   }
 
-  #img-e-commerce {
-    width: 100%;
+  /********* E-commerce *********/
+
+  .e-commerce__content {
+    display: block; 
+    text-align: center; 
   }
 
-  #container-e-commerce {
-    display: block;
+  .text-content,
+  .image-content {
+    width: 100%; 
+    margin: 0 auto; 
+  }
+
+  .image-content {
+    margin-top: 2rem;
   }
 
   /*********** Footer ************/
 
+  #footer {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
   .footer-content {
     padding: 1rem;
+    box-sizing: border-box;
   }
 
   .row {
     flex-direction: column;
     align-items: center;
+    width: 100%; 
+    margin: 0;
+    padding: 0;
   }
 
   .app-info,
@@ -284,7 +318,7 @@
     width: 100%;
     text-align: center;
     padding: 0.5rem;
-    margin-bottom: 1rem;
+    margin: 0; 
   }
 
   .app-name {

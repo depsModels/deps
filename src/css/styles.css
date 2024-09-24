@@ -885,7 +885,7 @@ label {
 
 /******** E-commerce *********/
 #e-commerce {
-  padding: 4rem 0 4rem 0;
+  padding: 4rem 0;
   background-color: var(--dark-background);
 }
 
@@ -895,8 +895,23 @@ label {
   align-items: flex-start;
 }
 
+.text-content {
+  width: 60%;
+}
+
+.additional-paragraphs {
+  margin-top: 2rem;
+}
+
+.image-content {
+  width: 35%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
 #img-e-commerce {
-  width: 30rem;
+  width: 100%;
   border-radius: 2vh;
   margin-bottom: 2rem;
 }
