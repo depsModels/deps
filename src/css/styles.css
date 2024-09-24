@@ -1153,7 +1153,8 @@ button:hover {
   background-color: #e0a800;
 }
 
-/********** modal contato ************/
+/********** Modal Contato ************/
+
 .modal label{
   color: #fff;
 }
@@ -1214,7 +1215,6 @@ button:hover {
 .btn-close{
   color: white;
 }
-
 
 .modal-header-contato .btn-close {
   filter: invert(1);
