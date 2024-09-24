@@ -364,6 +364,7 @@ nav img {
 .menu ul {
   list-style: none;
   display: flex;
+  align-items: center;
   margin: 0;
   padding: 0;
 }
@@ -382,6 +383,104 @@ nav img {
 
 .menu ul li a:hover {
   color: #fff;
+}
+
+#button-nav{
+  padding: 1.2rem 1.7rem;
+}
+
+/********** Modal Contato ************/
+
+.modal label{
+  color: #fff;
+}
+
+.modal-content-contato {
+  border-radius: 10px;
+  background-color: #f7f7f7;
+}
+
+.modal-dialog {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  max-width: 40rem;
+}
+
+.modal-header-contato {
+  background-color: #212529;
+  color: #fff;
+  border-bottom: none;
+}
+
+.modal-body{
+  background-color: var(--dark-background);
+}
+
+.modal-body-contato {
+  padding: 20px;
+}
+
+.label-contato {
+  color: #333;
+}
+
+.input-contato {
+  border-radius: 5px;
+  height: 40px;
+  font-size: 16px;
+  background-color: #fff;
+  padding: 1rem;
+}
+
+.textarea-contato {
+  border-radius: 5px;
+  font-size: 16px;
+  background-color: #fff;
+  padding: 10px;
+}
+
+.modal-footer-contato {
+  background-color: #212529;
+  color: #fff;
+  border-top: none;
+}
+
+.btn-close{
+  color: white;
+}
+
+
+.modal-header-contato .btn-close {
+  filter: invert(1);
+}
+
+.btn-cancelar {
+  background-color: #b00000;
+  color: #fff;
+  border-radius: 5px;
+}
+
+.btn-cancelar:hover {
+  background-color: #8b0a0a;
+  color: #fff;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-enviar {
+  background-color: var(--color-yellow-deps);
+  color: #fff;
+  border-radius: 5px;
+}
+
+.btn-enviar:hover {
+  background-color: #ffd700;
+  color: #fff;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
 }
 
 /**********  Buttons **********/
@@ -726,7 +825,7 @@ nav img {
 }
 
 .who-we-are__icons {
-  margin-top: 9rem;
+  margin-top: 20rem;
   width: 10rem;
 }
 
@@ -991,6 +1090,7 @@ label {
 .navegation ul {
   display: inline-block;
   text-align: left;
+  list-style-type: none; /* Remove a decoração da lista */
 }
 
 .navegation ul li.section-title {
@@ -1021,10 +1121,6 @@ label {
   color: var(--low-opacity);
   margin-right: 1.5rem;
   transition: color 0.4s ease;
-}
-
-div a {
-  text-decoration: none;
 }
 
 .form h4 {
@@ -1093,72 +1189,4 @@ textarea {
 
 .whatsapp-button:hover {
   background-color: #1ebea5;
-}
-
-.section-content {
-  height: 100vh;
-  /* Ocupa a tela inteira */
-  overflow: hidden;
-  /* Evita a rolagem interna das seções */
-  padding: 2rem 0 4rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-#landing-pages {
-  background-color: var(--dark-background);
-}
-
-#stock-management {
-  background-color: var(--low-opacity);
-}
-
-#e-commerce {
-  background-color: var(--dark-background);
-}
-
-.container {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  width: 100%;
-  max-width: 1200px;
-}
-
-.text-content {
-  width: 60%;
-}
-
-.image-content {
-  width: 35%;
-}
-
-button {
-  margin-top: 2rem;
-}
-
-img {
-  width: 100%;
-  height: auto;
-  border-radius: 2vh;
-}
-
-.list {
-  margin-top: 2rem;
-}
-
-button {
-  cursor: pointer;
-  background-color: #ffc107;
-  color: #fff;
-  border: none;
-  padding: 0.75rem 1.5rem;
-  border-radius: 5px;
-  font-size: 1rem;
-  transition: background-color 0.3s;
-}
-
-button:hover {
-  background-color: #e0a800;
 }
