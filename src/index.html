@@ -62,16 +62,54 @@
                 </div>
             </button>
 
-            <div class="menu" aria-hidden="true">
+            <div class="menu d-flex" aria-hidden="true">
                 <ul>
                     <li><a href="#home" class="links link-smooth">Home</a></li>
                     <li><a href="#presentation" class="links link-smooth">Projetos</a></li>
                     <li><a href="#who-we-are" class="links link-smooth">Quem somos</a></li>
                     <li><a href="#services" class="links link-smooth">Serviços</a></li>
-                    <li><a href="#footer" class="links link-smooth">Contato</a></li>
+                    <li><button id="button-nav" class="button button-yellow" data-bs-toggle="modal"
+                        data-bs-target="#contatoModal">Entre em contato agora!</button></li>
                 </ul>
             </div>
         </nav>
+
+        <!-- Modal -->
+        <div class="modal fade" id="contatoModal" tabindex="-1" aria-labelledby="contatoModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content modal-content-contato">
+                    <div class="modal-header modal-header-contato">
+                        <h1 class="modal-title fs-5" id="contatoModalLabel">Fale Conosco</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body modal-body-contato">
+                        <form>
+                            <div class="mb-3 px-3">
+                                <label for="nome" class="form-label label-contato">Nome:</label>
+                                <input type="text" class="form-control input-contato" id="nome"
+                                    placeholder="Digite seu nome">
+                            </div>
+                            <div class="mb-3 px-3">
+                                <label for="email" class="form-label label-contato">E-mail:</label>
+                                <input type="email" class="form-control input-contato" id="email"
+                                    placeholder="Digite seu e-mail">
+                            </div>
+                            <div class="mb-3 px-3">
+                                <label for="mensagem" class="form-label label-contato">Mensagem:</label>
+                                <textarea class="form-control textarea-contato" id="mensagem" rows="5"
+                                    placeholder="Digite sua mensagem"></textarea>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer modal-footer-contato">
+                        <button type="button" class="btn btn-secondary btn-cancelar"
+                            data-bs-dismiss="modal">Cancelar</button>
+                        <button type="button" class="btn btn-yellow btn-enviar">Enviar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
 
         <section class="section-home">
             <h3 class="subtitles subtitles-home light" data-aos="fade-right">CRIE, CONSTRUA, CONQUISTE</h3>
@@ -407,7 +445,6 @@
                         <li><a href="#presentation" class="links link-smooth">Projetos</a></li>
                         <li><a href="#who-we-are" class="links link-smooth">Quem somos</a></li>
                         <li><a href="#services" class="links link-smooth">Serviços</a></li>
-                        <li><a href="#footer" class="links link-smooth">Contato</a></li>
                     </ul>
                 </div>
 
@@ -444,6 +481,7 @@
             </div>
         </div>
     </div>
+
 
     <a href="https://api.whatsapp.com/send?phone=5551995336519&text=Olá,%20gostaria%20de%20fazer%20um%20orçamento.
     " class="whatsapp-button" target="_blank" title="Entre em contato pelo WhatsApp">
