@@ -27,6 +27,10 @@ html {
   scroll-behavior: smooth;
 }
 
+body {
+  background-color: var(--dark-background);
+}
+
 .container-main {
   display: flex;
   margin: 0;
@@ -353,7 +357,7 @@ nav img {
   filter: brightness(110%);
 }
 
-.menu-toggle{
+.menu-toggle {
   display: none;
 }
 
@@ -559,20 +563,27 @@ nav img {
   position: relative;
   overflow: hidden;
   transition: transform 0.5s ease, background-position 2s ease;
-  box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.25);
-  backdrop-filter: blur(10px);
+  background-size: cover;
+  background-position: center;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 .image-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-size: cover;
-  background-position: center;
-  transition: opacity 0.4s ease;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.2s ease;
   z-index: 1;
+  opacity: 0;
+}
+
+.image-overlay img {
+  width: 70%;
+  border-radius: 0 !important;
 }
 
 .img-stock {
@@ -590,15 +601,15 @@ nav img {
 /* Background e Hover */
 
 #stock-deps {
-  background: linear-gradient(to top, #f59b47, #f3ec78);
+  background-image: linear-gradient(to top, #f59b47, #f3ec78);
 }
 
 #karine {
-  background: linear-gradient(to top, #135797, #51dde7);
+  background-image: linear-gradient(to top, #135797, #51dde7);
 }
 
 #gym {
-  background: linear-gradient(to top, #bb1300, #ff7d7d);
+  background-image: linear-gradient(to top, #bb1300, #ff7d7d);
 }
 
 .projects:hover {
@@ -608,7 +619,7 @@ nav img {
 }
 
 .projects:hover .image-overlay {
-  opacity: 0.1;
+  opacity: 1;
 }
 
 .info-card {
@@ -630,7 +641,7 @@ nav img {
   transform: translateY(0);
   opacity: 1;
 }
-
+/* 
 #stock-deps:hover::before,
 #karine:hover::before,
 #gym:hover::before {
@@ -660,7 +671,7 @@ nav img {
 
 #gym:hover::before {
   background-image: url('/src/images/project-gym.avif');
-}
+} */
 
 #img-stock {
   width: 45rem;
@@ -813,6 +824,7 @@ label {
 }
 
 /********* Landing Pages ********/
+
 #landing-pages {
   padding: 4rem 0 4rem 0;
   width: 100%;
@@ -821,34 +833,35 @@ label {
 
 .landing-pages__content {
   display: flex;
-  justify-content: space-between; 
-  align-items: flex-start; 
+  justify-content: space-between;
+  align-items: flex-start;
 }
 
 .text-content {
-  width: 60%; 
-  margin-right: 2rem; 
+  width: 60%;
+  margin-right: 2rem;
 }
 
 .image-content {
-  width: 35%; 
+  width: 35%;
   display: flex;
-  flex-direction: column; 
-  align-items: stretch; 
+  flex-direction: column;
+  align-items: stretch;
 }
 
 .landing-pages__content img {
-  width: 100%; 
+  width: 100%;
   border-radius: 20px;
-  margin-bottom: 1rem; 
+  margin-bottom: 1rem;
 }
 
 .list {
-  width: 100%; 
-  margin-top: 1rem; 
+  width: 100%;
+  margin-top: 1rem;
 }
 
 /********* Stock Management *********/
+
 #stock-management {
   width: 100%;
   padding: 2rem 0 4rem 0;
@@ -857,33 +870,34 @@ label {
 
 .stock-management__content {
   display: flex;
-  justify-content: space-between; 
-  align-items: flex-start; 
+  justify-content: space-between;
+  align-items: flex-start;
 }
 
 .text-content {
-  width: 60%; 
-  margin-right: 2rem; 
+  width: 60%;
+  margin-right: 2rem;
 }
 
 .image-content {
-  width: 35%; 
+  width: 35%;
   display: flex;
   flex-direction: column;
-  align-items: flex-start; 
+  align-items: flex-start;
 }
 
 #img-stock-management {
   margin-top: 2rem;
-  width: 100%; 
+  width: 100%;
   border-radius: 2vh;
 }
 
 .description {
-  margin-top: 1rem; 
+  margin-top: 1rem;
 }
 
 /******** E-commerce *********/
+
 #e-commerce {
   padding: 4rem 0;
   background-color: var(--dark-background);
@@ -1082,8 +1096,10 @@ textarea {
 }
 
 .section-content {
-  height: 100vh; /* Ocupa a tela inteira */
-  overflow: hidden; /* Evita a rolagem interna das seções */
+  height: 100vh;
+  /* Ocupa a tela inteira */
+  overflow: hidden;
+  /* Evita a rolagem interna das seções */
   padding: 2rem 0 4rem;
   display: flex;
   justify-content: center;
