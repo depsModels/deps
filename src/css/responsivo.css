@@ -127,7 +127,9 @@
     justify-content: center;
     z-index: 1000;
     opacity: 0;
-    transition: opacity 0.5s ease, transform 0.5s ease;
+    transition:
+      opacity 0.5s ease,
+      transform 0.5s ease;
     transform: scale(0.9);
   }
 
@@ -154,7 +156,9 @@
     margin: 15px 0;
     opacity: 0;
     transform: translateY(20px);
-    transition: opacity 0.5s ease, transform 0.5s ease;
+    transition:
+      opacity 0.5s ease,
+      transform 0.5s ease;
   }
 
   .menu.show .links {
@@ -240,18 +244,18 @@
   /********* Landing Pages ********/
 
   .landing-pages__content {
-    display: block; 
-    text-align: center; 
+    display: block;
+    text-align: center;
   }
 
   .text-content,
   .image-content {
-    width: 100%; 
-    margin: 0 auto; 
+    width: 100%;
+    margin: 0 auto;
   }
 
   .image-content {
-    margin-top: 2rem; 
+    margin-top: 2rem;
   }
 
   .list {
@@ -261,14 +265,14 @@
   /********* Stock Management *********/
 
   .stock-management__content {
-    display: block; 
-    text-align: center; 
+    display: block;
+    text-align: center;
   }
 
   .text-content,
   .image-content {
-    width: 100%; 
-    margin: 0 auto; 
+    width: 100%;
+    margin: 0 auto;
   }
 
   .image-content {
@@ -278,14 +282,14 @@
   /********* E-commerce *********/
 
   .e-commerce__content {
-    display: block; 
-    text-align: center; 
+    display: block;
+    text-align: center;
   }
 
   .text-content,
   .image-content {
-    width: 100%; 
-    margin: 0 auto; 
+    width: 100%;
+    margin: 0 auto;
   }
 
   .image-content {
@@ -307,7 +311,7 @@
   .row {
     flex-direction: column;
     align-items: center;
-    width: 100%; 
+    width: 100%;
     margin: 0;
     padding: 0;
   }
@@ -318,7 +322,7 @@
     width: 100%;
     text-align: center;
     padding: 0.5rem;
-    margin: 0; 
+    margin: 0;
   }
 
   .app-name {

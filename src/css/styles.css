@@ -20,7 +20,21 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: system-ui, -apple-system, poppins, 'Segoe UI', Roboto, 'Helvetica Neue', 'Noto Sans', 'Liberation Sans', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  font-family:
+    system-ui,
+    -apple-system,
+    poppins,
+    "Segoe UI",
+    Roboto,
+    "Helvetica Neue",
+    "Noto Sans",
+    "Liberation Sans",
+    Arial,
+    sans-serif,
+    "Apple Color Emoji",
+    "Segoe UI Emoji",
+    "Segoe UI Symbol",
+    "Noto Color Emoji";
 }
 
 html {
@@ -306,17 +320,17 @@ p {
 /**********  Header **********/
 
 header::before {
-  content: '';
+  content: "";
   position: absolute;
   inset: 0;
-  background: url('/src/images/bg-header.avif');
+  background: url("/src/images/bg-header.avif");
   background-size: cover;
   z-index: -1;
   background-repeat: no-repeat;
 }
 
 header::after {
-  content: '';
+  content: "";
   position: absolute;
   inset: 0;
   background-color: rgba(0, 0, 0, 0.4);
@@ -385,13 +399,13 @@ nav img {
   color: #fff;
 }
 
-#button-nav{
+#button-nav {
   padding: 1.2rem 1.7rem;
 }
 
 /********** Modal Contato ************/
 
-.modal label{
+.modal label {
   color: #fff;
 }
 
@@ -415,7 +429,7 @@ nav img {
   border-bottom: none;
 }
 
-.modal-body{
+.modal-body {
   background-color: var(--dark-background);
 }
 
@@ -448,7 +462,7 @@ nav img {
   border-top: none;
 }
 
-.btn-close{
+.btn-close {
   color: white;
 }
 
@@ -536,18 +550,24 @@ nav img {
   border-radius: 1em;
   background-size: cover;
   background-position: center;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1), 0 2px 5px rgba(0, 0, 0, 0.05);
-  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow:
+    0 4px 10px rgba(0, 0, 0, 0.1),
+    0 2px 5px rgba(0, 0, 0, 0.05);
+  transition:
+    transform 0.3s,
+    box-shadow 0.3s;
 }
 
 .custom-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15), 0 4px 10px rgba(0, 0, 0, 0.1);
+  box-shadow:
+    0 8px 20px rgba(0, 0, 0, 0.15),
+    0 4px 10px rgba(0, 0, 0, 0.1);
   cursor: pointer;
 }
 
 .custom-card::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -623,19 +643,19 @@ nav img {
 }
 
 .custom-card:nth-child(1) {
-  background-image: url('../images/services-landing-page.avif');
+  background-image: url("../images/services-landing-page.avif");
   background-size: cover;
   background-position: center;
 }
 
 .custom-card:nth-child(2) {
-  background-image: url('../images/services-erp.avif');
+  background-image: url("../images/services-erp.avif");
   background-size: cover;
   background-position: center;
 }
 
 .custom-card:nth-child(3) {
-  background-image: url('../images/services-e-commerce.avif');
+  background-image: url("../images/services-e-commerce.avif");
   background-size: cover;
   background-position: center;
 }
@@ -660,7 +680,9 @@ nav img {
   height: 90vh;
   position: relative;
   overflow: hidden;
-  transition: transform 0.5s ease, background-position 2s ease;
+  transition:
+    transform 0.5s ease,
+    background-position 2s ease;
   background-size: cover;
   background-position: center;
   z-index: 1;
@@ -685,15 +707,15 @@ nav img {
 }
 
 .img-stock {
-  background-image: url('/src/images/bg-carousel-stock-management.avif');
+  background-image: url("/src/images/bg-carousel-stock-management.avif");
 }
 
 .img-karine {
-  background-image: url('/src/images/bg-carousel-psychologist.avif');
+  background-image: url("/src/images/bg-carousel-psychologist.avif");
 }
 
 .img-gym {
-  background-image: url('/src/images/bg-carousel-gym.avif');
+  background-image: url("/src/images/bg-carousel-gym.avif");
 }
 
 /* Background e Hover */
@@ -729,7 +751,9 @@ nav img {
   color: #333;
   padding: 10px;
   text-align: center;
-  transition: transform 0.4s ease, opacity 0.4s ease;
+  transition:
+    transform 0.4s ease,
+    opacity 0.4s ease;
   transform: translateY(100%);
   opacity: 0;
   z-index: 2;
@@ -841,7 +865,7 @@ nav img {
   text-align: center;
 }
 
-input[type='radio'] {
+input[type="radio"] {
   display: none;
 }
 
@@ -1152,7 +1176,9 @@ textarea {
   border-radius: 0.3125rem;
   cursor: pointer;
   font-size: 1rem;
-  transition: background-color 0.4s ease, color 0.4s ease;
+  transition:
+    background-color 0.4s ease,
+    color 0.4s ease;
 }
 
 .btn-form:hover {
