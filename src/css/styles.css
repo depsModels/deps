@@ -429,6 +429,12 @@ nav img {
   background-color: #f7f7f7;
 }
 
+.img-modal {
+  font-size: 2rem;
+  color: #fff;
+  margin-left: 0.5rem;
+}
+
 .modal-dialog {
   margin: 0 auto;
   display: flex;
@@ -1166,7 +1172,6 @@ label {
   display: inline-block;
   text-align: left;
   list-style-type: none;
-  /* Remove a decoração da lista */
 }
 
 .navegation ul li.section-title {
@@ -1191,6 +1196,10 @@ label {
 .icons-img-links {
   padding-top: 7rem;
 }
+
+.icons-img-links a {
+  text-decoration: none;
+} 
 
 .img-links {
   font-size: 2rem;
