@@ -38,14 +38,23 @@ radioSimplicity.addEventListener("mouseover", (e) => {
   sectionSimplicity.style.display = "block";
 });
 
+// Gerenciamento da classe "active" nas labels
 const depsAcronym = document.querySelector(".deps-acronym");
 const labels = depsAcronym.querySelectorAll("p");
 
+// Função para remover a classe 'active' de todas as labels
+const removeActiveFromAll = () => {
+  labels.forEach((label) => {
+    label.classList.remove("active");
+  });
+};
+
+// Adicionar comportamento para manter a classe 'active'
 labels.forEach((label) => {
   label.addEventListener("mouseover", () => {
+    // Remove 'active' de todas as labels
+    removeActiveFromAll();
+
     label.classList.add("active");
-  });
-  label.addEventListener("mouseout", () => {
-    label.classList.remove("active");
   });
 });

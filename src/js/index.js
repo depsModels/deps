@@ -1,5 +1,7 @@
-import "../css/styles.css";
-import "../css/responsivo.css";
-// src/index.js
-import "bootstrap/dist/css/bootstrap.min.css";
-import "bootstrap/dist/js/bootstrap.bundle.min";
+import "/src/js/acronym.js";
+import "/src/js/carousel.js";
+import "/src/js/form.js";
+import "/src/js/links.js";
+import "/src/js/menu.js";
+import "/src/js/responsive.js";
+import "/node_modules/bootstrap/dist/js/bootstrap.min.js";

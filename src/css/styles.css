@@ -73,7 +73,7 @@ body {
 
 .right-features {
   background-color: transparent;
-  margin-top: 2rem;
+  margin-top: 8rem;
 }
 
 .feature-card {
@@ -82,8 +82,8 @@ body {
   display: flex;
   border-radius: 8px;
   flex-direction: column;
-  justify-content: flex-start;
-  padding: var(--spacing-md);
+  justify-content: space-between;
+  padding: var(--spacing-xl);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
 
@@ -859,10 +859,6 @@ nav img {
   opacity: 1;
 }
 
-.deps-acronym p:not(.active) {
-  opacity: 0.7;
-}
-
 .who-we-are__icons {
   margin-top: 20rem;
   width: 10rem;
@@ -898,33 +894,39 @@ label {
   border-radius: 10vh;
 }
 
-#label-design:hover {
+
+#label-design:hover,
+#label-design.active {
   padding-left: 2rem;
   cursor: pointer;
   background-color: #ffc700;
   color: white;
 }
 
-#label-efficiency:hover {
+#label-efficiency:hover,
+#label-efficiency.active {
   padding-left: 2rem;
   cursor: pointer;
   background-color: #b00000;
   color: white;
 }
 
-#label-productivity:hover {
+#label-productivity:hover,
+#label-productivity.active {
   padding-left: 2rem;
   cursor: pointer;
   background-color: #49beff;
   color: white;
 }
 
-#label-simplicity:hover {
+#label-simplicity:hover,
+#label-simplicity.active {
   padding-left: 2rem;
   cursor: pointer;
   background-color: #0046af;
   color: white;
 }
+
 
 #design {
   display: block;
@@ -966,6 +968,7 @@ label {
 #landing-pages {
   padding: 4rem 0 4rem 0;
   width: 100%;
+  height: 100vh;
   background-color: var(--dark-background);
 }
 
@@ -977,14 +980,19 @@ label {
 
 .text-content {
   width: 60%;
+  height: 70vh;
   margin-right: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .image-content {
   width: 35%;
+  height: 80vh;
   display: flex;
   flex-direction: column;
-  align-items: stretch;
+  justify-content: space-between;
 }
 
 .landing-pages__content img {
@@ -1001,7 +1009,7 @@ label {
 /********* Stock Management *********/
 
 #stock-management {
-  width: 100%;
+  height: 100vh;
   padding: 2rem 0 4rem 0;
   background-color: var(--low-opacity);
 }
@@ -1012,17 +1020,6 @@ label {
   align-items: flex-start;
 }
 
-.text-content {
-  width: 60%;
-  margin-right: 2rem;
-}
-
-.image-content {
-  width: 35%;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
 
 #img-stock-management {
   margin-top: 2rem;
@@ -1038,6 +1035,7 @@ label {
 
 #e-commerce {
   padding: 4rem 0;
+  height: 100vh;
   background-color: var(--dark-background);
 }
 
@@ -1047,26 +1045,64 @@ label {
   align-items: flex-start;
 }
 
-.text-content {
-  width: 60%;
-}
-
 .additional-paragraphs {
   margin-top: 2rem;
 }
 
-.image-content {
-  width: 35%;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
 
 #img-e-commerce {
   width: 100%;
   border-radius: 2vh;
   margin-bottom: 2rem;
 }
+
+/******** FAQ *************/
+
+.faq {
+  padding: 50px 20px;
+  background-color: var(--low-opacity);
+}
+
+.faq h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.faq-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.faq-item {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  flex: 1 1 calc(50% - 20px); /* Responsivo, ajustando o tamanho dos itens */
+  min-width: 300px;
+}
+
+.faq-item h3 {
+  font-size: 1.5rem;
+  color: #444;
+}
+
+.faq-item p {
+  margin-top: 10px;
+  font-size: 1rem;
+  color: #666;
+}
+
+@media (max-width: 768px) {
+  .faq-item {
+    flex: 1 1 100%; /* Em telas menores, cada item ocupa 100% da largura */
+  }
+}
+
 
 /******** Footer *********/
 
