@@ -296,6 +296,12 @@
     margin-top: 2rem;
   }
 
+  /*********** FAQ ************/
+
+  .faq-item {
+    flex: 1 1 100%; /* Em telas menores, cada item ocupa 100% da largura */
+  }
+
   /*********** Footer ************/
 
   #footer {

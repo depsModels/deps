@@ -1062,11 +1062,12 @@ label {
   margin-bottom: 2rem;
 }
 
+
 /******** FAQ *************/
 
 .faq {
   padding: 50px 20px;
-  background-color: var(--low-opacity);
+  background-color: var(--low-opacity); /* Defina sua variável para o fundo aqui */
 }
 
 .faq h2 {
@@ -1090,23 +1091,47 @@ label {
   padding: 20px;
   flex: 1 1 calc(50% - 20px); /* Responsivo, ajustando o tamanho dos itens */
   min-width: 300px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
 }
 
 .faq-item h3 {
   font-size: 1.5rem;
   color: #444;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.faq-item .faq-arrow {
+  width: 16px;
+  height: 16px;
+  transition: transform 0.3s ease;
 }
 
 .faq-item p {
   margin-top: 10px;
   font-size: 1rem;
   color: #666;
+  height: 0;
+  overflow: hidden;
+  transition: height 0.3s ease, opacity 0.3s ease;
+  opacity: 0;
 }
 
-@media (max-width: 768px) {
-  .faq-item {
-    flex: 1 1 100%; /* Em telas menores, cada item ocupa 100% da largura */
-  }
+.faq-item.ativo p {
+  height: auto;
+  opacity: 1;
+}
+
+.faq-item.ativo .faq-arrow {
+  transform: rotate(180deg); /* Rotaciona a seta para baixo */
+}
+
+.faq-item:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
 
