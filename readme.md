@@ -22,9 +22,13 @@ Por fim, apresentamos uma seção dedicada aos nossos serviços. Aqui, destacamo
 - *Controle de Estoque*: Soluções para gestão de estoque, facilitando o monitoramento e a organização de produtos.
 - *E-commerce*: Criação de lojas virtuais robustas, adaptadas às necessidades dos nossos clientes.
 
-### 4. Modal de Contato 📬
+### Modal de Contato 📬
 
 O site também conta com um *modal de contato* que está facilmente acessível. Isso permite que os visitantes se conectem conosco rapidamente, fazendo perguntas ou solicitando informações adicionais sobre nossos serviços.
+
+## FAQ ❓
+
+Antes de encerrar a página, você encontrará uma seção de FAQ, onde respondemos às perguntas mais frequentes.
 
 ## Tecnologias Utilizadas 💻
 
@@ -41,4 +45,4 @@ Para explorar o site da DEPS e conhecer mais sobre nossos projetos e serviços, 
 
 ---
 
-Agradecemos pela sua visita e esperamos que você tenha uma experiência agradável em nosso site! 
+Agradecemos pela sua visita e esperamos que você tenha uma experiência agradável em nosso site!
