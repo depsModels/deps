@@ -1063,11 +1063,13 @@ label {
 }
 
 
-/******** FAQ *************/
+/******** FAQ ********/
 
 .faq {
-  padding: 50px 20px;
-  background-color: var(--low-opacity); /* Defina sua variável para o fundo aqui */
+  padding: 2.75rem 1.25rem 13.75rem 1.25rem;
+  background-color: var(--low-opacity);
+  height: 100%;
+
 }
 
 .faq h2 {
@@ -1079,9 +1081,15 @@ label {
 
 .faq-container {
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
   gap: 20px;
+  height: 30vh;
+}
+
+.faq-half{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .faq-item {
@@ -1089,11 +1097,11 @@ label {
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 20px;
-  flex: 1 1 calc(50% - 20px); /* Responsivo, ajustando o tamanho dos itens */
+  flex: 1 1 calc(50% - 20px); 
   min-width: 300px;
   cursor: pointer;
-  transition: all 0.3s ease;
   position: relative;
+  margin-top: 2rem;
 }
 
 .faq-item h3 {
@@ -1108,7 +1116,7 @@ label {
 .faq-item .faq-arrow {
   width: 16px;
   height: 16px;
-  transition: transform 0.3s ease;
+  transition: transform 0.5s ease;
 }
 
 .faq-item p {
@@ -1117,7 +1125,7 @@ label {
   color: #666;
   height: 0;
   overflow: hidden;
-  transition: height 0.3s ease, opacity 0.3s ease;
+  transition: height 0.8s ease, opacity 0.8s ease;
   opacity: 0;
 }
 
@@ -1127,13 +1135,12 @@ label {
 }
 
 .faq-item.ativo .faq-arrow {
-  transform: rotate(180deg); /* Rotaciona a seta para baixo */
+  transform: rotate(180deg); 
 }
 
 .faq-item:hover {
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
-
 
 /******** Footer *********/
 
