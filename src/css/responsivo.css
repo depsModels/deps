@@ -297,6 +297,10 @@
   }
 
   /*********** FAQ ************/
+  
+  #footer {
+    padding: 1.5rem;
+  }
 
   .faq-container {
     flex-direction: column;
