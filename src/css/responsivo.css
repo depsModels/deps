@@ -298,8 +298,31 @@
 
   /*********** FAQ ************/
 
+  .faq-container {
+    flex-direction: column;
+    gap: 15px;
+    height: auto; /* Remove a altura fixa para maior flexibilidade */
+  }
+
+  .faq-half {
+    flex: 1 1 100%; /* Cada coluna agora ocupa 100% da largura */
+  }
+
   .faq-item {
-    flex: 1 1 100%; /* Em telas menores, cada item ocupa 100% da largura */
+    min-width: 100%; /* O card agora ocupa toda a largura do container */
+    margin-top: 1.5rem;
+  }
+
+  .faq h2 {
+    font-size: 1.75rem; /* Reduz ligeiramente o tamanho do título */
+  }
+
+  .faq-item h3 {
+    font-size: 1.25rem; /* Reduz o tamanho do título dentro dos cards */
+  }
+
+  .faq-item p {
+    font-size: 0.95rem; /* Texto um pouco menor para caber melhor */
   }
 
   /*********** Footer ************/

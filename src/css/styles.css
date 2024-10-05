@@ -1066,7 +1066,7 @@ label {
 /******** FAQ ********/
 
 .faq {
-  padding: 2.75rem 1.25rem 13.75rem 1.25rem;
+  padding: 3rem 1.25rem 15.75rem 1.25rem;
   background-color: var(--low-opacity);
   height: 100%;
 
@@ -1075,7 +1075,6 @@ label {
 .faq h2 {
   text-align: center;
   font-size: 2rem;
-  margin-bottom: 30px;
   color: #333;
 }
 
@@ -1087,6 +1086,7 @@ label {
 }
 
 .faq-half{
+  flex: 1 1 45%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -1147,7 +1147,7 @@ label {
 #footer {
   background-color: var(--dark-background);
   color: #ffffff;
-  padding: 1.25rem;
+  padding: 1.25rem 5rem;
   text-align: center;
 }
 
@@ -1263,11 +1263,11 @@ textarea {
 
 .btn-form {
   width: auto;
-  padding: 0.75rem 1.15rem;
+  padding: 0.70rem 1.10rem;
   background-color: var(--color-blue-deps);
   color: #ffffff;
   border: none;
-  border-radius: 0.3125rem;
+  border-radius: 0.5rem;
   cursor: pointer;
   font-size: 1rem;
   transition:
