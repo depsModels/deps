@@ -1066,10 +1066,9 @@ label {
 /******** FAQ ********/
 
 .faq {
-  padding: 3rem 1.25rem 15.75rem 1.25rem;
+  padding: 3rem 1.25rem 5rem 1.25rem;
   background-color: var(--low-opacity);
   height: 100%;
-
 }
 
 .faq h2 {
@@ -1082,14 +1081,14 @@ label {
   display: flex;
   justify-content: space-between;
   gap: 20px;
-  height: 30vh;
-}
 
+}
 .faq-half{
   flex: 1 1 45%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  height: 100%;
 }
 
 .faq-item {

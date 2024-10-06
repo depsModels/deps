@@ -29,6 +29,16 @@
     font-size: 2rem;
   }
 
+  .title-kaftan {
+    font-family: kaftan;
+    font-size: 3.5rem;
+  }
+
+  .subtitle-kaftan {
+    font-family: kaftan;
+    font-size: 3.5rem;
+  }
+
   /**********  Buttons **********/
 
   .button {
@@ -194,10 +204,92 @@
     max-width: 100%;
   }
 
+  .deps-acronym {
+    width: 100%;
+  }
+
   .about-acronym {
-    width: 60%;
-    text-align: center;
-    margin: 100px auto;
+    display: none;
+  }
+
+  #label-design,
+  #label-efficiency,
+  #label-productivity,
+  #label-simplicity {
+    margin-left: 2rem;
+    transition: 0.5s;
+    width: 85%;
+    border-radius: 8vh;
+  }
+
+  #label-design:hover,
+  #label-design.active {
+    margin-left: 2rem;
+    cursor: pointer;
+    background-color: #ffc700;
+    color: white;
+  }
+
+  #label-efficiency:hover,
+  #label-efficiency.active {
+    margin-left: 2rem;
+    cursor: pointer;
+    background-color: #b00000;
+    color: white;
+  }
+
+  #label-productivity:hover,
+  #label-productivity.active {
+    margin-left: 2rem;
+    cursor: pointer;
+    background-color: #49beff;
+    color: white;
+  }
+
+  #label-simplicity:hover,
+  #label-simplicity.active {
+    margin-left: 2rem;
+    cursor: pointer;
+    background-color: #0046af;
+    color: white;
+  }
+
+  .deps-titles {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    cursor: pointer;
+    transition:
+      background-color 0.3s ease,
+      transform 0.3s ease;
+    position: relative;
+    padding: 0.5rem 1rem;
+  }
+
+  .deps-titles.active {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: scale(1.05);
+  }
+
+  .deps-titles span {
+    transition:
+      opacity 0.3s ease,
+      transform 0.3s ease;
+  }
+
+  .deps-titles span.full-word {
+    opacity: 0; /* Oculta a palavra completa inicialmente */
+    transform: translateY(10px); /* Move para baixo */
+    display: inline-block;
+  }
+
+  .deps-titles.active span.full-word {
+    opacity: 1; /* Torna a palavra completa visível quando ativo */
+    transform: translateY(0); /* Volta para a posição original */
+  }
+
+  .deps-titles span:first-child {
+    margin-right: 0.5rem; /* Espaço entre a letra e a palavra */
   }
 
   /******** Services **********/
@@ -243,6 +335,10 @@
 
   /********* Landing Pages ********/
 
+  #landing-pages {
+    height: 100%;
+  }
+
   .landing-pages__content {
     display: block;
     text-align: center;
@@ -251,6 +347,7 @@
   .text-content,
   .image-content {
     width: 100%;
+    height: 100%;
     margin: 0 auto;
   }
 
@@ -264,16 +361,24 @@
 
   /********* Stock Management *********/
 
-  .stock-management__content {
-    display: block;
-    text-align: center;
+  #stock-management {
+    height: 100%;
   }
 
-  .text-content,
-  .image-content {
-    width: 100%;
-    margin: 0 auto;
+  .stock-management__content {
+    display: flex;
+    flex-direction: column; /* Muda a direção para coluna */
   }
+
+  .image-content {
+    order: 2; /* Coloca a imagem após o texto */
+    height: 100%;
+  }
+
+  .text-content {
+    order: 1; /* Coloca o texto antes da imagem */
+  }
+
 
   .image-content {
     margin-top: 2rem;
@@ -281,23 +386,27 @@
 
   /********* E-commerce *********/
 
-  .e-commerce__content {
-    display: block;
-    text-align: center;
+  #e-commerce{
+    height: 100%;
   }
 
-  .text-content,
-  .image-content {
-    width: 100%;
-    margin: 0 auto;
+  .e-commerce__content {
+   display: flex;
+    flex-direction: column; /* Muda a direção para coluna */
   }
+
 
   .image-content {
     margin-top: 2rem;
   }
 
   /*********** FAQ ************/
-  
+
+  .faq{
+    height: 100%;
+    padding: 3rem 1rem 1.75rem 1rem;
+  }
+
   #footer {
     padding: 1.5rem;
   }

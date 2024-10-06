@@ -25,6 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
       menuOpen = true;
     } else {
       // Verifica se o modal está aberto
+      menu.style.display = "none";
       const modal = document.getElementById("contatoModal");
       if (modal.classList.contains("show")) {
         // Fecha o modal
