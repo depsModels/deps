@@ -213,6 +213,19 @@
     padding: 0 1rem;
   }
 
+  .feature-card {
+    height: 100%;
+    margin-top: 1rem;
+  }
+  .feature-card-bgimage {
+    display: none;
+  }
+
+  .right-features {
+    background-color: transparent;
+    margin-top: 0rem;
+  }
+
   #img-features {
     margin-top: 2rem;
   }
