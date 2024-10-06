@@ -26,17 +26,30 @@
   }
 
   .titles {
-    font-size: 2rem;
+    font-size: 2.25rem;
   }
+
+  #title-presentation {
+    font-size: 2.735rem;
+  }
+
+  #span-presentation {
+    font-size: 3.235rem;
+  }
+
+  .title-services span {
+    font-size: 3rem;
+  }
+  
 
   .title-kaftan {
     font-family: kaftan;
-    font-size: 3.5rem;
+    font-size: 3.375rem;
   }
 
   .subtitle-kaftan {
     font-family: kaftan;
-    font-size: 3.5rem;
+    font-size: 2.7rem;
   }
 
   /**********  Buttons **********/
@@ -72,6 +85,10 @@
     display: block;
     margin: 0 auto;
     text-align: center;
+  }
+
+  .section-home h2 {
+    margin: 0 .5rem 0 .5rem;
   }
 
   .menu-toggle {
