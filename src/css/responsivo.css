@@ -36,7 +36,7 @@
 
   .subtitle-kaftan {
     font-family: kaftan;
-    font-size: 3.5rem;
+    font-size: 3rem;
   }
 
   /**********  Buttons **********/
@@ -194,6 +194,19 @@
   .right-features {
     width: 100%;
     padding: 0 1rem;
+  }
+
+  .feature-card {
+    height: 100%;
+    margin-top: 1rem;
+  }
+  .feature-card-bgimage {
+    display: none;
+  }
+
+  .right-features {
+    background-color: transparent;
+    margin-top: 0rem;
   }
 
   #img-features {
