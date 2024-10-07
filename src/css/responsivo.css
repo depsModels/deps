@@ -26,17 +26,30 @@
   }
 
   .titles {
-    font-size: 2rem;
+    font-size: 2.25rem;
   }
+
+  #title-presentation {
+    font-size: 2.735rem;
+  }
+
+  #span-presentation {
+    font-size: 3.235rem;
+  }
+
+  .title-services span {
+    font-size: 3rem;
+  }
+  
 
   .title-kaftan {
     font-family: kaftan;
-    font-size: 3.5rem;
+    font-size: 3.375rem;
   }
 
   .subtitle-kaftan {
     font-family: kaftan;
-    font-size: 3 rem;
+    font-size: 3rem;
   }
 
   /**********  Buttons **********/
@@ -72,6 +85,10 @@
     display: block;
     margin: 0 auto;
     text-align: center;
+  }
+
+  .section-home h2 {
+    margin: 0 .5rem 0 .5rem;
   }
 
   .menu-toggle {
@@ -180,6 +197,10 @@
 
   #presentation {
     display: block;
+  }
+
+  #presentation #title-presentation {
+    margin: 1rem;
   }
 
   /*********** Who-We-Are ************/
@@ -329,8 +350,8 @@
 
   .custom-card {
     display: block;
-    width: 100%;
-    margin-bottom: 2rem;
+    width: 85%;
+    margin-bottom: var(--spacing-sm);
   }
 
   .card-inner {
@@ -523,4 +544,10 @@
   #container-features {
     flex-wrap: wrap;
   }
+}
+
+/*********** Estilos para dispositivos móveis (até 1024 pixels) ***********/
+
+@media (max-width: 1024px) {
+  
 }

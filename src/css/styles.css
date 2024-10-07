@@ -230,14 +230,16 @@ p {
 
 #title-presentation {
   color: white;
-  padding-top: 5vh;
   text-align: center;
-  font-size: 4.4rem;
+  font-size: 4.1rem;
+}
+
+#span-presentation {
+  font-size: 4.5rem;
 }
 
 .titles {
-  padding: 1rem;
-  font-size: 3.4rem;
+  font-size: 3.5rem;
 }
 
 .title-features {
@@ -672,7 +674,6 @@ nav img {
   background-position: center;
 }
 
-.card-back,
 .card-front {
   position: absolute;
   width: 100%;
@@ -710,7 +711,7 @@ nav img {
 
 .card-footer {
   font-size: 1rem;
-  margin-top: 10px;
+  margin-top: var(--spacing-sm);
 }
 
 .custom-card:nth-child(1) {
@@ -881,8 +882,6 @@ nav img {
   margin-right: 2rem;
 }
 
-
-
 /********** Who We Are **********/
 
 #who-we-are {
@@ -895,6 +894,10 @@ nav img {
 
 #who-we-are h2 {
   margin: var(--spacing-xl);
+}
+
+.feature-card div h2 {
+  padding: 0 0 1rem 0;
 }
 
 .features-cards {
@@ -924,7 +927,6 @@ nav img {
 
 .deps-acronym {
   width: 45%;
-  margin-top: var(--spacing-xl);
   display: flex;
   flex-direction: column;
   gap: 2.6rem;
