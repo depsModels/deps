@@ -199,6 +199,10 @@
     display: block;
   }
 
+  #presentation #title-presentation {
+    margin: 1rem;
+  }
+
   /*********** Who-We-Are ************/
 
   .container-main {
@@ -346,8 +350,8 @@
 
   .custom-card {
     display: block;
-    width: 100%;
-    margin-bottom: 2rem;
+    width: 85%;
+    margin-bottom: var(--spacing-sm);
   }
 
   .card-inner {
@@ -540,4 +544,10 @@
   #container-features {
     flex-wrap: wrap;
   }
+}
+
+/*********** Estilos para dispositivos móveis (até 1024 pixels) ***********/
+
+@media (max-width: 1024px) {
+  
 }

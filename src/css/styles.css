@@ -180,7 +180,6 @@ p {
 
 #title-presentation {
   color: white;
-  padding-top: 5vh;
   text-align: center;
   font-size: 4.1rem;
 }
@@ -625,7 +624,6 @@ nav img {
   background-position: center;
 }
 
-.card-back,
 .card-front {
   position: absolute;
   width: 100%;
@@ -663,7 +661,7 @@ nav img {
 
 .card-footer {
   font-size: 1rem;
-  margin-top: 10px;
+  margin-top: var(--spacing-sm);
 }
 
 .custom-card:nth-child(1) {
@@ -786,52 +784,6 @@ nav img {
 .projects:hover .info-card {
   transform: translateY(0);
   opacity: 1;
-}
-
-/* 
-#stock-deps:hover::before,
-#karine:hover::before,
-#gym:hover::before {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 45rem;
-  height: 40rem;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  transform: translate(-50%, -50%);
-  opacity: 1;
-  transition: opacity 0.4s ease;
-  z-index: 1;
-  background-color: inherit;
-}
-
-#stock-deps:hover::before {
-  background-image: url('/src/images/project-stock-deps.avif');
-}
-
-#karine:hover::before {
-  background-image: url('/src/images/project-karine.avif');
-}
-
-#gym:hover::before {
-  background-image: url('/src/images/project-gym.avif');
-} */
-
-#img-stock {
-  width: 45rem;
-  height: 30rem;
-  border-radius: 20px;
-}
-
-#img1-presentation {
-  margin-left: 2rem;
-}
-
-#img2-presentation {
-  margin-right: 2rem;
 }
 
 /********** Who We Are **********/
