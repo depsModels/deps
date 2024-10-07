@@ -166,17 +166,17 @@ div.feature-card p {
   position: absolute;
   width: 1rem; /* Ajusta a largura da pseudo-classe */
   height: 0.2rem; /* Ajusta a altura da pseudo-classe */
-  right: 0rem; /* Ajusta a posição da pseudo-classe */
+  right: -0.3rem; /* Ajusta a posição da pseudo-classe */
   background-color: var(--color-yellow-deps);
 }
 
 .arrow::after {
-  top: 0.4rem; /* Ajusta a posição da pseudo-classe */
+  top: 0.3rem; /* Ajusta a posição da pseudo-classe */
   transform: rotate(-45deg);
 }
 
 .arrow::before {
-  top: -0.4rem; /* Ajusta a posição da pseudo-classe */
+  top: -0.3rem; /* Ajusta a posição da pseudo-classe */
   box-shadow: 0 3px 5px rgba(0, 0, 0, .2);
   transform: rotate(45deg);
 }
