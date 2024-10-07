@@ -1,116 +1,60 @@
-let radioDesign = document.querySelector("#label-design");
-let radioEfficiency = document.querySelector("#label-efficiency");
-let radioProductivity = document.querySelector("#label-productivity");
-let radioSimplicity = document.querySelector("#label-simplicity");
+let mode = '';
 
-let sectionDesign = document.querySelector("#design");
-let sectionEfficiency = document.querySelector("#efficiency");
-let sectionProductivity = document.querySelector("#productivity");
-let sectionSimplicity = document.querySelector("#simplicity");
+const radios = {
+  design: document.querySelector("#label-design"),
+  efficiency: document.querySelector("#label-efficiency"),
+  productivity: document.querySelector("#label-productivity"),
+  simplicity: document.querySelector("#label-simplicity")
+};
 
-let pointer = document.querySelector(".pointer");
+const sections = {
+  design: document.querySelector("#design"),
+  efficiency: document.querySelector("#efficiency"),
+  productivity: document.querySelector("#productivity"),
+  simplicity: document.querySelector("#simplicity")
+};
 
-const depsAcronym = document.querySelector(".deps-acronym");
-const labels = depsAcronym.querySelectorAll("p");
+const labels = document.querySelectorAll(".deps-acronym p");
 
-const removeActiveFromAll = () => {
-  labels.forEach((label) => {
-    label.classList.remove("active");
+const showSection = (key) => {
+  Object.keys(sections).forEach(k => sections[k].style.display = k === key ? 'block' : 'none');
+};
+
+const toggleFullWords = (show) => {
+  labels.forEach(label => {
+    const fullWord = label.querySelector("span.full-word");
+    fullWord.style.opacity = show ? "1" : "0";
+    fullWord.style.transform = show ? "translateY(0)" : "translateY(10px)";
   });
 };
 
-function desktopFunction() {
-  console.log("Modo desktop ativado");
+const setActive = (activeLabel) => {
+  labels.forEach(label => label.classList.toggle("active", label === activeLabel));
+};
 
-  // Mostrar full-word em todas as labels no modo desktop
-  labels.forEach((label) => {
-    const fullWord = label.querySelector("span.full-word");
-    fullWord.style.opacity = "1"; // Mostrar full-word
-    fullWord.style.transform = "translateY(0)"; // Resetar a posição
+const desktopFunction = () => {
+  if (mode === 'desktop') return;
+  mode = 'desktop';
+  toggleFullWords(true);
+  Object.values(radios).forEach(radio => radio.onmouseover = () => {
+    setActive(radio);
+    showSection(radio.id.split('-')[1]);
   });
+};
 
-  radioDesign.addEventListener("mouseover", (e) => {
-    sectionDesign.style.display = "block";
-    sectionEfficiency.style.display = "none";
-    sectionProductivity.style.display = "none";
-    sectionSimplicity.style.display = "none";
+const mobileFunction = () => {
+  if (mode === 'mobile') return;
+  mode = 'mobile';
+  labels.forEach(label => label.onclick = () => {
+    setActive(label);
+    toggleFullWords(false);
+    label.querySelector("span.full-word").style.opacity = "1";
+    label.querySelector("span.full-word").style.transform = "translateY(0)";
+    showSection(label.id.split('-')[1]);
   });
+};
 
-  radioEfficiency.addEventListener("mouseover", (e) => {
-    sectionDesign.style.display = "none";
-    sectionEfficiency.style.display = "block";
-    sectionProductivity.style.display = "none";
-    sectionSimplicity.style.display = "none";
-  });
+const checkWindowSize = () => window.innerWidth <= 768 ? mobileFunction() : desktopFunction();
 
-  radioProductivity.addEventListener("mouseover", (e) => {
-    sectionDesign.style.display = "none";
-    sectionEfficiency.style.display = "none";
-    sectionProductivity.style.display = "block";
-    sectionSimplicity.style.display = "none";
-  });
-
-  radioSimplicity.addEventListener("mouseover", (e) => {
-    sectionDesign.style.display = "none";
-    sectionEfficiency.style.display = "none";
-    sectionProductivity.style.display = "none";
-    sectionSimplicity.style.display = "block";
-  });
-}
-
-function mobileFunction() {
-  console.log("Modo mobile ativado");
-  
-  radioDesign.classList.add("active");
-  sectionDesign.style.display = "block";
-
-  labels.forEach((label) => {
-    label.addEventListener("click", () => {
-
-      removeActiveFromAll();
-
-      label.classList.add("active");
-
-      labels.forEach((lbl) => {
-        const fullWord = lbl.querySelector("span.full-word");
-        if (lbl !== label) {
-          fullWord.style.opacity = "0"; // Esconder full-word
-          fullWord.style.transform = "translateY(10px)"; // Mover a palavra para baixo
-        } else {
-          fullWord.style.opacity = "1"; // Mostrar full-word
-          fullWord.style.transform = "translateY(0)"; // Resetar a posição
-        }
-      });
-
-      // Exibe a seção correspondente
-      sectionDesign.style.display = "none";
-      sectionEfficiency.style.display = "none";
-      sectionProductivity.style.display = "none";
-      sectionSimplicity.style.display = "none";
-
-      if (label === radioDesign) {
-        sectionDesign.style.display = "block";
-      } else if (label === radioEfficiency) {
-        sectionEfficiency.style.display = "block";
-      } else if (label === radioProductivity) {
-        sectionProductivity.style.display = "block";
-      } else if (label === radioSimplicity) {
-        sectionSimplicity.style.display = "block";
-      }
-    });
-  });
-}
-
-function checkWindowSize() {
-  if (window.innerWidth <= 768) { 
-    mobileFunction();
-  } else {
-    desktopFunction();
-  }
-}
-
-// Verifica o tamanho da janela quando a página carrega
 window.onload = checkWindowSize;
-
-// Verifica o tamanho da janela toda vez que ela for redimensionada
 window.onresize = checkWindowSize;

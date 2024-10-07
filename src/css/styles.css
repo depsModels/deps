@@ -130,6 +130,56 @@ div.feature-card p {
   display: flex;
 }
 
+/********* cursor **************/
+.link-carousel{
+  cursor: pointer;
+}
+.icon {
+  background-color: var(--dark-background); /* Fundo escuro */
+  border-radius: 50%; /* Ajusta o formato do cursor para um círculo */
+  position: absolute;
+  top: 50%;
+  left: 50%; /* Ajusta a posição do ícone */
+  transform: translate(-45%, -50%);
+  width: 4rem; /* Ajusta a largura do cursor */
+  height: 4rem; /* Ajusta a altura do cursor */
+  cursor: pointer;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: left 0.1s, top 0.1s; /* Adiciona transição para a classe .icon */
+}
+
+.arrow {
+  position: relative; /* Muda para relative para centralizar dentro do ícone */
+  width: 1.5rem; /* Ajusta a largura da flecha */
+  height: 0.2rem; /* Ajusta a altura da flecha */
+  right: 0rem;
+  background-color: var(--color-yellow-deps);
+  box-shadow: 0 3px 5px black;
+  animation: arrow 700ms linear infinite;
+}
+
+.arrow::after, .arrow::before {
+  content: '';
+  position: absolute;
+  width: 1rem; /* Ajusta a largura da pseudo-classe */
+  height: 0.2rem; /* Ajusta a altura da pseudo-classe */
+  right: 0rem; /* Ajusta a posição da pseudo-classe */
+  background-color: var(--color-yellow-deps);
+}
+
+.arrow::after {
+  top: 0.4rem; /* Ajusta a posição da pseudo-classe */
+  transform: rotate(-45deg);
+}
+
+.arrow::before {
+  top: -0.4rem; /* Ajusta a posição da pseudo-classe */
+  box-shadow: 0 3px 5px rgba(0, 0, 0, .2);
+  transform: rotate(45deg);
+}
 /********** Typography **********/
 
 h1,
@@ -830,6 +880,8 @@ nav img {
 #img2-presentation {
   margin-right: 2rem;
 }
+
+
 
 /********** Who We Are **********/
 
