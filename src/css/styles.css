@@ -762,6 +762,11 @@ nav img {
   flex-direction: column;
 }
 
+.splide__slide img {
+  width: 100%;
+  height: auto;
+}
+
 .image-overlay {
   height: 100%;
   width: 100%;
@@ -790,7 +795,7 @@ nav img {
   background-image: url("/src/images/bg-carousel-gym.avif");
 }
 
-/****** Background e Hover *****/
+/******* Background e Hover *******/
 
 #stock-deps {
   background-image: linear-gradient(to top, #f59b47, #f3ec78);
@@ -836,11 +841,11 @@ nav img {
   opacity: 1;
 }
 
-.splide__slide img {
-  width: 100%;
-  height: auto;
+#img-stock {
+  width: 45rem;
+  height: 30rem;
+  border-radius: 20px;
 }
-
 
 /********** Who We Are **********/
 
@@ -946,6 +951,7 @@ label {
   background-color: #0046af;
   color: white;
 }
+
 
 #design {
   display: block;
