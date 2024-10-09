@@ -130,31 +130,32 @@ div.feature-card p {
   display: flex;
 }
 
-/********* cursor **************/
+/********* Cursor **************/
+
 .link-carousel{
   cursor: pointer;
 }
 .icon {
-  background-color: var(--dark-background); /* Fundo escuro */
-  border-radius: 50%; /* Ajusta o formato do cursor para um círculo */
+  background-color: var(--dark-background); 
+  border-radius: 50%;
   position: absolute;
   top: 50%;
-  left: 50%; /* Ajusta a posição do ícone */
+  left: 50%; 
   transform: translate(-45%, -50%);
-  width: 4rem; /* Ajusta a largura do cursor */
-  height: 4rem; /* Ajusta a altura do cursor */
+  width: 4rem; 
+  height: 4rem; 
   cursor: pointer;
   z-index: 2;
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: left 0.1s, top 0.1s; /* Adiciona transição para a classe .icon */
+  transition: left 0.1s, top 0.1s; 
 }
 
 .arrow {
-  position: relative; /* Muda para relative para centralizar dentro do ícone */
-  width: 1.5rem; /* Ajusta a largura da flecha */
-  height: 0.2rem; /* Ajusta a altura da flecha */
+  position: relative; 
+  width: 1.5rem; 
+  height: 0.2rem; 
   right: 0rem;
   background-color: var(--color-yellow-deps);
   box-shadow: 0 3px 5px black;
@@ -164,22 +165,23 @@ div.feature-card p {
 .arrow::after, .arrow::before {
   content: '';
   position: absolute;
-  width: 1rem; /* Ajusta a largura da pseudo-classe */
-  height: 0.2rem; /* Ajusta a altura da pseudo-classe */
-  right: -0.3rem; /* Ajusta a posição da pseudo-classe */
+  width: 1rem;
+  height: 0.2rem; 
+  right: -0.3rem; 
   background-color: var(--color-yellow-deps);
 }
 
 .arrow::after {
-  top: 0.3rem; /* Ajusta a posição da pseudo-classe */
+  top: 0.3rem;
   transform: rotate(-45deg);
 }
 
 .arrow::before {
-  top: -0.3rem; /* Ajusta a posição da pseudo-classe */
+  top: -0.3rem; 
   box-shadow: 0 3px 5px rgba(0, 0, 0, .2);
   transform: rotate(45deg);
 }
+
 /********** Typography **********/
 
 h1,
@@ -476,15 +478,26 @@ nav img {
   color: #fff;
 }
 
+#contatoModalLabel {
+  font-size: 1.5rem;
+}
+
+.modal-title-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+}
+
 .modal-content-contato {
   border-radius: 10px;
   background-color: #f7f7f7;
 }
 
 .img-modal {
-  font-size: 2rem;
+  font-size: 2.2rem;
   color: #fff;
-  margin-left: 0.5rem;
 }
 
 .modal-dialog {
@@ -497,21 +510,13 @@ nav img {
 }
 
 .modal-header-contato {
-  background-color: #212529;
+  background-color: var(--dark-background);
   color: #fff;
   border-bottom: none;
 }
 
 .modal-body {
   background-color: var(--dark-background);
-}
-
-.modal-body-contato {
-  padding: 20px;
-}
-
-.label-contato {
-  color: #333;
 }
 
 .input-contato {
@@ -544,29 +549,31 @@ nav img {
 }
 
 .btn-cancelar {
-  background-color: #b00000;
+  background-color: var(--color-red-deps);
   color: #fff;
   border-radius: 5px;
+  border: none;
+  padding: 0.65rem 1rem;
+  min-width: 4rem;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .btn-cancelar:hover {
   background-color: #8b0a0a;
-  color: #fff;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
 }
 
 .btn-enviar {
   background-color: var(--color-yellow-deps);
   color: #fff;
   border-radius: 5px;
+  border: none; 
+  padding: 0.65rem 1rem;
+  min-width: 4rem;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease; 
 }
 
 .btn-enviar:hover {
   background-color: #ffd700;
-  color: #fff;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
 }
 
 /**********  Buttons **********/
@@ -790,7 +797,7 @@ nav img {
   background-image: url("/src/images/bg-carousel-gym.avif");
 }
 
-/* Background e Hover */
+/****** Background e Hover *****/
 
 #stock-deps {
   background-image: linear-gradient(to top, #f59b47, #f3ec78);
@@ -834,52 +841,6 @@ nav img {
 .projects:hover .info-card {
   transform: translateY(0);
   opacity: 1;
-}
-
-/* 
-#stock-deps:hover::before,
-#karine:hover::before,
-#gym:hover::before {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 45rem;
-  height: 40rem;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  transform: translate(-50%, -50%);
-  opacity: 1;
-  transition: opacity 0.4s ease;
-  z-index: 1;
-  background-color: inherit;
-}
-
-#stock-deps:hover::before {
-  background-image: url('/src/images/project-stock-deps.avif');
-}
-
-#karine:hover::before {
-  background-image: url('/src/images/project-karine.avif');
-}
-
-#gym:hover::before {
-  background-image: url('/src/images/project-gym.avif');
-} */
-
-#img-stock {
-  width: 45rem;
-  height: 30rem;
-  border-radius: 20px;
-}
-
-#img1-presentation {
-  margin-left: 2rem;
-}
-
-#img2-presentation {
-  margin-right: 2rem;
 }
 
 /********** Who We Are **********/
