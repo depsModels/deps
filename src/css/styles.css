@@ -368,13 +368,6 @@ p {
   font-size: 4rem;
 }
 
-/********** Carrossel ************/
-
-.splide__slide img {
-  width: 100%;
-  height: auto;
-}
-
 /********** Espaçamentos ************/
 
 .margin-right {
@@ -843,6 +836,12 @@ nav img {
   opacity: 1;
 }
 
+.splide__slide img {
+  width: 100%;
+  height: auto;
+}
+
+
 /********** Who We Are **********/
 
 #who-we-are {
@@ -947,7 +946,6 @@ label {
   background-color: #0046af;
   color: white;
 }
-
 
 #design {
   display: block;
