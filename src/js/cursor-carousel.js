@@ -10,7 +10,7 @@ window.addEventListener("mousemove", function (e) {
     cursorDot.style.left = `${posX}px`;
     cursorDot.style.top = `${posY}px`;
   } else {
-    cursorDot.style.left = "-100px";
-    cursorDot.style.top = "-100px";
+    cursorDot.style.left = "-120px";
+    cursorDot.style.top = "-140px";
   }
 });
