@@ -44,7 +44,7 @@
 
   .title-kaftan {
     font-family: kaftan;
-    font-size: 3.375rem;
+    font-size: 3.5rem;
   }
 
   .subtitle-kaftan {
@@ -615,4 +615,49 @@
   .row {
     justify-content: space-between; /* Espaçar divs lado a lado */
   }
+}
+
+/*********** Estilos para dispositivos móveis (até 1279 pixels) ***********/
+
+@media (min-width: 1024px) and (max-width: 1279px) {
+
+/********* Cursor **********/
+
+.icon {
+  display: none;
+}
+
+/*********** Navigation Bar ************/
+
+.menu ul li {
+  white-space: nowrap; /* Impede a quebra de linha do texto */
+}
+
+/*********** Who-We-Are ************/
+
+#label-design {
+  width: 80%;
+}
+
+#label-efficiency,
+#label-productivity,
+#label-simplicity {
+  width: 90%;
+}
+
+/******** Footer *********/
+
+.navegation {
+  display: none; /* Oculta a navegação */
+}
+
+.app-info,
+.form {
+  width: 45%; /* Largura para cada uma das divs */
+  margin: 0; /* Remover margens laterais */
+}
+
+.row {
+  justify-content: space-between; /* Espaçar divs lado a lado */
+}
 }
