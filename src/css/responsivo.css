@@ -58,6 +58,12 @@
     margin: 0;
   }
 
+  /********* Cursor **********/
+
+  .icon {
+    display: none;
+  }
+
   /********** Header **********/
 
   header {
@@ -66,6 +72,8 @@
     height: 100vh;
     text-align: center;
   }
+
+  /********** Navigation Bar **********/
 
   nav {
     width: 100%;
@@ -76,8 +84,8 @@
   nav img {
     width: 20vh;
     filter: brightness(110%);
-    float: left;
-  }
+    margin: 0 14vh;
+}
 
   .section-home {
     margin-top: 10vh;
@@ -88,7 +96,7 @@
   }
 
   .section-home h2 {
-    margin: 0 .5rem 0 .5rem;
+    margin: 0 .6rem 0 .6rem;
   }
 
   .menu-toggle {
@@ -193,7 +201,14 @@
     transform: translateY(0);
   }
 
-  /******** Presentation ***********/
+  /********** Modal Contato ************/
+
+  .label-contato {
+    text-align: left;
+    display: block;
+  }
+
+  /******** Presentation - Carrossel ***********/
 
   #presentation {
     display: block;
@@ -201,6 +216,11 @@
 
   #presentation #title-presentation {
     margin: 1rem;
+  }
+
+  .projects {
+    height: 75vh;
+
   }
 
   /*********** Who-We-Are ************/
@@ -252,7 +272,7 @@
   #label-simplicity {
     margin-left: 2rem;
     transition: 0.5s;
-    width: 85%;
+    width: 85%; 
     border-radius: 8vh;
   }
 
@@ -312,18 +332,18 @@
   }
 
   .deps-titles span.full-word {
-    opacity: 0; /* Oculta a palavra completa inicialmente */
-    transform: translateY(10px); /* Move para baixo */
+    opacity: 0; 
+    transform: translateY(10px); 
     display: inline-block;
   }
 
   .deps-titles.active span.full-word {
-    opacity: 1; /* Torna a palavra completa visível quando ativo */
-    transform: translateY(0); /* Volta para a posição original */
+    opacity: 1; 
+    transform: translateY(0); 
   }
 
   .deps-titles span:first-child {
-    margin-right: 0.5rem; /* Espaço entre a letra e a palavra */
+    margin-right: 0.5rem; 
   }
 
   /******** Services **********/
@@ -425,7 +445,7 @@
   }
 
   .e-commerce__content {
-   display: flex;
+    display: flex;
     flex-direction: column; /* Muda a direção para coluna */
   }
 
@@ -548,6 +568,51 @@
 
 /*********** Estilos para dispositivos móveis (até 1024 pixels) ***********/
 
-@media (max-width: 1024px) {
+@media (min-width: 768px) and (max-width: 1024px) {
   
+  /********* Cursor **********/
+
+  .icon {
+    display: none;
+  }
+
+  /*********** Navigation Bar ************/
+
+  .menu ul li {
+    white-space: nowrap; /* Impede a quebra de linha do texto */
+  }
+
+  /*********** Who-We-Are ************/
+
+  #label-design {
+      width: 80%;
+  }
+
+  #label-efficiency {
+      width: 90%;
+  }
+
+  #label-productivity {
+      width: 105%;
+  }
+
+  #label-simplicity {
+      width: 100%;
+  }
+
+  /******** Footer *********/
+
+  .navegation {
+    display: none; /* Oculta a navegação */
+  }
+
+  .app-info,
+  .form {
+    width: 45%; /* Largura para cada uma das divs */
+    margin: 0; /* Remover margens laterais */
+  }
+
+  .row {
+    justify-content: space-between; /* Espaçar divs lado a lado */
+  }
 }
