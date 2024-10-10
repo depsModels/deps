@@ -29,7 +29,6 @@ if (videoStock) {
   console.log("Video element not found");
 }
 
-
 if (videoGym) {
   figureGym.addEventListener("mouseenter", () => {
     videoGym.play();
@@ -41,8 +40,6 @@ if (videoGym) {
 } else {
   console.log("Video element not found");
 }
-
-
 
 var splide = new Splide(".splide", {
   type: "loop",

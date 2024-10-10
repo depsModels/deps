@@ -40,7 +40,6 @@
   .title-services span {
     font-size: 3rem;
   }
-  
 
   .title-kaftan {
     font-family: kaftan;
@@ -85,7 +84,7 @@
     width: 20vh;
     filter: brightness(110%);
     margin: 0 14vh;
-}
+  }
 
   .section-home {
     margin-top: 10vh;
@@ -96,7 +95,7 @@
   }
 
   .section-home h2 {
-    margin: 0 .6rem 0 .6rem;
+    margin: 0 0.6rem 0 0.6rem;
   }
 
   .menu-toggle {
@@ -220,7 +219,6 @@
 
   .projects {
     height: 75vh;
-
   }
 
   /*********** Who-We-Are ************/
@@ -272,7 +270,7 @@
   #label-simplicity {
     margin-left: 2rem;
     transition: 0.5s;
-    width: 85%; 
+    width: 85%;
     border-radius: 8vh;
   }
 
@@ -332,18 +330,18 @@
   }
 
   .deps-titles span.full-word {
-    opacity: 0; 
-    transform: translateY(10px); 
+    opacity: 0;
+    transform: translateY(10px);
     display: inline-block;
   }
 
   .deps-titles.active span.full-word {
-    opacity: 1; 
-    transform: translateY(0); 
+    opacity: 1;
+    transform: translateY(0);
   }
 
   .deps-titles span:first-child {
-    margin-right: 0.5rem; 
+    margin-right: 0.5rem;
   }
 
   /******** Services **********/
@@ -421,18 +419,17 @@
 
   .stock-management__content {
     display: flex;
-    flex-direction: column; /* Muda a direção para coluna */
+    flex-direction: column;
   }
 
   .image-content {
-    order: 2; /* Coloca a imagem após o texto */
+    order: 2;
     height: 100%;
   }
 
   .text-content {
-    order: 1; /* Coloca o texto antes da imagem */
+    order: 1;
   }
-
 
   .image-content {
     margin-top: 2rem;
@@ -440,15 +437,14 @@
 
   /********* E-commerce *********/
 
-  #e-commerce{
+  #e-commerce {
     height: 100%;
   }
 
   .e-commerce__content {
     display: flex;
-    flex-direction: column; /* Muda a direção para coluna */
+    flex-direction: column;
   }
-
 
   .image-content {
     margin-top: 2rem;
@@ -456,7 +452,7 @@
 
   /*********** FAQ ************/
 
-  .faq{
+  .faq {
     height: 100%;
     padding: 3rem 1rem 1.75rem 1rem;
   }
@@ -468,28 +464,28 @@
   .faq-container {
     flex-direction: column;
     gap: 15px;
-    height: auto; /* Remove a altura fixa para maior flexibilidade */
+    height: auto;
   }
 
   .faq-half {
-    flex: 1 1 100%; /* Cada coluna agora ocupa 100% da largura */
+    flex: 1 1 100%;
   }
 
   .faq-item {
-    min-width: 100%; /* O card agora ocupa toda a largura do container */
+    min-width: 100%;
     margin-top: 1.5rem;
   }
 
   .faq h2 {
-    font-size: 1.75rem; /* Reduz ligeiramente o tamanho do título */
+    font-size: 1.75rem;
   }
 
   .faq-item h3 {
-    font-size: 1.25rem; /* Reduz o tamanho do título dentro dos cards */
+    font-size: 1.25rem;
   }
 
   .faq-item p {
-    font-size: 0.95rem; /* Texto um pouco menor para caber melhor */
+    font-size: 0.95rem;
   }
 
   /*********** Footer ************/
@@ -569,7 +565,6 @@
 /*********** Estilos para dispositivos móveis (até 1024 pixels) ***********/
 
 @media (min-width: 768px) and (max-width: 1024px) {
-  
   /********* Cursor **********/
 
   .icon {
@@ -585,79 +580,92 @@
   /*********** Who-We-Are ************/
 
   #label-design {
-      width: 80%;
+    width: 80%;
   }
 
   #label-efficiency {
-      width: 90%;
+    width: 90%;
   }
 
   #label-productivity {
-      width: 105%;
+    width: 105%;
   }
 
   #label-simplicity {
-      width: 100%;
+    width: 100%;
+  }
+
+  /******** FAQ *********/
+
+  .faq-item {
+    min-height: 125px;
+    max-height: 200px;
   }
 
   /******** Footer *********/
 
   .navegation {
-    display: none; /* Oculta a navegação */
+    display: none;
   }
 
   .app-info,
   .form {
-    width: 45%; /* Largura para cada uma das divs */
-    margin: 0; /* Remover margens laterais */
+    width: 45%;
+    margin: 0;
   }
 
   .row {
-    justify-content: space-between; /* Espaçar divs lado a lado */
+    justify-content: space-between;
   }
 }
 
 /*********** Estilos para dispositivos móveis (até 1279 pixels) ***********/
 
-@media (min-width: 1024px) and (max-width: 1279px) {
+@media (min-width: 1025px) and (max-width: 1279px) {
+  /********* Cursor **********/
 
-/********* Cursor **********/
+  .icon {
+    display: none;
+  }
 
-.icon {
-  display: none;
-}
+  /*********** Navigation Bar ************/
 
-/*********** Navigation Bar ************/
+  .menu ul li {
+    white-space: nowrap; /* Impede a quebra de linha do texto */
+  }
 
-.menu ul li {
-  white-space: nowrap; /* Impede a quebra de linha do texto */
-}
+  /*********** Who-We-Are ************/
 
-/*********** Who-We-Are ************/
+  #label-design {
+    width: 80%;
+  }
 
-#label-design {
-  width: 80%;
-}
+  #label-efficiency,
+  #label-productivity,
+  #label-simplicity {
+    width: 90%;
+  }
 
-#label-efficiency,
-#label-productivity,
-#label-simplicity {
-  width: 90%;
-}
+  /******** FAQ *********/
 
-/******** Footer *********/
+  .faq-item {
+    min-height: 125px;
+    max-height: 200px;
+  }
 
-.navegation {
-  display: none; /* Oculta a navegação */
-}
+  /******** Footer *********/
 
-.app-info,
-.form {
-  width: 45%; /* Largura para cada uma das divs */
-  margin: 0; /* Remover margens laterais */
-}
+  .navegation {
+    display: none;
+  }
 
-.row {
-  justify-content: space-between; /* Espaçar divs lado a lado */
-}
+  .app-info,
+  .form {
+    width: 45%;
+    margin: 0;
+  }
+
+  .row {
+    justify-content: space-between;
+  }
 }
