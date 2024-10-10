@@ -14,6 +14,50 @@
   --spacing-xl: 4rem;
 }
 
+/********** Loader content ************/
+
+.loader-container.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+#page-content {
+  opacity: 0;
+  transform: translate3d(0, -1rem, 0);
+}
+
+#page-content.visible {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+.loader-container {
+  position: fixed;
+  inset: 0;
+  z-index: 999;
+  background-color: var(--dark-background);
+  display: grid;
+  place-content: center;
+}
+
+.loader {
+  width: 4rem;
+  height: 4rem;
+  border: 0.4rem solid var(--color-yellow-deps);
+  border-left-color: var(--color-yellow-deps);
+  border-top-color: var(--color-red-deps);
+  border-right-color: var(--color-blue-deps);
+  border-bottom-color: var(--color-faint-blue-deps);
+  border-radius: 50%;
+  animation: 0.8s ease infinite alternate spinner;
+}
+
+@keyframes spinner {
+  to {
+    transform: rotate(1turn) scale(1.2);
+  }
+}
+
 /********** Body / Commons **********/
 
 * {
@@ -235,7 +279,6 @@ p {
 
 /********* Cursor **********/
 
-
 .icon {
   background-color: var(--dark-background);
   border-radius: 50%;
@@ -426,11 +469,11 @@ nav img {
 
 .modal-body-contato {
   background-color: var(--dark-background);
-  padding: 3rem 2rem 0 2rem; 
+  padding: 3rem 2rem 0 2rem;
 }
 
 .mb-3.px-3:first-child {
-  margin-top: 1rem; 
+  margin-top: 1rem;
 }
 
 .input-contato {
@@ -595,7 +638,6 @@ figure .footer-figure {
   transition-property: opacity, transform;
 }
 
-
 figcaption::before {
   content: "";
   position: absolute;
@@ -618,13 +660,12 @@ figure:hover figcaption::before {
   opacity: 1;
 }
 
-
-figure:hover .main-figure{
-  transform: translate3d(0,0,0);
+figure:hover .main-figure {
+  transform: translate3d(0, 0, 0);
 }
 
-figure:hover .footer-figure{
-  transform: translate3d(0,0,0);
+figure:hover .footer-figure {
+  transform: translate3d(0, 0, 0);
 }
 
 figure img {

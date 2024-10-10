@@ -6,4 +6,5 @@ import "/src/js/menu.js";
 import "/src/js/responsive.js";
 import "/src/js/faq.js";
 import "/src/js/cursor-carousel.js";
+import "/src/js/load-content.js";
 import "/node_modules/bootstrap/dist/js/bootstrap.min.js";
