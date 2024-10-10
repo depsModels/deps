@@ -413,13 +413,24 @@ nav img {
 }
 
 .modal-header-contato {
-  background-color: var(--dark-background);
+  background-color: #101113;
   color: #fff;
   border-bottom: none;
+  padding: 1rem;
 }
 
 .modal-body {
   background-color: var(--dark-background);
+  padding: 2rem 2rem 0 2rem;
+}
+
+.modal-body-contato {
+  background-color: var(--dark-background);
+  padding: 3rem 2rem 0 2rem; 
+}
+
+.mb-3.px-3:first-child {
+  margin-top: 1rem; 
 }
 
 .input-contato {
@@ -438,7 +449,7 @@ nav img {
 }
 
 .modal-footer-contato {
-  background-color: #212529;
+  background-color: var(--dark-background);
   color: #fff;
   border-top: none;
 }
