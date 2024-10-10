@@ -221,6 +221,31 @@
     height: 75vh;
   }
 
+  figcaption{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .main-figure,
+  .footer-figure{
+    opacity: 1;
+  }
+
+  figure .main-figure {
+    transform: translate3d(0, -2rem, 0);
+    transition-property: opacity, transform;
+  }
+  
+  figure .footer-figure {
+    transform: translate3d(0, 2rem, 0);
+    transition-property: opacity, transform;
+  }
+
+  figure:active .videos {
+    transform: scale(0.95);
+    opacity: 0.65;
+  }
+
   /*********** Who-We-Are ************/
 
   .container-main {
