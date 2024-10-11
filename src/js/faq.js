@@ -1,7 +1,7 @@
-const faqItems = document.querySelectorAll('.faq-item');
+const faqItems = document.querySelectorAll(".faq-item");
 
-faqItems.forEach(item => {
-    item.addEventListener('click', () => {
-        item.classList.toggle('ativo');
-    });
+faqItems.forEach((item) => {
+  item.addEventListener("click", () => {
+    item.classList.toggle("ativo");
+  });
 });

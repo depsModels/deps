@@ -221,13 +221,13 @@
     height: 75vh;
   }
 
-  figcaption{
+  figcaption {
     display: flex;
     flex-direction: column;
   }
 
   .main-figure,
-  .footer-figure{
+  .footer-figure {
     opacity: 1;
   }
 
@@ -235,7 +235,7 @@
     transform: translate3d(0, -2rem, 0);
     transition-property: opacity, transform;
   }
-  
+
   figure .footer-figure {
     transform: translate3d(0, 2rem, 0);
     transition-property: opacity, transform;

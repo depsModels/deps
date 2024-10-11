@@ -1,0 +1,21 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap");
+
+/********** Variaveis **********/
+
+:root {
+  --color-red-deps: #b00000;
+  --color-yellow-deps: #feac0e;
+  --color-blue-deps: #0046af;
+  --color-faint-blue-deps: #49beff;
+  --color-white-deps: #fff;
+  --color-black-deps: #000;
+  --dark-background: #212529;
+  --low-opacity: #b5b5b5;
+  --spacing-sm: 1rem;
+  --spacing-md: 2rem;
+  --spacing-xl: 4rem;
+}
+
+.title-merriweather {
+  font-family: "Merriweather";
+}
