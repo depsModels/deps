@@ -1,7 +1,8 @@
 {
   "name": "deps",
   "scripts": {
-    "lint": "npx prettier ./src --write"
+    "build": "webpack",
+    "lint": "prettier ./src --write"
   },
   "devDependencies": {
     "css-loader": "^7.1.1",

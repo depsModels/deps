@@ -17,11 +17,11 @@ document.addEventListener("DOMContentLoaded", function () {
           }, index * 100);
         });
       });
-  
+
       // Habilita eventos de clique no botão do modal
       const buttonNav = document.getElementById("button-nav");
       buttonNav.style.pointerEvents = "auto";
-  
+
       menuOpen = true;
     } else {
       // Verifica se o modal está aberto
@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const modalDialog = modal.querySelector(".modal-dialog");
         modalDialog.classList.remove("show");
       }
-  
+
       // Fecha o menu após um atraso
       setTimeout(() => {
         menu.classList.remove("show");
@@ -42,11 +42,11 @@ document.addEventListener("DOMContentLoaded", function () {
           link.style.transform = "translateY(20px)";
           link.style.pointerEvents = "none"; // Desabilita eventos de clique
         });
-  
+
         // Desabilita eventos de clique no botão do modal
         const buttonNav = document.getElementById("button-nav");
         buttonNav.style.pointerEvents = "none";
-  
+
         menuOpen = false;
       }, 200);
     }
@@ -57,7 +57,7 @@ document.addEventListener("DOMContentLoaded", function () {
       menuToggle.classList.remove("active");
       menu.style.display = "flex";
       menuOpen = false;
-  
+
       // Reset link styles
       links.forEach((link) => {
         link.style.opacity = "1";

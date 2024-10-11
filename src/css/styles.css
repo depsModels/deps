@@ -1,18 +1,4 @@
-/********** Variaveis **********/
-
-:root {
-  --color-red-deps: #b00000;
-  --color-yellow-deps: #feac0e;
-  --color-blue-deps: #0046af;
-  --color-faint-blue-deps: #49beff;
-  --color-white-deps: #fff;
-  --color-black-deps: #000;
-  --dark-background: #212529;
-  --low-opacity: #b5b5b5;
-  --spacing-sm: 1rem;
-  --spacing-md: 2rem;
-  --spacing-xl: 4rem;
-}
+@import "./globals.css";
 
 /********** Loader content ************/
 
@@ -539,7 +525,6 @@ nav img {
 
 /******** Presentation - Carrossel ***********/
 
-
 #presentation {
   width: 100%;
   height: auto;
@@ -548,7 +533,6 @@ nav img {
   padding-top: 5rem;
   padding-bottom: 5rem;
 }
-
 
 .splide {
   overflow: hidden;
@@ -570,6 +554,19 @@ nav img {
 .splide__slide figure video {
   width: 80%;
   height: auto;
+}
+.my-slider-progress {
+  background: #ccc;
+}
+
+.my-slider-progress-bar {
+  background: #ffc700;
+  height: 5px;
+  transition: width 400ms ease;
+  width: 0;
+}
+ul.splide__pagination {
+  display: none;
 }
 
 /******* Background *******/
