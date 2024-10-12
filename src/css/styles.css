@@ -530,14 +530,12 @@ nav img {
 #presentation {
   width: 100%;
   height: auto;
-  perspective: 1000px; /* Perspectiva para o cubo */
   background-color: var(--dark-background);
   padding-top: 5rem;
   padding-bottom: 5rem;
 }
 
 .splide {
-  overflow: hidden;
   transition: transform 0.5s ease-in-out;
 }
 
@@ -612,7 +610,6 @@ ul.splide__pagination {
   transition-timing-function: ease-in-out;
 }
 
-/* Estilização para a figura principal */
 figure {
   width: 100%;
   overflow: hidden;
