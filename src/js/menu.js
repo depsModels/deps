@@ -53,7 +53,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   function handleResize() {
-    if (window.innerWidth > 767) {
+    if (window.innerWidth > 1024) {
       menuToggle.classList.remove("active");
       menu.style.display = "flex";
       menuOpen = false;

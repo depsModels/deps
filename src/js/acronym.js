@@ -65,7 +65,7 @@ const mobileFunction = () => {
 };
 
 const checkWindowSize = () =>
-  window.innerWidth <= 768 ? mobileFunction() : desktopFunction();
+  window.innerWidth <= 1024 ? mobileFunction() : desktopFunction();
 
 window.onload = checkWindowSize;
 window.onresize = checkWindowSize;
