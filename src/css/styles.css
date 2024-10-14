@@ -115,8 +115,6 @@ header {
   padding-top: 2rem;
 }
 
-
-
 /********** Navigation Bar **********/
 
 nav {
@@ -149,9 +147,8 @@ nav img {
 
 .menu ul li {
   margin-left: 1.375rem;
-  white-space: nowrap; 
+  white-space: nowrap;
 }
-
 
 .menu ul li a {
   text-decoration: none;
@@ -313,7 +310,7 @@ nav img {
 }
 
 .splide__slide {
-  transition: transform  0.5s ease-in-out ;
+  transition: transform 0.5s ease-in-out;
 }
 
 .splide__slide.is-prev,
@@ -321,7 +318,6 @@ nav img {
   opacity: 0.7;
   transform: scale(0.98);
 }
-
 
 .splide__slide figure video {
   width: 80%;
@@ -398,11 +394,11 @@ figcaption {
   overflow: hidden;
   inset: 0;
   pointer-events: none;
-  padding: 5rem;
+  padding: 3rem;
 }
 
 .main-figure {
-  line-height: .5em;
+  line-height: 0.5em;
   font-size: 7rem;
   margin-left: 4.5%;
 }
@@ -410,7 +406,7 @@ figcaption {
 .footer-figure {
   font-size: 1.5rem;
   font-weight: bolder;
-  margin-left:4.5%;
+  margin-left: 4.5%;
 }
 
 .main-figure,
@@ -589,10 +585,10 @@ div.feature-card p {
   width: 10rem;
 }
 
-.container-acronym{
- display: flex;
- align-items: center;
- justify-content: center;
+.container-acronym {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .deps-acronym {
@@ -627,8 +623,6 @@ input[type="radio"] {
 label {
   cursor: pointer;
 }
-
-
 
 #label-design,
 #label-efficiency,
@@ -843,7 +837,7 @@ label {
 
 /********* Landing Pages ********/
 
-#landing-pages { 
+#landing-pages {
   width: 100%;
   height: 100%;
   padding: 4rem 0 4rem 0;

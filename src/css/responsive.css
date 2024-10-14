@@ -269,7 +269,6 @@
     transform: translate3d(0, 8rem, 0);
     transition-property: opacity, transform;
     width: 90%;
-    margin-top: 30rem;
   }
 
   figure:active .videos {
@@ -752,7 +751,6 @@
     transform: translate3d(0, 8rem, 0);
     transition-property: opacity, transform;
     width: 90%;
-    margin-top: 35rem;
   }
 
   /************ acronym **************/
@@ -845,11 +843,6 @@
     margin-right: 0.5rem;
   }
 
-  /************ carousel *************/
-
-  .footer-figure{
-    margin-top: 30rem;
-  }
 
   /*********** Who-We-Are ************/
 
@@ -972,7 +965,6 @@
     transform: translate3d(0, 8rem, 0);
     transition-property: opacity, transform;
     width: 90%;
-    margin-top: 40rem;
   }
 
   /*********** Who-We-Are ************/
