@@ -42,7 +42,7 @@
   <!-- CSS -->
   <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css" />
   <link rel="stylesheet" href="/src/css/styles.css" />
-  <link rel="stylesheet" href="/src/css/responsivo.css" />
+  <link rel="stylesheet" href="/src/css/responsive.css" />
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 
   <!-- Recursos externos -->
@@ -56,7 +56,6 @@
 </head>
 
 <body>
-
   <div class="loader-container">
     <div class="loader"></div>
   </div>
@@ -134,13 +133,15 @@
       <h3 class="subtitles subtitles-home light" data-aos="fade-right">
         CRIE, CONSTRUA, CONQUISTE
       </h3>
-      <h1 class="title-home light" data-aos="fade-right" data-aos-duration="1000">
-        Transforme sua
-        <span class="yellow-emphasis title-kaftan">Marca</span> com
-        <br />
-        Web Design
-        <span class="yellow-emphasis title-kaftan">Exclusivo</span>
-      </h1>
+      <div class="title-home-responsive">
+        <h1 class="title-home light" data-aos="fade-right" data-aos-duration="1000">
+          Transforme sua
+          <span class="yellow-emphasis title-kaftan">Marca</span> com
+          <br class="line-break"/>
+          Web Design
+          <span class="yellow-emphasis title-kaftan">Exclusivo</span>
+        </h1>
+      </div>
       <h2 class="subtitles subtitles-home light" data-aos="fade-right" data-aos-duration="2800">
         Potencializando pequenos negócios e startups para alcançar novos
         patamares
@@ -153,13 +154,14 @@
     </div>
   </header>
 
-  <section id="presentation" data-aos="zoom-in-up">
+  <section id="presentation-carousel">
+  <div id="presentation" data-aos="zoom-in-up">
     <h2 id="title-presentation">
       A Agência Digital Moderna
-      <span id="span-presentation" class="yellow-emphasis title-kaftan">Para um <br />
+      <span id="span-presentation" class="yellow-emphasis title-kaftan">Para um<br class="line-break"/>
         Mundo Conectado</span>
     </h2>
-  </section>
+  </div>
 
   <section id="image-carousel" class="splide">
     <div class="splide__track">
@@ -220,6 +222,7 @@
       <div class="my-slider-progress-bar"></div>
     </div>
   </section>
+</section>
 
   <section id="who-we-are">
     <h2 class="titles titles-center light">O que é a DEPS?</h2>

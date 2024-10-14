@@ -62,7 +62,7 @@
 
   .subtitle-kaftan {
     font-family: kaftan;
-    font-size: 3.2rem;
+    font-size: 3rem;
   }
 
   /**********  Buttons **********/
@@ -237,6 +237,7 @@
 
   .splide__slide figure video {
     width: 90%;
+    height: auto;
   }
 
   .projects {
@@ -244,13 +245,13 @@
   }
 
   figcaption {
-    align-items: center;
+    display: flex;
+    flex-direction: column;
   }
 
   .main-figure,
   .footer-figure {
     opacity: 1;
-    margin: 0rem;
   }
 
 
@@ -258,7 +259,6 @@
     transform: translate3d(0, -6rem, 0);
     transition-property: opacity, transform;
     width: 90%;
-    margin: 0rem;
   }
 
   figure .main-figure p{
@@ -269,7 +269,7 @@
     transform: translate3d(0, 8rem, 0);
     transition-property: opacity, transform;
     width: 90%;
-    margin: 0rem;
+    margin-top: 30rem;
   }
 
   figure:active .videos {
@@ -741,6 +741,7 @@
     transform: translate3d(0, -6rem, 0);
     transition-property: opacity, transform;
     width: 90%;
+    margin-top: 5rem;
   }
 
   figure .main-figure p{
@@ -751,6 +752,7 @@
     transform: translate3d(0, 8rem, 0);
     transition-property: opacity, transform;
     width: 90%;
+    margin-top: 35rem;
   }
 
   /************ acronym **************/
@@ -843,7 +845,11 @@
     margin-right: 0.5rem;
   }
 
+  /************ carousel *************/
 
+  .footer-figure{
+    margin-top: 30rem;
+  }
 
   /*********** Who-We-Are ************/
 
@@ -927,9 +933,15 @@
     display: none;
   }
 
+  /*********** Header ***********/
+
   header{
-    width: 100%;
     height: 100%;
+  }
+
+  .section-home{
+    height: 100%;
+    padding-bottom: 10%;
   }
 
   /*********** Navigation Bar ************/
@@ -960,22 +972,19 @@
     transform: translate3d(0, 8rem, 0);
     transition-property: opacity, transform;
     width: 90%;
+    margin-top: 40rem;
   }
 
   /*********** Who-We-Are ************/
 
   #label-design {
-    width: 95%;
+    width: 80%;
   }
 
   #label-efficiency,
   #label-productivity,
   #label-simplicity {
-    width: 100%;
-  }
-
-  .first-letter-acronym{
-    font-size: 10vh;
+    width: 90%;
   }
 
   /*********** Landing pages **********/
