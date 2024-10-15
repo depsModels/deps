@@ -40,7 +40,7 @@ body {
   background-color: var(--dark-background);
 }
 
-/**********  Buttons **********/
+/********** Buttons **********/
 
 .button {
   margin-top: 2.5rem;
@@ -213,7 +213,7 @@ nav {
 
 .modal-body {
   background-color: var(--dark-background);
-  padding: 2rem 2rem 0 2rem;
+  padding: 1rem 2rem 0 2rem;
 }
 
 .modal-body-contato {
