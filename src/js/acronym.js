@@ -1,5 +1,6 @@
 let mode = "";
 
+// Seleciona os elementos dos radios e seções
 const radios = {
   design: document.querySelector("#label-design"),
   efficiency: document.querySelector("#label-efficiency"),
@@ -16,30 +17,37 @@ const sections = {
 
 const labels = document.querySelectorAll(".deps-acronym p");
 
+// Exibe a seção correspondente à label ativa
 const showSection = (key) => {
   Object.keys(sections).forEach(
     (k) => (sections[k].style.display = k === key ? "block" : "none"),
   );
 };
 
-const toggleFullWords = (show) => {
+// Esconde todas as palavras completas ('full-word')
+const hideAllFullWords = () => {
   labels.forEach((label) => {
     const fullWord = label.querySelector("span.full-word");
-    fullWord.style.opacity = show ? "1" : "0";
-    fullWord.style.transform = show ? "translateY(0)" : "translateY(10px)";
+    fullWord.style.opacity = "0";
+    fullWord.style.transform = "translateY(10px)";
   });
 };
 
+// Define a label ativa e mostra a palavra completa correspondente
 const setActive = (activeLabel) => {
   labels.forEach((label) =>
     label.classList.toggle("active", label === activeLabel),
   );
+  hideAllFullWords();
+  const fullWord = activeLabel.querySelector("span.full-word");
+  fullWord.style.opacity = "1";
+  fullWord.style.transform = "translateY(0)";
 };
 
+// Função para inicializar o estado do layout no modo desktop
 const desktopFunction = () => {
   if (mode === "desktop") return;
   mode = "desktop";
-  toggleFullWords(true);
   Object.values(radios).forEach(
     (radio) =>
       (radio.onmouseover = () => {
@@ -49,6 +57,7 @@ const desktopFunction = () => {
   );
 };
 
+// Função para inicializar o estado do layout no modo mobile
 const mobileFunction = () => {
   if (mode === "mobile") return;
   mode = "mobile";
@@ -56,16 +65,21 @@ const mobileFunction = () => {
     (label) =>
       (label.onclick = () => {
         setActive(label);
-        toggleFullWords(false);
-        label.querySelector("span.full-word").style.opacity = "1";
-        label.querySelector("span.full-word").style.transform = "translateY(0)";
         showSection(label.id.split("-")[1]);
       }),
   );
 };
 
-const checkWindowSize = () =>
+// Função para verificar o tamanho da janela e ajustar o layout
+const checkWindowSize = () => {
   window.innerWidth <= 1024 ? mobileFunction() : desktopFunction();
+};
 
-window.onload = checkWindowSize;
+// No carregamento da página, oculta todas as palavras completas e ativa a primeira label
+window.onload = () => {
+  checkWindowSize();
+  setActive(radios.design); // Define "design" como a primeira label ativa
+  showSection("design"); // Mostra a seção de "design" por padrão
+};
+
 window.onresize = checkWindowSize;
