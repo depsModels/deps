@@ -31,7 +31,7 @@
   }
 
   .subtitle-kaftan {
-    font-size: 3rem;
+    font-size: 2.8rem;
   }
 
   /********** Buttons ***********/
@@ -322,7 +322,7 @@
   /******** Services **********/
 
   .title-services {
-    margin-right: 0;
+    margin: 2rem 0 3rem 0;
     text-align: center;
   }
 
@@ -333,7 +333,6 @@
   .span-emphasis {
     margin-left: 0;
     display: block;
-    margin-top: 0.5rem;
   }
 
   .block-cards {
@@ -409,7 +408,7 @@
 
   .faq-container {
     flex-direction: column;
-    gap: 15px;
+    gap: 0;
     height: auto;
   }
 
@@ -439,6 +438,7 @@
   #footer {
     max-width: 100%;
     overflow-x: hidden;
+    padding: 2rem;
   }
 
   .footer-content {
@@ -606,7 +606,6 @@
     flex-direction: column;
     align-items: center;
     width: 100%;
-    margin-top: 10%;
   }
 
   .links {
@@ -626,6 +625,10 @@
   }
 
   /*********** Presentation - Carousel ***************/
+
+  .line-break {
+    display: none;
+  }
 
   .splide__slide.is-active figure .main-figure {
     transform: translate3d(0, 0rem, 0);

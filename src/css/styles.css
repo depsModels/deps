@@ -167,7 +167,7 @@ nav {
   margin-top: 0;
 }
 
-/********** Modal Contato ************/
+/********** Modal Contact ************/
 
 .modal label {
   color: #fff;
@@ -415,8 +415,6 @@ figcaption {
   opacity: 0;
   transition: opacity 0.3s ease-in-out;
 }
-
-
 
 .splide__slide.is-active figure .main-figure {
   transform: translate3d(0, 4rem, 0);
@@ -820,6 +818,10 @@ label {
   margin-bottom: 2rem;
 }
 
+.list li:first-child {
+  margin-top: 2rem;
+}
+
 /********* Landing Pages ********/
 
 #landing-pages {
@@ -878,7 +880,7 @@ label {
 }
 
 #img-stock-management {
-  margin-top: 2rem;
+  margin-top: 0.5rem;
   width: 100%;
   border-radius: 2vh;
 }
