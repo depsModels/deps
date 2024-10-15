@@ -92,7 +92,7 @@ header::after {
 }
 
 header {
-  padding-top: 0px;
+  padding-top: 0;
   padding-bottom: 10%;
   height: 100%;
   position: relative;
@@ -107,12 +107,12 @@ header {
 }
 
 .title-home {
-  margin-top: 2rem;
-  font-size: 3.4rem;
+  margin-top: var(--spacing-md);
+  font-size: 3.5rem;
 }
 
 .subtitles-home {
-  padding-top: 2rem;
+  margin-top: var(--spacing-md);
 }
 
 /********** Navigation Bar **********/
@@ -126,10 +126,10 @@ nav {
   margin-right: 10rem;
 }
 
-nav img {
-  margin-left: 10vh;
-  margin-top: 50px;
-  width: 20%;
+.logo-nav {
+  margin-left: 4rem;
+  margin-top: 4rem;
+  width: 20rem;
   filter: brightness(110%);
 }
 
@@ -152,7 +152,7 @@ nav img {
 
 .menu ul li a {
   text-decoration: none;
-  color: var(--low-opacity, #b5b5b5);
+  color: var(--low-opacity);
   font-weight: 500;
   font-size: 1.25rem;
   transition: color 0.3s ease;
@@ -338,6 +338,7 @@ ul.splide__pagination {
 }
 
 /******* Background *******/
+
 #stock-deps {
   background-image: linear-gradient(to top, #f59b47, #f3ec78);
 }
@@ -547,31 +548,11 @@ div.feature-card p {
   object-fit: cover;
 }
 
-.icons {
-  margin-top: 4vh;
-  font-size: 10vh;
-  color: rgb(21, 95, 233);
-}
-
-.flex {
-  display: flex;
-}
-
 .feature-card div h2 {
   padding: 0 0 1rem 0;
 }
 
-.features-cards {
-  margin-top: 5rem;
-  list-style: none;
-  padding: 0;
-  text-align: left;
-  margin-bottom: 20px;
-}
-
-.features-cards li {
-  margin-bottom: 10px;
-}
+/********* Acronym ********/
 
 .deps-acronym p {
   transition: opacity 0.5s;
@@ -701,19 +682,6 @@ label {
   margin-left: 18rem;
 }
 
-/******** Listas **********/
-
-.list {
-  margin-top: 5rem;
-  width: 50%;
-  margin-right: 1rem;
-}
-
-.list li {
-  font-size: 1.5rem;
-  margin-bottom: 2rem;
-}
-
 /********** Cards Services **********/
 
 .block-cards {
@@ -776,8 +744,8 @@ label {
   height: 100%;
   transform-style: preserve-3d;
   transition: transform 0.8s;
-  border-radius: 1em;
-  padding: 20px;
+  border-radius: 1rem;
+  padding: 1rem;
   text-align: center;
   background-size: cover;
   background-position: center;
@@ -793,7 +761,7 @@ label {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border-radius: 1em;
+  border-radius: 1rem;
   padding: 20px;
   text-align: center;
   box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.25);
@@ -833,6 +801,19 @@ label {
   background-image: url("../images/services-e-commerce.avif");
   background-size: cover;
   background-position: center;
+}
+
+/******** Listas Services **********/
+
+.list {
+  margin-top: 5rem;
+  width: 50%;
+  margin-right: 1rem;
+}
+
+.list li {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
 }
 
 /********* Landing Pages ********/
