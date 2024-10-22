@@ -42,7 +42,7 @@ O site foi desenvolvido utilizando as seguintes tecnologias:
 
 ## Acesse o Site 🌐
 
-Para explorar o site da DEPS e conhecer mais sobre nossos projetos e serviços, visite <a href="https://depsmodels.com" target="_blank">depsmodels.com</a>.
+Para explorar o site da DEPS e conhecer mais sobre nossos projetos e serviços, visite [depsmodels.com](https://depsmodels.com).
 
 ---
 
