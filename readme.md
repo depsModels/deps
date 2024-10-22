@@ -38,7 +38,8 @@ O site foi desenvolvido utilizando as seguintes tecnologias:
 - *CSS*: Estilização visual e layout do site.
 - *JavaScript*: Interatividade e funcionalidades dinâmicas.
 - *Bootstrap*: Framework para facilitar o desenvolvimento responsivo e acelerar a criação do layout.
-
+- *Husky*: Ferramenta de automação para execução de hooks no Git, garantindo a consistência do código.
+- 
 ## Acesse o Site 🌐
 
 Para explorar o site da DEPS e conhecer mais sobre nossos projetos e serviços, visite [depsmodels.com](https://depsmodels.com).
