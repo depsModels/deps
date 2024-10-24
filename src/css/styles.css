@@ -528,7 +528,7 @@ figure img {
       rgba(0, 212, 255, 0) 0%,
       rgba(0, 0, 0, 1) 100%
     ),
-    var(--feature-card-bgimage);
+    url("/src/images/card-notebook.avif");
   background-size: cover;
 }
 

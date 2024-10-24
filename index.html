@@ -40,7 +40,7 @@
     <link rel="icon" href="src/images/logos/logo-dark-background.png" type="image/png" />
 
     <!-- CSS -->
-    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="src/css/styles.css" />
     <link rel="stylesheet" href="src/css/responsive.css" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
@@ -103,32 +103,31 @@
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body modal-body-contato">
-                        <form>
+                        <form id="modalForm">
                             <div class="mb-3 px-3">
-                                <label for="nome" class="form-label label-contato">Nome:</label>
-                                <input type="text" class="form-control input-contato" id="nome"
-                                    placeholder="Digite seu nome" />
+                                <label for="nomeModal" class="form-label label-contato">Nome:</label>
+                                <input type="text" class="form-control input-contato" id="nomeModal" name="name"
+                                    placeholder="Digite seu nome" required />
                             </div>
                             <div class="mb-3 px-3">
-                                <label for="email" class="form-label label-contato">E-mail:</label>
-                                <input type="email" class="form-control input-contato" id="email"
-                                    placeholder="Digite seu e-mail" />
+                                <label for="emailModal" class="form-label label-contato">E-mail:</label>
+                                <input type="email" class="form-control input-contato" id="emailModal" name="from"
+                                    placeholder="Digite seu e-mail" required />
                             </div>
                             <div class="mb-3 px-3">
-                                <label for="mensagem" class="form-label label-contato">Mensagem:</label>
-                                <textarea class="form-control textarea-contato" id="mensagem" rows="5"
-                                    placeholder="Digite sua mensagem"></textarea>
+                                <label for="mensagemModal" class="form-label label-contato">Mensagem:</label>
+                                <textarea class="form-control textarea-contato" id="mensagemModal" name="message"
+                                    rows="5" placeholder="Digite sua mensagem" required></textarea>
+                            </div>
+                            <div class="modal-footer modal-footer-contato">
+                                <button type="button" class="btn btn-secondary btn-cancelar" data-bs-dismiss="modal">
+                                    Cancelar
+                                </button>
+                                <button type="submit" class="btn btn-yellow btn-enviar">Enviar</button>
                             </div>
                         </form>
                     </div>
-                    <div class="modal-footer modal-footer-contato">
-                        <button type="button" class="btn btn-secondary btn-cancelar" data-bs-dismiss="modal">
-                            Cancelar
-                        </button>
-                        <button type="button" class="btn btn-yellow btn-enviar">
-                            Enviar
-                        </button>
-                    </div>
+
                 </div>
             </div>
         </div>
@@ -173,8 +172,13 @@
                     <li class="splide__slide">
                         <div class="projects" id="stock-deps" data-aos="zoom-in-left">
                             <figure>
+<<<<<<< Updated upstream
                                 <video class="videos" id="video-stock" src="src/videos/videoStock.webm" loop
                                     alt="Projeto StockDEPS" controls controlsList="nodownload" draggable="false"></video>
+=======
+                                <video class="videos" id="video-stock" src="src/videos/videoStock.webm" loop  loading="lazy"
+                                    alt="Projeto StockDEPS"></video>
+>>>>>>> Stashed changes
                                 <figcaption>
                                     <div class="main-figure light">
                                         <p>Stock Deps</p>
@@ -191,8 +195,13 @@
                     <li class="splide__slide">
                         <div class="projects" id="karine" data-aos="zoom-in-left">
                             <figure>
+<<<<<<< Updated upstream
                                 <video class="videos" id="video-karine" src="src/videos/videoKarine.webm" loop
                                     alt="Projeto Karine" controls controlsList="nodownload" draggable="false"></video>
+=======
+                                <video class="videos" id="video-karine" src="src/videos/videoKarine.webm" loop loading="lazy"
+                                    alt="Projeto Karine"></video>
+>>>>>>> Stashed changes
                                 <figcaption>
                                     <div class="main-figure light">
                                         <p>Portfólios</p>
@@ -207,8 +216,13 @@
                     <li class="splide__slide">
                         <div class="projects" id="gym" data-aos="zoom-in-left">
                             <figure>
+<<<<<<< Updated upstream
                                 <video class="videos" id="video-gym" src="src/videos/videoGym.webm"
                                     alt="Projeto MyGym" controls controlsList="nodownload" draggable="false"></video>
+=======
+                                <video class="videos" id="video-gym" src="src/videos/videoGym.webm" loop loading="lazy"
+                                    alt="Projeto MyGym"></video>
+>>>>>>> Stashed changes
                                 <figcaption>
                                     <div class="main-figure light">
                                         <p>Landing Pages</p>
@@ -286,8 +300,12 @@
                             </p>
                         </div>
                     </div>
+<<<<<<< Updated upstream
                     <div class="feature-card feature-card-bgimage" style="
                 --feature-card-bgimage: url(&quot;src/images/card-notebook.avif&quot;);"></div>
+=======
+                    <div class="feature-card feature-card-bgimage"></div>
+>>>>>>> Stashed changes
                 </div>
             </div>
         </div>
@@ -317,8 +335,7 @@
             </div>
             <div class="about-acronym">
                 <div id="design">
-                    <img class="who-we-are__icons" src="src/images/icon-design.png" alt="Ícone Design"
-                        loading="lazy" />
+                    <img class="who-we-are__icons" src="src/images/icon-design.png" alt="Ícone Design" loading="lazy" />
                     <h3 class="titles">
                         <span class="yellow-emphasis">Design</span>
                     </h3>
