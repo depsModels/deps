@@ -41,6 +41,10 @@ html {
   scroll-behavior: smooth;
 }
 
+video {
+  pointer-events: none;
+}
+
 /********** Typography **********/
 
 h1,
