@@ -7,29 +7,17 @@ const videoGym = document.querySelector("#video-gym");
 
 // Função para dar play/pause no vídeo com base no slide ativo
 function controlVideos(index) {
-  if (videoStock) {
-    if (index === 0) {
-      videoStock.play();
-    } else {
-      videoStock.pause();
+  const videos = [videoStock, videoKarine, videoGym];
+  videos.forEach((video, idx) => {
+    if (video) {
+      video.pause();
+      video.controls = false;
+      if (idx === index) {
+        video.muted = true;
+        video.play();
+      }
     }
-  }
-
-  if (videoKarine) {
-    if (index === 1) {
-      videoKarine.play();
-    } else {
-      videoKarine.pause();
-    }
-  }
-
-  if (videoGym) {
-    if (index === 2) {
-      videoGym.play();
-    } else {
-      videoGym.pause();
-    }
-  }
+  });
 }
 
 // Inicializando o Splide
@@ -60,20 +48,17 @@ splide.on("mounted", function () {
   bar.style.width = String(100 * rate) + "%"; // Inicializa a barra de progresso
 });
 
-// Reproduzir vídeos sem som ao carregar a página para evitar bloqueio
 if (videoStock) {
   videoStock.muted = true;
-  videoStock.play();
+  videoStock.autoplay = true;
 }
-
 if (videoKarine) {
   videoKarine.muted = true;
-  videoKarine.play();
+  videoKarine.autoplay = true;
 }
-
 if (videoGym) {
   videoGym.muted = true;
-  videoGym.play();
+  videoGym.autoplay = true;
 }
 
 splide.mount();

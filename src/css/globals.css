@@ -42,9 +42,17 @@ html {
 }
 
 video {
-  pointer-events: none;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  -webkit-overflow-scrolling: touch; /* Evita tela cheia em iOS */
+  overflow: hidden;
 }
 
+/* Esconde botão de play padrão no iOS */
+video::-webkit-media-controls-start-playback-button {
+  display: none !important;
+}
 /********** Typography **********/
 
 h1,
