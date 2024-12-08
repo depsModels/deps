@@ -286,6 +286,28 @@ nav {
   background-color: #ffd700;
 }
 
+.modal.fade .modal-dialog {
+  transform: translate(0, -50px);
+  opacity: 0;
+  transition:
+    transform 0.8s ease,
+    opacity 0.3s ease;
+}
+
+.modal.show .modal-dialog {
+  transform: translate(0, 0);
+  opacity: 1;
+}
+
+.modal.fade .modal-backdrop {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.modal.show .modal-backdrop {
+  opacity: 0.5;
+}
+
 /******** Presentation - Carousel ***********/
 
 #presentation {
