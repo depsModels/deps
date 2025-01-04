@@ -1,26 +1,42 @@
 {
-  "name": "deps",
+  "name": "depsmodels",
+  "description": "Site Oficial da DepsModels!",
+  "minimum-stability": "stable",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "Elano Tavares do Nascimento",
+      "email": "elano.tavares.ncs@gmail.com",
+      "homepage": "https://depsmodels.com",
+      "role": "Developer"
+    },
+    {
+      "name": "Kaio Leote Silveira",
+      "email": "kaiolsilveira5@gmail.com",
+      "homepage": "https://depsmodels.com",
+      "role": "Developer"
+    },
+    {
+      "name": "Miguel Leonardo Strapazon Lewandowski",
+      "email": "miguelstrapazonl@gmail.com",
+      "homepage": "https://depsmodels.com",
+      "role": "Developer"
+    },
+    {
+      "name": "Raul Lize Teixeira",
+      "email": "raullizeteixeira@gmail.com",
+      "homepage": "https://depsmodels.com",
+      "role": "Developer"
+    }
+  ],
   "scripts": {
     "build": "webpack",
-    "lint": "prettier ./src --write",
-    "prepare": "husky install"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
-  "lint-staged": {
-    "src/**/*.{js,css,html}": [
-      "prettier --write"
-    ]
+    "lint": "prettier ./src --write"
   },
   "devDependencies": {
     "css-loader": "^7.1.1",
     "css-minimizer-webpack-plugin": "^7.0.0",
     "html-webpack-plugin": "^5.6.0",
-    "husky": "^8.0.0",
-    "lint-staged": "^15.2.10",
     "mini-css-extract-plugin": "^2.9.0",
     "prettier": "^3.3.3",
     "style-loader": "^4.0.0",
