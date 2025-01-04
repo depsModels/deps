@@ -101,13 +101,18 @@ p {
   font-weight: 100;
 }
 
-.links {
+.links,
+.links-footer {
   font-size: 1.2rem;
-  padding: 2vh;
+  padding: var(--spacing-sm);
   font-weight: lighter;
   text-decoration: none;
   color: var(--low-opacity);
   font-family: poppins;
+}
+
+.links-footer {
+  padding: 0;
 }
 
 .links:hover {

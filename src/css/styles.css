@@ -1082,11 +1082,10 @@ text-content description {
   list-style-type: none;
 }
 
-.navegation ul li.section-title {
+.section-title {
   font-size: 1.5rem;
   color: #ffffff;
   font-weight: normal;
-  margin-bottom: 1rem;
 }
 
 .navegation ul li a {
@@ -1114,6 +1113,13 @@ text-content description {
   color: var(--low-opacity);
   margin-right: 1.5rem;
   transition: color 0.4s ease;
+}
+
+.footer-line {
+  margin-top: 0.75rem;
+  margin-bottom: 0.75rem;
+  border: 1px solid white;
+  width: 100%;
 }
 
 .form h4 {
