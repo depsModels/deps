@@ -2,18 +2,21 @@
 
 /********** Loader content ************/
 
-.loader-container.hidden {
-  opacity: 0;
-  visibility: hidden;
-}
-
 .loader-container {
   position: fixed;
   inset: 0;
-  z-index: 999;
+  z-index: 9999;
   background-color: var(--dark-background);
   display: grid;
   place-content: center;
+  transition: opacity 0.5s ease, visibility 0.5s;
+  opacity: 1;
+  visibility: visible;
+}
+
+.loader-container.loaded {
+  opacity: 0;
+  visibility: hidden;
 }
 
 .loader {
@@ -34,10 +37,9 @@
   }
 }
 
-/********** Body **********/
-
 body {
   background-color: var(--dark-background);
+  overflow-x: hidden;
 }
 
 /********** Buttons **********/
@@ -169,143 +171,118 @@ nav {
 
 /********** Modal Contact ************/
 
-.modal label {
-  color: #fff;
-}
-
-#contatoModalLabel {
-  font-size: 1.5rem;
-}
-
-.modal-title-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-  width: 100%;
-}
-
-.modal-content-contato {
-  border-radius: 10px;
-  background-color: #f7f7f7;
-}
-
-.img-modal {
-  font-size: 2.2rem;
-  color: #fff;
-}
-
 .modal-dialog {
-  margin: 0 auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  max-width: 40rem;
+    max-width: 500px;
+    margin: 1.75rem auto;
 }
 
-.modal-header-contato {
-  background-color: #101113;
-  color: #fff;
-  border-bottom: none;
-  padding: 1.2rem;
+.modal-content {
+    background-color: var(--dark-background);
+    border-radius: 12px;
+    border: none;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.modal-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    position: relative;
+}
+
+.modal-title {
+    color: var(--color-yellow-deps);
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-align: center;
+    margin: 0;
+}
+
+.modal-header .close {
+    position: absolute;
+    right: 1.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: #ffffff;
+    opacity: 0.7;
+    transition: all 0.3s ease;
+    padding: 5px;
+    font-size: 1.8rem;
+    line-height: 1;
+    cursor: pointer;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+}
+
+.modal-header .close:hover {
+    opacity: 1;
+    color: var(--color-yellow-deps);
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.modal-header .close:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(255, 193, 7, 0.25);
 }
 
 .modal-body {
-  background-color: var(--dark-background);
-  padding: 1rem 2rem 0 2rem;
+    padding: 2rem;
 }
 
-.modal-body-contato {
-  background-color: var(--dark-background);
-  padding: 2rem 2rem 0 2rem;
+.modal-body .form-group {
+    margin-bottom: 1.25rem;
 }
 
-.mb-3.px-3:first-child {
-  margin-top: 1rem;
+.modal-body label {
+    color: #ffffff;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
 }
 
-.input-contato {
-  border-radius: 5px;
-  height: 40px;
-  font-size: 16px;
-  background-color: #fff;
-  padding: 1rem;
+.modal-body .form-control {
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    padding: 0.75rem 1rem;
+    transition: all 0.3s ease;
 }
 
-.textarea-contato {
-  border-radius: 5px;
-  font-size: 16px;
-  background-color: #fff;
-  padding: 10px;
+.modal-body .form-control:focus {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: var(--color-yellow-deps);
+    box-shadow: 0 0 0 0.2rem rgba(255, 193, 7, 0.25);
+    color: #ffffff;
 }
 
-.modal-footer-contato {
-  background-color: var(--dark-background);
-  color: #fff;
-  border-top: none;
+.modal-body .form-control::placeholder {
+    color: rgba(255, 255, 255, 0.5);
 }
 
-.btn-close {
-  color: white;
+.modal-body .btn-primary {
+    background-color: var(--color-yellow-deps);
+    border-color: var(--color-yellow-deps);
+    padding: 0.75rem 1.5rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
 }
 
-.modal-header-contato .btn-close {
-  filter: invert(1);
+.modal-body .btn-primary:hover {
+    background-color: #ffc107;
+    border-color: #ffc107;
 }
 
-.btn-cancelar {
-  background-color: var(--color-red-deps);
-  color: #fff;
-  border-radius: 5px;
-  border: none;
-  padding: 0.65rem 1rem;
-  min-width: 4rem;
-  transition:
-    background-color 0.3s ease,
-    box-shadow 0.3s ease;
-}
-
-.btn-cancelar:hover {
-  background-color: #8b0a0a;
-}
-
-.btn-enviar {
-  background-color: var(--color-yellow-deps);
-  color: #fff;
-  border-radius: 5px;
-  border: none;
-  padding: 0.65rem 1rem;
-  min-width: 4rem;
-  transition:
-    background-color 0.3s ease,
-    box-shadow 0.3s ease;
-}
-
-.btn-enviar:hover {
-  background-color: #ffd700;
-}
-
-.modal.fade .modal-dialog {
-  transform: translate(0, -50px);
-  opacity: 0;
-  transition:
-    transform 0.8s ease,
-    opacity 0.3s ease;
-}
-
-.modal.show .modal-dialog {
-  transform: translate(0, 0);
-  opacity: 1;
-}
-
-.modal.fade .modal-backdrop {
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-
-.modal.show .modal-backdrop {
-  opacity: 0.5;
+#responseMessage {
+    text-align: center;
+    margin-top: 1rem;
+    font-weight: 500;
 }
 
 /******** Presentation - Carousel ***********/
@@ -1023,150 +1000,145 @@ text-content description {
 #footer {
   background-color: var(--dark-background);
   color: #ffffff;
-  padding: 1.25rem 5rem;
-  text-align: center;
+  padding: 4rem 2rem;
+  font-family: 'Poppins', sans-serif;
 }
 
-.footer-content {
-  display: inline-block;
-  width: 100%;
-  padding: 1.25rem 0;
-}
-
-.row {
-  display: flex;
-  justify-content: space-around;
-  align-items: flex-start;
-  flex-wrap: wrap;
-}
-
-.app-info,
-.navegation,
-.form {
-  display: inline-block;
-  width: 25%;
-  vertical-align: top;
-  text-align: left;
-  padding: 1rem;
-}
-
-.app-name {
-  font-size: 1.75rem;
-  font-weight: bold;
-  text-transform: uppercase;
-}
-
-.app-info p {
-  margin-top: 1rem;
-}
-
-.app-info,
-.form {
-  width: 25%;
-  vertical-align: top;
-  text-align: left;
-  padding: 1rem;
-  margin-left: var(--spacing-xl);
-  margin-right: var(--spacing-xl);
-}
-
-.navegation {
-  width: 25%;
-  text-align: center;
+.footer-container {
+  max-width: 1200px;
   margin: 0 auto;
 }
 
-.navegation ul {
-  display: inline-block;
-  text-align: left;
-  list-style-type: none;
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
 }
 
-.section-title {
-  margin-bottom: 0.25rem;
-  font-size: 1.5rem;
-  color: #ffffff;
-  font-weight: normal;
+.footer-brand {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
-.navegation ul li a {
+.footer-logo {
+  width: 150px;
+  margin-bottom: 1rem;
+}
+
+.footer-title {
   font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.footer-tagline {
   color: var(--low-opacity);
+  margin-bottom: 1.5rem;
+}
+
+.social-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.social-icon {
+  color: #ffffff;
+  font-size: 1.5rem;
+  transition: color 0.3s ease;
+}
+
+.social-icon:hover {
+  color: var(--color-yellow-deps);
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-links h4 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  color: var(--color-yellow-deps);
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links ul li {
+  margin-bottom: 0.5rem;
+}
+
+.footer-links ul li a {
+  color: #ffffff;
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
-.navegation ul li a:hover,
-.img-links:hover {
-  color: #fff;
+.footer-links ul li a:hover {
+  color: var(--color-yellow-deps);
 }
 
-.icons-img-links {
-  padding-top: 7rem;
+.footer-contact {
+  display: flex;
+  flex-direction: column;
 }
 
-.icons-img-links a {
-  text-decoration: none;
-}
-
-.img-links {
-  font-size: 2rem;
-  color: var(--low-opacity);
-  margin-right: 1.5rem;
-  transition: color 0.4s ease;
-}
-
-.footer-line {
-  margin-top: 0.75rem;
-  margin-bottom: 0.75rem;
-  border: 1px solid white;
-  width: 100%;
-}
-
-.form h4 {
-  font-size: 1.5rem;
-  color: #ffffff;
-  font-weight: normal;
+.footer-contact h4 {
+  font-size: 1.2rem;
   margin-bottom: 1rem;
+  color: var(--color-yellow-deps);
 }
 
-.form-wrapper {
-  text-align: left;
-}
-
-input,
-textarea {
-  font-size: 1rem;
-  width: 100%;
-  padding: 0.625rem;
-  margin-bottom: 0.625rem;
-  border: none;
-  border-radius: 0.3125rem;
-}
-
-.btn-form {
-  width: auto;
-  padding: 0.7rem 1.1rem;
-  background-color: var(--color-blue-deps);
-  color: #ffffff;
-  border: none;
-  border-radius: 0.5rem;
-  cursor: pointer;
-  font-size: 1rem;
-  transition:
-    background-color 0.4s ease,
-    color 0.4s ease;
-}
-
-.btn-form:hover {
-  background-color: var(--color-faint-blue-deps);
-}
-
-.copyright {
-  text-align: center;
-  font-size: 1rem;
-  margin-top: 1.25rem;
+.footer-contact p {
+  margin-bottom: 1.5rem;
   color: var(--low-opacity);
+}
+
+.btn-contact {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background-color: var(--color-yellow-deps);
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  text-align: center;
+}
+
+.btn-contact:hover {
+  background-color: #ffc107;
+}
+
+.footer-bottom {
+  margin-top: 2rem;
+  text-align: center;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-bottom p {
+  color: var(--low-opacity);
+  font-size: 0.9rem;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-brand, .footer-links, .footer-contact {
+    text-align: center;
+    align-items: center;
+  }
+
+  .social-links {
+    justify-content: center;
+  }
 }
 
 /********** WhatsApp **********/
@@ -1191,4 +1163,41 @@ textarea {
 
 .whatsapp-button:hover {
   background-color: #1ebea5;
+}
+
+/* Estilos para garantir que o modal e backdrop sejam completamente removidos */
+.modal-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0);
+    opacity: 0;
+    transition: opacity 0.15s linear;
+}
+
+.modal-backdrop.show {
+    z-index: 1040;
+    opacity: 0.5;
+}
+
+body.modal-open {
+    overflow: visible !important;
+    position: static !important;
+    padding-right: 0 !important;
+}
+
+.modal.fade .modal-dialog {
+    transition: 
+        transform 0.3s ease-out,
+        opacity 0.3s ease-out;
+    transform: translate(0, -50px);
+    opacity: 0;
+}
+
+.modal.show .modal-dialog {
+    transform: translate(0, 0);
+    opacity: 1;
 }
