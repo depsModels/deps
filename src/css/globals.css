@@ -152,12 +152,8 @@ p {
   font-weight: 900;
 }
 
-.title-kaftan {
-  font-family: kaftan;
-  font-size: 4rem;
-}
-
+/* Removendo classes e fontes kaftan */
+.title-kaftan,
 .subtitle-kaftan {
-  font-family: kaftan;
-  font-size: 4rem;
+    display: none;
 }
