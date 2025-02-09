@@ -62,3 +62,6 @@ if (videoGym) {
 }
 
 splide.mount();
+
+// Adicionar export para módulo ES6
+export {};
