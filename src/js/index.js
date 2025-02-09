@@ -13,7 +13,6 @@ try {
     import('./modules/components/menu.js').then(() => console.log('Menu module loaded'));
     import('./modules/components/responsive.js').then(() => console.log('Responsive module loaded'));
     import('./modules/components/faq.js').then(() => console.log('FAQ module loaded'));
-    import('./modules/components/cursor-carousel.js').then(() => console.log('Cursor Carousel module loaded'));
     import('./modules/components/load-content.js').then(() => console.log('Load Content module loaded'));
 } catch (error) {
     console.error('Error loading modules:', error);
