@@ -1,4 +1,5 @@
 <?php
+    // Função para enviar e-mails
     function sendEmail($name, $email, $message) {
         $to = "contato@depsmodels.com"; // Endereço de e-mail de destino
         $subject = "Novo contato de $name"; // Assunto do e-mail

@@ -8,7 +8,7 @@ function handleFormSubmit(formId) {
 
     // Envia os dados do formulário via AJAX para o arquivo PHP
     var xhr = new XMLHttpRequest();
-    xhr.open("POST", "sendform.php", true);
+    xhr.open("POST", "sendForm.php", true);
     xhr.onload = function () {
       if (xhr.status === 200) {
         // Exibe a mensagem retornada pelo PHP no modal
