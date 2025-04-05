@@ -674,7 +674,7 @@
             </div>
         </div>
         <div class="copyright">
-            2025 | &copy; Deps Models. All rights reserved.
+            <span id="currentYear"></span> | &copy; Deps Models. All rights reserved.
         </div>
     </footer>
 
@@ -711,6 +711,11 @@
 
     <!-- Bundle JS -->
     <script src="dist/bundle.js"></script>
+
+    <!-- Script para atualizar o ano automaticamente -->
+    <script>
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+    </script>
 </body>
 
 </html>
