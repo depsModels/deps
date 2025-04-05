@@ -362,15 +362,18 @@ ul.splide__pagination {
 /******* Background *******/
 
 #stock-deps {
-  background-image: linear-gradient(to top, #f59b47, #f3ec78);
+  background-color: #007bff;
+  background-image: none;
 }
 
 #karine {
-  background-image: linear-gradient(to top, #135797, #51dde7);
+  background-color: #28a745;
+  background-image: none;
 }
 
-#gym {
-  background-image: linear-gradient(to top, #bb1300, #ff7d7d);
+#ecommerce {
+  background-color: #ffc107;
+  background-image: none;
 }
 
 .projects {

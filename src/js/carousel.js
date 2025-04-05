@@ -1,13 +1,13 @@
 const figureKarine = document.querySelector("#karine");
 const figureStock = document.querySelector("#stock-deps");
-const figureGym = document.querySelector("#gym");
+const figureEcommerce = document.querySelector("#ecommerce");
 const videoKarine = document.querySelector("#video-karine");
 const videoStock = document.querySelector("#video-stock");
-const videoGym = document.querySelector("#video-gym");
+const videoEcommerce = document.querySelector("#video-ecommerce");
 
 // Função para dar play/pause no vídeo com base no slide ativo
 function controlVideos(index) {
-  const videos = [videoStock, videoKarine, videoGym];
+  const videos = [videoStock, videoKarine, videoEcommerce];
   videos.forEach((video, idx) => {
     if (video) {
       video.pause();
@@ -56,9 +56,9 @@ if (videoKarine) {
   videoKarine.muted = true;
   videoKarine.autoplay = true;
 }
-if (videoGym) {
-  videoGym.muted = true;
-  videoGym.autoplay = true;
+if (videoEcommerce) {
+  videoEcommerce.muted = true;
+  videoEcommerce.autoplay = true;
 }
 
 splide.mount();
