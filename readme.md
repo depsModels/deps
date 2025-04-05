@@ -43,6 +43,50 @@ O site foi desenvolvido utilizando as seguintes tecnologias:
 
 Para explorar o site da DEPS e conhecer mais sobre nossos projetos e serviços, visite [depsmodels.com](https://depsmodels.com).
 
+## Como Testar a Aplicação Localmente 🧪
+
+Se você deseja testar o site em seu ambiente local, siga estas etapas:
+
+### Pré-requisitos
+- Node.js instalado em sua máquina
+- NPM (Node Package Manager)
+
+### Passos para execução:
+
+1. **Clone o repositório**
+   ```
+   git clone https://github.com/depsModels/deps.git
+   cd deps
+   ```
+
+2. **Instale as dependências**
+   ```
+   npm install
+   ```
+
+3. **Construa o projeto**
+   ```
+   npm run build
+   ```
+
+4. **Execute o site localmente**
+   Você pode usar qualquer servidor local de sua preferência. Uma opção simples é usar o Live Server do VS Code:
+   - Instale a extensão Live Server no VS Code
+   - Abra o arquivo index.html 
+   - Clique em "Go Live" na barra inferior do VS Code
+
+   Ou utilize qualquer outro servidor HTTP local como:
+   ```
+   npx serve
+   ```
+
+5. **Solução de problemas comuns**
+   - Se encontrar erros relacionados a políticas de execução no PowerShell (Windows), execute o seguinte comando como administrador:
+     ```
+     Set-ExecutionPolicy Bypass -Scope Process
+     ```
+   - Se o site ficar em carregamento infinito, verifique se o webpack gerou corretamente os arquivos na pasta dist/
+
 ---
 
 Agradecemos pela sua visita e esperamos que você tenha uma experiência agradável em nosso site!
