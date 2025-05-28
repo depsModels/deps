@@ -1,5 +1,4 @@
-/********** Variaveis **********/
-
+/* CSS Variables */
 :root {
   --color-red-deps: #b00000;
   --color-yellow-deps: #feac0e;
@@ -14,8 +13,7 @@
   --spacing-xl: 4rem;
 }
 
-/********** Commons **********/
-
+/* Reset & Base */
 * {
   margin: 0;
   padding: 0;
@@ -45,15 +43,14 @@ video {
   object-fit: cover;
   width: 100%;
   height: 100%;
-  -webkit-overflow-scrolling: touch; /* Evita tela cheia em iOS */
+  -webkit-overflow-scrolling: touch;
   overflow: hidden;
 }
 
-/* Esconde botão de play padrão no iOS */
 video::-webkit-media-controls-start-playback-button {
   display: none !important;
 }
-/********** Typography **********/
+/* Typography */
 
 h1,
 h2,
@@ -66,6 +63,40 @@ h3 {
 
 p {
   font-family: poppins;
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--color-blue-deps);
+  text-align: center;
+  margin-bottom: var(--spacing-md);
+}
+
+.subtitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--color-blue-deps);
+  text-align: center;
+  margin-bottom: var(--spacing-sm);
+}
+
+.text {
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--color-black-deps);
+  text-align: center;
+  margin-bottom: var(--spacing-sm);
+}
+
+.text-left {
+  text-align: left;
+}
+.text-center {
+  text-align: center;
+}
+.text-right {
+  text-align: right;
 }
 
 .description {

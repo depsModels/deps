@@ -1,12 +1,6 @@
 @import "./globals.css";
 
-/********** Loader content ************/
-
-.loader-container.hidden {
-  opacity: 0;
-  visibility: hidden;
-}
-
+/* Loader */
 .loader-container {
   position: fixed;
   inset: 0;
@@ -14,6 +8,14 @@
   background-color: var(--dark-background);
   display: grid;
   place-content: center;
+  transition:
+    opacity 0.3s ease,
+    visibility 0.3s ease;
+}
+
+.loader-container.hidden {
+  opacity: 0;
+  visibility: hidden;
 }
 
 .loader {
@@ -34,32 +36,27 @@
   }
 }
 
-/********** Body **********/
-
+/* Body */
 body {
   background-color: var(--dark-background);
 }
 
-/********** Buttons **********/
-
+/* Buttons */
 .button {
   margin-top: 2.5rem;
   padding: 1.2rem 1.3rem;
   font-family: poppins;
   font-size: 1.2rem;
-  font-style: normal;
   font-weight: 600;
   line-height: 150%;
   border-radius: 20px;
-  border: 0px;
+  border: none;
   cursor: pointer;
-  transform: translatey(0px);
-  transition: transform 0.6s;
+  transition: transform 0.3s ease;
 }
 
 .button:hover {
-  transform: translatey(-1rem);
-  transition: transform 0.6s;
+  transform: translateY(-0.5rem);
 }
 
 .button-yellow {
@@ -71,16 +68,19 @@ body {
   margin-top: 30%;
 }
 
-/**********  Header **********/
+/* Header */
+header {
+  padding-bottom: 10%;
+  height: 100%;
+  position: relative;
+}
 
 header::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: url("/src/images/bg-header.avif");
-  background-size: cover;
+  background: url("/src/images/bg-header.avif") no-repeat center/cover;
   z-index: -1;
-  background-repeat: no-repeat;
 }
 
 header::after {
@@ -89,13 +89,6 @@ header::after {
   inset: 0;
   background-color: rgba(0, 0, 0, 0.4);
   z-index: -1;
-}
-
-header {
-  padding-top: 0;
-  padding-bottom: 10%;
-  height: 100%;
-  position: relative;
 }
 
 .section-home {
@@ -115,8 +108,7 @@ header {
   margin-top: var(--spacing-md);
 }
 
-/********** Navigation Bar **********/
-
+/* Navigation */
 nav {
   display: flex;
   justify-content: space-between;

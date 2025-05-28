@@ -1,10 +1,93 @@
-/*********** Estilos para dispositivos móveis (até 767 pixels) ***********/
-
+/* Mobile Responsive */
 @media (max-width: 767px) {
-  /********** Body **********/
-  body {
-    width: 100%;
+  /* Typography */
+  .title {
+    font-size: 2rem;
+  }
+  .subtitle {
+    font-size: 1.2rem;
+  }
+  .text {
+    font-size: 0.9rem;
+  }
+
+  /* Header */
+  .header {
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .header .container {
+    padding: 0 1rem;
+  }
+  .header .row {
+    height: 100vh;
+    align-items: center;
+  }
+  .header .col-12 {
     text-align: center;
+  }
+  .header .title {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  .header .subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+  }
+
+  /* Navigation */
+  .navbar {
+    padding: 0.5rem 1rem;
+  }
+  .navbar-brand img {
+    height: 40px;
+  }
+  .navbar-nav {
+    display: none;
+  }
+
+  .navbar-toggler {
+    display: block;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: var(--color-blue-deps);
+    cursor: pointer;
+  }
+
+  .navbar-toggler:focus {
+    outline: none;
+  }
+
+  .navbar-toggler.active .bar:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+  .navbar-toggler.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  .navbar-toggler.active .bar:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -6px);
+  }
+
+  .bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    background-color: var(--color-blue-deps);
+    transition: 0.3s;
+  }
+
+  /* Button */
+  .btn {
+    padding: 0.75rem 1.5rem;
+    font-size: 0.9rem;
+  }
+
+  /* Body */
+  body {
     overflow-x: hidden;
   }
 
