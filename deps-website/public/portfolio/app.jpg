@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
+  <rect width="800" height="600" fill="#1a1a1a"/>
+  <g fill="none" stroke="#49BEFF" stroke-width="2">
+    <rect x="100" y="100" width="600" height="400" rx="10" />
+    <rect x="130" y="130" width="200" height="340" rx="5" />
+    <rect x="350" y="130" width="320" height="160" rx="5" />
+    <rect x="350" y="310" width="150" height="160" rx="5" />
+    <rect x="520" y="310" width="150" height="160" rx="5" />
+  </g>
+  <text x="400" y="500" font-family="Arial" font-size="24" fill="#ffffff" text-anchor="middle">Aplicativo de Gestão</text>
+  
+  <!-- Menu lateral simulado -->
+  <g transform="translate(150, 170)">
+    <rect x="0" y="0" width="160" height="30" fill="#0046AF" opacity="0.6" rx="3" />
+    <rect x="0" y="40" width="160" height="30" fill="#1a1a1a" opacity="0.6" rx="3" />
+    <rect x="0" y="80" width="160" height="30" fill="#1a1a1a" opacity="0.6" rx="3" />
+    <rect x="0" y="120" width="160" height="30" fill="#1a1a1a" opacity="0.6" rx="3" />
+    <rect x="0" y="160" width="160" height="30" fill="#1a1a1a" opacity="0.6" rx="3" />
+    <rect x="0" y="200" width="160" height="30" fill="#1a1a1a" opacity="0.6" rx="3" />
+  </g>
+  
+  <!-- Gráfico de linha simulado -->
+  <g transform="translate(510, 200)">
+    <polyline points="0,80 40,60 80,90 120,30 160,50" stroke="#FEAC0E" stroke-width="3" fill="none" />
+    <circle cx="0" cy="80" r="4" fill="#FEAC0E" />
+    <circle cx="40" cy="60" r="4" fill="#FEAC0E" />
+    <circle cx="80" cy="90" r="4" fill="#FEAC0E" />
+    <circle cx="120" cy="30" r="4" fill="#FEAC0E" />
+    <circle cx="160" cy="50" r="4" fill="#FEAC0E" />
+  </g>
+  
+  <!-- Cards simulados -->
+  <g transform="translate(425, 390)">
+    <rect x="-50" y="-50" width="100" height="100" fill="#FF94B4" opacity="0.2" rx="5" />
+    <text x="0" y="0" font-family="Arial" font-size="24" fill="#ffffff" text-anchor="middle">42</text>
+    <text x="0" y="20" font-family="Arial" font-size="12" fill="#ffffff" text-anchor="middle">Tarefas</text>
+  </g>
+  
+  <g transform="translate(595, 390)">
+    <rect x="-50" y="-50" width="100" height="100" fill="#3A29FF" opacity="0.2" rx="5" />
+    <text x="0" y="0" font-family="Arial" font-size="24" fill="#ffffff" text-anchor="middle">87%</text>
+    <text x="0" y="20" font-family="Arial" font-size="12" fill="#ffffff" text-anchor="middle">Progresso</text>
+  </g>
+</svg>

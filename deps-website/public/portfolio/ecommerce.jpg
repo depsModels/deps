@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
+  <rect width="800" height="600" fill="#1a1a1a"/>
+  <g fill="none" stroke="#FEAC0E" stroke-width="2">
+    <rect x="100" y="100" width="600" height="400" rx="10" />
+    <rect x="150" y="150" width="300" height="300" rx="5" />
+    <rect x="500" y="150" width="150" height="100" rx="5" />
+    <rect x="500" y="270" width="150" height="80" rx="5" />
+    <rect x="500" y="370" width="150" height="80" rx="5" />
+  </g>
+  <text x="400" y="500" font-family="Arial" font-size="24" fill="#ffffff" text-anchor="middle">E-commerce de Moda</text>
+  <circle cx="300" cy="300" r="50" fill="#FF94B4" opacity="0.5" />
+  <circle cx="400" cy="250" r="30" fill="#3A29FF" opacity="0.5" />
+</svg>
