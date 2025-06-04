@@ -20,17 +20,17 @@ export default function Navbar() {
 
   return (
     <nav 
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-black/80 backdrop-blur-md py-3' : 'bg-transparent py-5'}`}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-black/90 backdrop-blur-lg border-b border-gray-800/50' : 'bg-transparent'}`}
     >
-      <div className="container mx-auto px-4">
-        <div className="flex flex-col items-center">
-          {/* Logo central */}
-          <Link href="/" className="text-2xl font-bold text-white mb-2">
+      <div className="container mx-auto px-6">
+        <div className="flex items-center justify-between h-16">
+          {/* Logo */}
+          <Link href="/" className="text-xl font-bold text-white hover:text-gray-300 transition-colors">
             <span className="text-[#FEAC0E]">DEPS</span> MODELS
           </Link>
           
           {/* Links de navegação em desktop */}
-          <div className="hidden md:flex justify-center space-x-8">
+          <div className="hidden md:flex items-center space-x-8">
             <NavLink href="#home">Home</NavLink>
             <NavLink href="#portfolio">Portfólio</NavLink>
             <NavLink href="#services">Serviços</NavLink>
@@ -43,7 +43,7 @@ export default function Navbar() {
           <div className="md:hidden">
             <button 
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="text-white p-2"
+              className="text-white p-2 hover:text-gray-300 transition-colors"
               aria-label="Toggle menu"
             >
               {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -71,10 +71,11 @@ function NavLink({ href, children, onClick }: { href: string; children: React.Re
   return (
     <Link 
       href={href} 
-      className="text-gray-300 hover:text-[#FEAC0E] transition-colors duration-200 font-medium"
+      className="text-gray-300 hover:text-white transition-colors duration-200 font-medium relative group"
       onClick={onClick}
     >
       {children}
+      <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-white transition-all duration-200 group-hover:w-full"></span>
     </Link>
   );
 }
